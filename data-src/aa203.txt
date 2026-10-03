@@ -1,0 +1,59 @@
+01|ZXMThMHFD_w|4910|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 19: Model-Based RL
+02|a1g9U_5zO54|4818|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 18: RL Policy Optimization
+03|zanXSI7zSws|4660|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 17: RL Value-Based Methods
+04|cqPbt3OfRK4|4431|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 16: Fundamentals of RL
+05|udHX5Auj7ik|4772|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 15: Imitation Learning
+06|7YdOx-ih0II|4422|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 14: Intro to IL and RL
+07|RtJSHiqOdgQ|4805|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 13: Intro to Learning
+08|8Elrw30y0tg|4526|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 12: Feasibility of MPC
+09|3_gxaB_Pp3k|4416|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 11: Introduction to MPC
+10|Fl5EjGhQjgs|4626|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 10: Reachibility Analysis
+11|C9mLpI8Td9g|4621|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 9: Stochastic Dyn. Program
+12|1YdgSwEtf_s|4445|AStanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 8: LQR-Style Algorithms
+13|hy-e9g4nugE|4515|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 7: Dynamic Programming
+14|zX8raxUa2DE|4829|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 6: Direct Methods
+15|R4_fHzTo0IM|4684|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 5: Computational Methods
+16|7rejaoMWviw|5089|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 4: Indirect Methods
+17|duZJ2_ajLso|4977|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 3: Calculus of Variations
+18|FbkNYklySak|4741|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 2: Optimization Theory
+19|Au2stLALZew|4403|Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 1: Course Overview
+20|wfJpKjMwXpg|3992|Stanford Robotics Seminar ENGR319 | Winter 2025 | Embodied Intelligence
+21|NiRXiuWwrps|2075|Stanford Robotics Seminar ENGR319 | Spring 2026 | Towards Trustworthy Autonomy
+22|8hohrUYuyx4|3811|Stanford Robotics Seminar ENGR319 | Spring 2026 | Leveraging Geometry in Robot Learning
+23|3W36pd50Wqw|3473|Stanford Robotics Seminar ENGR319 | Spring 2026 | Integrated Learning and Planning
+24|dI8pLC1BLSM|4272|Stanford Robotics Seminar ENGR319 | Spring 2026 | Interactive Autonomy
+25|r3x_w3tEmB4|3752|Stanford Robotics Seminar ENGR319 | Spring 2026 | Unlocking Autonomous Medical Robotics
+26|b6uxaRL_ipw|3104|Stanford Robotics Seminar ENGR319 | Spring 2026 | Mechanical Intelligence in Locomotion
+27|NUtaN10cVDc|4148|Stanford Robotics Seminar ENGR319 | Spring 2026 | Robot Learning from Human Experience
+28|D7e7oUbtkFM|3230|Stanford Robotics Seminar ENGR319 | Winter 2026 | Gen Control, Action Chunking, Moravec’s Paradox
+29|_U0EUX2E3k0|4422|Stanford AA228V I Validation of Safety Critical Systems I Explainability
+30|VHpW1a3uq_s|81|Design and Control of Haptic Systems: The Challenges of Robotics
+31|popjDuA-whA|3850|Stanford Robotics Seminar ENGR319 | Winter 2026 | 𝚿0: An Open Foundation Model
+32|V2GTzEx_u8s|42|What Is A Haptic Device? Professor Allison Okamura Explains.
+33|MeGmBTfuQzU|62|Sneak Peek: Design and Control of Haptic Systems
+34|rYPUpQj0sWs|219|Course Overview: Design and Control of Haptic Systems (ME327)
+35|NMFyMlwmwP8|4437|Stanford Robotics Seminar ENGR319 | Winter 2026 | Bringing AI Up To Speed
+36|o5bW3C5OD6U|2656|Stanford Robotics Seminar ENGR319 | Winter 2026 | Autonomous Navigation and Safe Humanoids
+37|PYh9k4cy25w|3595|Stanford Robotics Seminar ENGR319 | Winter 2026 | Resilient Autonomy
+38|RKFRO_G4YkA|3182|Stanford Robotics Seminar ENGR319 | Winter 2026 | Robot Motion Learning w/Physics-Based PDE Priors
+39|zdCJyn1OY-4|4511|Stanford Robotics Seminar ENGR319 | Autumn 2025 | The Dynamics of Fluid Physical Interaction
+40|v18Jo2ILXZ8|4181|Stanford Robotics Seminar ENGR319 | Autumn 2025 | Next Generation Dexterous Manipulation
+41|MoI6yxW6fuE|3848|Stanford Robotics Seminar ENGR319 | Autumn 2025 | The Graph Physical AI Approach
+42|5uWtpDON7Vs|1749|Stanford Robotics Seminar ENGR319 | Autumn 2025 | Embodied Foundation Models
+43|CHD6DS6f21Y|1757|Stanford Robotics Seminar ENGR319 | Autumn 2025 | General Compliant Robot Interaction
+44|x0aLBWTBOuQ|3064|Stanford Webinar - AI Safety
+45|3iIPRBi2K2w|3091|Stanford Robotics Seminar ENGR319 | Autumn 2025 | Adaptive Robots
+46|VRpK2YtWZ4I|2768|AI-Robotics Frontier
+47|99wIpauDEmY|3831|Stanford Robotics Seminar ENGR319 | Autumn 2025 | Manipulation Data Pyramid
+48|eztufZ3xM4c|3802|Stanford Robotics Seminar ENGR319 | Autumn 2025 | Make Every Step an Experiment
+49|YcTytFL1Bc0|3726|Stanford Webinar - From Pixels to Human Impact: Unlocking Real-World Value with Computer Vision
+50|Sa_lfHZ8qic|1732|Stanford Seminar - Robot Learning Without Action Chunking
+51|05SuBLowwKM|3210|Stanford Seminar - Learning to control large teams of robots
+52|zRq_3f4qrcU|3859|Stanford Seminar - Towards Open World Robot Safety
+53|SqKBFo4_-0k|3086|Stanford Seminar - Towards Robots that Generalize and Adapt Efficiently
+54|PWw7wDOsc4c|3508|Stanford Seminar - Where are the Field Robots?
+55|uQ-5BryUNv8|3582|Stanford Seminar - Modeling Humans for Humanoid Robots
+56|V6y3E0r4bMo|3352|Stanford Seminar - Robot Skill Acquisition: Policy Representation and Data Generation
+57|ct4tdyyNDY4|4568|Stanford CS25: V2 I Robotics and Imitation Learning
+58|IT734HriiHQ|1999|AI and Robotics - Chelsea Finn & Andrew Ng
+59|xvLTAm2cecY|NA|NA

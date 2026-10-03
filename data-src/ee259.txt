@@ -1,0 +1,21 @@
+01|VvoKJ6xvssQ|4303|Stanford EE259 Principles of Sensing for Autonomy I Introduction, GPS overview I 2023 I Lecture 1
+02|v5OW9aZHWfk|4706|Stanford EE259 I GPS principle of operation, ranging codes & navigation messages I 2023 I Lecture 2
+03|a_feUoPuePA|4803|Stanford EE259 I GPS satellite orbits, PRN ranging I 2023 I Lecture 3
+04|14ZmOyvG9aQ|4842|Stanford EE259 I GPS receiver architecture, acquisition & tracking, position est. I 2023 I Lecture 4
+05|JZ9uAG_NXi0|4799|Stanford EE259 I Inertial sensors: accelerometer principle of operation & architecture I 2023 I Lec5
+06|qg9uN_pYF8E|4884|Stanford EE259 I Inertial sensors: gyroscope principle of operation and architecture I 2023 I Lec. 6
+07|h8vVU3vjHpY|4759|Stanford EE259 I Inertial navigation, dead reckoning I 2023 I Lecture 7
+08|fQbHSX-G_Pg|4869|Stanford EE259 I Ultrasonic sensor (Sonar) principle of operation & architecture I 2023 I Lecture 8
+09|AkTkEEfeXLA|5002|Stanford EE259 I Sonar ranging and bearing angle estimation I 2023 I Lecture 9
+10|CPkht7C0tEY|4756|Stanford EE259 I Radar principle of operation & architectures (pulsed, FMCW, PMCW) I 2023 I Lec. 10
+11|tWqFcSbD8FA|4742|Stanford EE259 I Radar antenna designs and characteristics I 2023 I Lecture 11
+12|zfrudmIQvik|4239|Stanford EE259 I Radar range and velocity estimation, performance tradeoffs I 2023 I Lecture 12
+13|56MwUp5FnUo|4988|Stanford EE259 I 2023 I Lecture 12 (Extra Session)
+14|2JYMXDoHiDY|4875|Stanford EE259 I MIMO imaging radar, direction of arrival est, target detection I 2023 I Lecture 13
+15|RajTLcrJDOo|4986|Stanford EE259 I Waveform orthogonality in MIMO radar, radar noise and interference I 2023 I Lec. 14
+16|JlQKunkJgbA|4914|Stanford EE259 I Lidar principle of operation, laser physics I 2023 I Lecture 15
+17|mvIDwIWQP_M|4928|Stanford EE259 I Gaussian beams, beam scanning techniques I 2023 I Lecture 16
+18|0XBan0nC1Ok|4922|Stanford EE259 I Photodetection principles (direct vs. coherent), lidar system arch. I 2023 I Lec 17
+19|VvKJN8yS1k4|4770|Stanford EE259 I Lidar range and direction of arrival estimation I 2023 I Lecture 18
+20|NQlYpDQf-SE|4600|Stanford EE259 I Camera principle of operation and architectures, image formation I 2023 I Lec. 19
+21|BpZaQC5WiZo|7741|Stanford EE259 I Lenses, image sensors, image signal processing I 2023 I Lecture 20

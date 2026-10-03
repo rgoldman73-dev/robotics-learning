@@ -1,0 +1,54 @@
+01|oR6G1MUMveE|626|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 1 - Introduction
+02|vVspolIKPgc|1200|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 2 - vector notation
+03|wlPiJZ1DQjs|1104|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 3 - vector examples
+04|Ih3rIcBnnSg|1672|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 4-addition & scalar mult.
+05|YiCAeeBEo50|845|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 5 - VMLS inner product
+06|wqcknO3fArY|376|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 6 - VMLS complexity
+07|0rOEhJlNzhs|839|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 7 - VMLS linear functions
+08|H0jR5nqueWk|1249|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 8-VMLS taylor approx & reg
+09|odR39SYhUH0|905|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 9 - VMLS norm
+10|w77MlgsylqY|855|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 10 - VMLS distance
+11|Gdl92kGR8Ho|974|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 11-VMLS std. deviation
+12|4shS22XxZYw|1419|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 12 - VMLS angle
+13|liaZ_SCuE1w|1898|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 13 - VMLS k means
+14|a4GjONqojzM|1150|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 14-VMLS k means app.
+15|RikEADik56Q|1509|Stanford ENGR108: Intro to Applied Linear Algebra | 2020 | Lecture 15-VMLS linear ind.
+16|IZhpqYeKZEM|924|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 16-VMLS Gram Schmidt algo.
+17|dTeN9ypsVTU|2545|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 17 - VMLS matrix notation
+18|1_LEoD33gC0|490|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 18-VMLS matrix vector mult
+19|JbtNJM1hM_4|1690|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 19-VMLS matrix vector  ex.
+20|jXN50fuRSqE|363|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 20-VMLS selector matrices
+21|v7CH2ry-vrQ|942|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 21 - VMLS incidence matrix
+22|kTg0vKppOl8|970|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 22 - VMLS convolution
+23|tQ3nrT6cZGE|959|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 23-VMLS vector linear func
+24|8SD2zRNWQcU|1046|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 24-VMLS linear func models
+25|6zWKMTVGkgQ|1363|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 25 - VMLS linear equations
+26|NS0jvPLtgGc|2365|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 26-VMLS linear dynamic sys
+27|t-G9n2uCa4k|1525|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 27-VMLS matrix mult
+28|NZfWiVuRMnI|498|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 28-VMLS matrix mult ex
+29|vDCZpK96k7k|961|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 29-VMLS mtrx pwrs & QR fac
+30|WFx4oV2JcRM|2122|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 30-VMLS left & right inv.
+31|lWEJPWFIgtw|1202|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 31-VMLS solving linear eqs
+32|R69sATXr1lM|866|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 32 - VMLS pseudo inverse
+33|q7tuWtK2wWY|1687|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 33 - VMLS least squares
+34|5XhCN-44ua0|1345|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 34-VMLS least squares ex.
+35|1UssEuFDxd4|911|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 35-VMLS LS data fitting
+36|R6sObXmPqXw|2282|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 36-VMLS fit univariate fnc
+37|SaERMg6BhWk|1838|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 37 - VMLS validation
+38|3LGyi_9Yn8s|1141|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 38 - VMLS classification
+39|J-xhBfJn1mw|1006|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 39-VMLS LS classification
+40|WaOr_4M8yfE|1181|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 40-VMLS multiclass classif
+41|p18I80UDjNs|1285|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 41-VMLS multi objective LS
+42|qr9uzoRkYK0|725|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 42-ctrl via multi obj LS
+43|y44HXBjCZ0Q|1431|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 43-MLS est & inversion
+44|XTdzAMf0gG0|855|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 44-VMLS reg data fitting
+45|vOFsja_YmJc|1323|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 45-VMLS constrained LS
+46|maCbeyno_mI|1003|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 46-VMLS solve cstr LS prob
+47|fKUea6LCzU8|2988|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 47-VMLS portfolio optim
+48|MNqVUDkudYM|1435|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 48-VMLS linear quadrt ctrl
+49|zu2nYmSfY6U|945|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 49-VMLS lin quadrt st est
+50|nK6uSzKQlEs|1201|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 50-VMLS nonlinear eq. & LS
+51|UQsOyMj9lnI|1202|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 51-VMLS Leven. Marq. algo
+52|W0mamVcppBA|957|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 52-VMLS nonlin mdl fitting
+53|SM_ZieyKicU|1033|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 53-VMLS cstrd nonlinear LS
+54|00njRSL8WNQ|1303|Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 54-VMLS aug Lagragian mthd

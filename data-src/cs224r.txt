@@ -1,0 +1,19 @@
+01|EvHRQhMX7_w|3179|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 1: Class Intro
+02|WxRDyObrm_M|4025|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 2: Imitation Learning
+03|KCAOXd4IO9o|3758|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 3: Policy Gradients
+04|oejFZShW9hU|3810|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 4: Actor-Critic Methods
+05|cRGKc-nAWho|4162|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 5: Off-Policy Actor Critic
+06|-7kv6jf0isQ|3700|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 6: Q-Learning
+07|lRDaXnPIzks|4071|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 7: Offline RL
+08|PDIxDhA9Z6Y|3959|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 8: Reward Learning
+09|XKLGuwvSKvI|3771|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 9: RL for LLMs
+10|O2VpNnwB4lM|4230|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 10: RL for LLM Reasoning
+11|PvqyGnOirgA|4400|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 11: Model-Based RL
+12|qNdsI_4AQJw|4230|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 12: Multi-Task RL
+13|wSiyEpvoGkA|4151|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 13: Meta RL
+14|4tlSKdi8teU|4362|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 14: Exploration
+15|iKWYLSVAtfM|4173|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 15: Hierarchical RL and IL
+16|rbaWQQLrzl0|3944|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 16: RL for Robots
+17|Hp1WBWghrak|2989|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 17: Advancing Robot Intelligence
+18|07MQNMcxhZU|3039|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Tutorial Session: Review of Q-Learning
+19|FacJ_1tTSx4|4249|Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 18: Frontiers

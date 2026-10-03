@@ -1,0 +1,16 @@
+01|0yD3uBshJB0|3492|Lecture 1 | Introduction to Robotics
+02|QKyDrUonp98|4091|Lecture 2 | Introduction to Robotics
+03|Mm5Tfm04cKk|4631|Lecture 3 | Introduction to Robotics
+04|IY38-bK6yXs|4314|Lecture 4 | Introduction to Robotics
+05|u79KfNgP1Cc|3996|Lecture 5 | Introduction to Robotics
+06|fwHc0a8DMQ0|4235|Lecture 6 | Introduction to Robotics
+07|6SRTAoyzC6A|4154|Lecture 7 | Introduction to Robotics
+08|XrNdB4k5kUk|4511|Lecture 8 | Introduction to Robotics
+09|-B3cyFXrhos|4563|Lecture 9 | Introduction to Robotics
+10|7wIqGavQjTQ|3694|Lecture 10 | Introduction to Robotics
+11|o3Xx3vi6qzo|4421|Lecture 11 | Introduction to Robotics
+12|MCmkUJGYvOY|4417|Lecture 12 | Introduction to Robotics
+13|5-k2RzfIgoU|4211|Lecture 13 | Introduction to Robotics
+14|U3diaQ-iU0I|4395|Lecture 14 | Introduction to Robotics
+15|A6QEQFTBKnA|4345|Lecture 15 | Introduction to Robotics
+16|DdqNdpcFcF8|4214|Lecture 16 | Introduction to Robotics

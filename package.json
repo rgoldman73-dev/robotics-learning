@@ -1,0 +1,17 @@
+{
+  "name": "robotics-learning",
+  "version": "1.0.0",
+  "description": "Daily 30-minute modules for the free Stanford robotics path: offline-capable PWA",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "curriculum": "python3 scripts/build_curriculum.py"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "vite-plugin-pwa": "^0.20.5"
+  }
+}

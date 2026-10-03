@@ -1,0 +1,16 @@
+01|WsvFL-LjA6U|4748|Stanford CS234 Reinforcement Learning I Introduction to Reinforcement Learning I 2024 I Lecture 1
+02|gHdsUUGcBC0|4407|Stanford CS234 Reinforcement Learning I Tabular MDP Planning I 2024 I Lecture 2
+03|jjq51TRNVvk|4807|Stanford CS234 Reinforcement Learning I Policy Evaluation I 2024 I Lecture 3
+04|b_wvosA70f8|4715|Stanford CS234 Reinforcement Learning I Q learning and Function Approximation I 2024 I Lecture 4
+05|L6OVEmV3NcE|4108|Stanford CS234 Reinforcement Learning I Policy Search 1 I 2024 I Lecture 5
+06|8PwvNQ5WS-o|4764|Stanford CS234 Reinforcement Learning I Policy Search 2 I 2024 I Lecture 6
+07|4ngb0IZTg8I|4723|Stanford CS234 Reinforcement Learning I Policy Search 3 I 2024 I Lecture 7
+08|IEbuJtjqtMU|4439|Stanford CS234 Reinforcement Learning I Offline RL 1 I 2024 I Lecture 8
+09|Q7rl8ovBWwQ|4724|Stanford CS234 I Guest Lecture on DPO: Rafael Rafailov, Archit Sharma, Eric Mitchell I Lecture 9
+10|F6APGIAm5fw|4802|Stanford CS234 Reinforcement Learning I Offline RL 3 I 2024 I Lecture 10
+11|sqYii3nd78w|4494|Stanford CS234 Reinforcement Learning I Exploration 1 I 2024 I Lecture 11
+12|gFJNsfg_35E|4677|Stanford CS234 Reinforcement Learning I Exploration 2 I 2024 I Lecture 12
+13|pc7oayCSZmQ|4221|Stanford CS234 Reinforcement Learning I Exploration 3 I 2024 I Lecture 13
+14|UgANzoWc0nc|4409|Stanford CS234 Reinforcement Learning I Multi-Agent Game Playing I 2024 I Lecture 14
+15|FOlPpjNbHjE|4434|Stanford CS234 Reinforcement Learning I Emma Brunskill & Dan Webber I 2024 I Lecture 15
+16|eenJzay5aLo|4173|Stanford CS234 Reinforcement Learning I Value Alignment I 2024 I Lecture 16

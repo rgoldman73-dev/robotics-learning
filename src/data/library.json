@@ -1,0 +1,1378 @@
+{
+ "courses": [
+  {
+   "key": "engr108",
+   "name": "ENGR108",
+   "full": "Introduction to Applied Linear Algebra",
+   "who": "Stephen Boyd",
+   "playlist": "https://www.youtube.com/playlist?list=PLoROMvodv4rMz-WbFQtNUsUElIh2cPmN9",
+   "page": "https://web.stanford.edu/~boyd/vmls/",
+   "items": [
+    {
+     "idx": 1,
+     "id": "oR6G1MUMveE",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 1 - Introduction",
+     "min": 10,
+     "lecture": 1,
+     "inPath": true
+    },
+    {
+     "idx": 2,
+     "id": "vVspolIKPgc",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 2 - vector notation",
+     "min": 20,
+     "lecture": 2,
+     "inPath": true
+    },
+    {
+     "idx": 3,
+     "id": "wlPiJZ1DQjs",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 3 - vector examples",
+     "min": 18,
+     "lecture": 3,
+     "inPath": true
+    },
+    {
+     "idx": 4,
+     "id": "Ih3rIcBnnSg",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 4-addition & scalar mult.",
+     "min": 28,
+     "lecture": 4,
+     "inPath": true
+    },
+    {
+     "idx": 5,
+     "id": "YiCAeeBEo50",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 5 - VMLS inner product",
+     "min": 14,
+     "lecture": 5,
+     "inPath": true
+    },
+    {
+     "idx": 6,
+     "id": "wqcknO3fArY",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 6 - VMLS complexity",
+     "min": 6,
+     "lecture": 6,
+     "inPath": true
+    },
+    {
+     "idx": 7,
+     "id": "0rOEhJlNzhs",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 7 - VMLS linear functions",
+     "min": 14,
+     "lecture": 7,
+     "inPath": true
+    },
+    {
+     "idx": 8,
+     "id": "H0jR5nqueWk",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 8-VMLS taylor approx & reg",
+     "min": 21,
+     "lecture": 8,
+     "inPath": true
+    },
+    {
+     "idx": 9,
+     "id": "odR39SYhUH0",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 9 - VMLS norm",
+     "min": 15,
+     "lecture": 9,
+     "inPath": true
+    },
+    {
+     "idx": 10,
+     "id": "w77MlgsylqY",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 10 - VMLS distance",
+     "min": 14,
+     "lecture": 10,
+     "inPath": true
+    },
+    {
+     "idx": 11,
+     "id": "Gdl92kGR8Ho",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 11-VMLS std. deviation",
+     "min": 16,
+     "lecture": 11,
+     "inPath": true
+    },
+    {
+     "idx": 12,
+     "id": "4shS22XxZYw",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 12 - VMLS angle",
+     "min": 24,
+     "lecture": 12,
+     "inPath": true
+    },
+    {
+     "idx": 13,
+     "id": "liaZ_SCuE1w",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 13 - VMLS k means",
+     "min": 32,
+     "lecture": 13,
+     "inPath": false
+    },
+    {
+     "idx": 14,
+     "id": "a4GjONqojzM",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 14-VMLS k means app.",
+     "min": 19,
+     "lecture": 14,
+     "inPath": false
+    },
+    {
+     "idx": 15,
+     "id": "RikEADik56Q",
+     "title": "Stanford ENGR108: Intro to Applied Linear Algebra | 2020 | Lecture 15-VMLS linear ind.",
+     "min": 25,
+     "lecture": 15,
+     "inPath": true
+    },
+    {
+     "idx": 16,
+     "id": "IZhpqYeKZEM",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 16-VMLS Gram Schmidt algo.",
+     "min": 15,
+     "lecture": 16,
+     "inPath": true
+    },
+    {
+     "idx": 17,
+     "id": "dTeN9ypsVTU",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 17 - VMLS matrix notation",
+     "min": 42,
+     "lecture": 17,
+     "inPath": true
+    },
+    {
+     "idx": 18,
+     "id": "1_LEoD33gC0",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 18-VMLS matrix vector mult",
+     "min": 8,
+     "lecture": 18,
+     "inPath": true
+    },
+    {
+     "idx": 19,
+     "id": "JbtNJM1hM_4",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 19-VMLS matrix vector  ex.",
+     "min": 28,
+     "lecture": 19,
+     "inPath": true
+    },
+    {
+     "idx": 20,
+     "id": "jXN50fuRSqE",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 20-VMLS selector matrices",
+     "min": 6,
+     "lecture": 20,
+     "inPath": true
+    },
+    {
+     "idx": 21,
+     "id": "v7CH2ry-vrQ",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 21 - VMLS incidence matrix",
+     "min": 16,
+     "lecture": 21,
+     "inPath": true
+    },
+    {
+     "idx": 22,
+     "id": "kTg0vKppOl8",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 22 - VMLS convolution",
+     "min": 16,
+     "lecture": 22,
+     "inPath": true
+    },
+    {
+     "idx": 23,
+     "id": "tQ3nrT6cZGE",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 23-VMLS vector linear func",
+     "min": 16,
+     "lecture": 23,
+     "inPath": true
+    },
+    {
+     "idx": 24,
+     "id": "8SD2zRNWQcU",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 24-VMLS linear func models",
+     "min": 17,
+     "lecture": 24,
+     "inPath": true
+    },
+    {
+     "idx": 25,
+     "id": "6zWKMTVGkgQ",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 25 - VMLS linear equations",
+     "min": 23,
+     "lecture": 25,
+     "inPath": true
+    },
+    {
+     "idx": 26,
+     "id": "NS0jvPLtgGc",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 26-VMLS linear dynamic sys",
+     "min": 39,
+     "lecture": 26,
+     "inPath": true
+    },
+    {
+     "idx": 27,
+     "id": "t-G9n2uCa4k",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 27-VMLS matrix mult",
+     "min": 25,
+     "lecture": 27,
+     "inPath": true
+    },
+    {
+     "idx": 28,
+     "id": "NZfWiVuRMnI",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 28-VMLS matrix mult ex",
+     "min": 8,
+     "lecture": 28,
+     "inPath": true
+    },
+    {
+     "idx": 29,
+     "id": "vDCZpK96k7k",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 29-VMLS mtrx pwrs & QR fac",
+     "min": 16,
+     "lecture": 29,
+     "inPath": true
+    },
+    {
+     "idx": 30,
+     "id": "WFx4oV2JcRM",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 30-VMLS left & right inv.",
+     "min": 35,
+     "lecture": 30,
+     "inPath": true
+    },
+    {
+     "idx": 31,
+     "id": "lWEJPWFIgtw",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 31-VMLS solving linear eqs",
+     "min": 20,
+     "lecture": 31,
+     "inPath": true
+    },
+    {
+     "idx": 32,
+     "id": "R69sATXr1lM",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 32 - VMLS pseudo inverse",
+     "min": 14,
+     "lecture": 32,
+     "inPath": true
+    },
+    {
+     "idx": 33,
+     "id": "q7tuWtK2wWY",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 33 - VMLS least squares",
+     "min": 28,
+     "lecture": 33,
+     "inPath": true
+    },
+    {
+     "idx": 34,
+     "id": "5XhCN-44ua0",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 34-VMLS least squares ex.",
+     "min": 22,
+     "lecture": 34,
+     "inPath": true
+    },
+    {
+     "idx": 35,
+     "id": "1UssEuFDxd4",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 35-VMLS LS data fitting",
+     "min": 15,
+     "lecture": 35,
+     "inPath": true
+    },
+    {
+     "idx": 36,
+     "id": "R6sObXmPqXw",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 36-VMLS fit univariate fnc",
+     "min": 38,
+     "lecture": 36,
+     "inPath": true
+    },
+    {
+     "idx": 37,
+     "id": "SaERMg6BhWk",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 37 - VMLS validation",
+     "min": 31,
+     "lecture": 37,
+     "inPath": true
+    },
+    {
+     "idx": 38,
+     "id": "3LGyi_9Yn8s",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 38 - VMLS classification",
+     "min": 19,
+     "lecture": 38,
+     "inPath": true
+    },
+    {
+     "idx": 39,
+     "id": "J-xhBfJn1mw",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 39-VMLS LS classification",
+     "min": 17,
+     "lecture": 39,
+     "inPath": true
+    },
+    {
+     "idx": 40,
+     "id": "WaOr_4M8yfE",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 40-VMLS multiclass classif",
+     "min": 20,
+     "lecture": 40,
+     "inPath": true
+    },
+    {
+     "idx": 41,
+     "id": "p18I80UDjNs",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 41-VMLS multi objective LS",
+     "min": 21,
+     "lecture": 41,
+     "inPath": true
+    },
+    {
+     "idx": 42,
+     "id": "qr9uzoRkYK0",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 42-ctrl via multi obj LS",
+     "min": 12,
+     "lecture": 42,
+     "inPath": true
+    },
+    {
+     "idx": 43,
+     "id": "y44HXBjCZ0Q",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 43-MLS est & inversion",
+     "min": 24,
+     "lecture": 43,
+     "inPath": true
+    },
+    {
+     "idx": 44,
+     "id": "XTdzAMf0gG0",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 44-VMLS reg data fitting",
+     "min": 14,
+     "lecture": 44,
+     "inPath": true
+    },
+    {
+     "idx": 45,
+     "id": "vOFsja_YmJc",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 45-VMLS constrained LS",
+     "min": 22,
+     "lecture": 45,
+     "inPath": true
+    },
+    {
+     "idx": 46,
+     "id": "maCbeyno_mI",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 46-VMLS solve cstr LS prob",
+     "min": 17,
+     "lecture": 46,
+     "inPath": true
+    },
+    {
+     "idx": 47,
+     "id": "fKUea6LCzU8",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 47-VMLS portfolio optim",
+     "min": 50,
+     "lecture": 47,
+     "inPath": false
+    },
+    {
+     "idx": 48,
+     "id": "MNqVUDkudYM",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 48-VMLS linear quadrt ctrl",
+     "min": 24,
+     "lecture": 48,
+     "inPath": true
+    },
+    {
+     "idx": 49,
+     "id": "zu2nYmSfY6U",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 49-VMLS lin quadrt st est",
+     "min": 16,
+     "lecture": 49,
+     "inPath": true
+    },
+    {
+     "idx": 50,
+     "id": "nK6uSzKQlEs",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 50-VMLS nonlinear eq. & LS",
+     "min": 20,
+     "lecture": 50,
+     "inPath": true
+    },
+    {
+     "idx": 51,
+     "id": "UQsOyMj9lnI",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 51-VMLS Leven. Marq. algo",
+     "min": 20,
+     "lecture": 51,
+     "inPath": true
+    },
+    {
+     "idx": 52,
+     "id": "W0mamVcppBA",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 52-VMLS nonlin mdl fitting",
+     "min": 16,
+     "lecture": 52,
+     "inPath": true
+    },
+    {
+     "idx": 53,
+     "id": "SM_ZieyKicU",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 53-VMLS cstrd nonlinear LS",
+     "min": 17,
+     "lecture": 53,
+     "inPath": true
+    },
+    {
+     "idx": 54,
+     "id": "00njRSL8WNQ",
+     "title": "Stanford ENGR108: Introduction to Applied Linear Algebra | 2020 | Lecture 54-VMLS aug Lagragian mthd",
+     "min": 22,
+     "lecture": 54,
+     "inPath": true
+    }
+   ]
+  },
+  {
+   "key": "cs223a",
+   "name": "CS223A",
+   "full": "Introduction to Robotics",
+   "who": "Oussama Khatib",
+   "playlist": "https://www.youtube.com/playlist?list=PL65CC0384A1798ADF",
+   "page": "https://see.stanford.edu/Course/CS223A",
+   "items": [
+    {
+     "idx": 1,
+     "id": "0yD3uBshJB0",
+     "title": "Lecture 1 | Introduction to Robotics",
+     "min": 58,
+     "lecture": 1,
+     "inPath": true
+    },
+    {
+     "idx": 2,
+     "id": "QKyDrUonp98",
+     "title": "Lecture 2 | Introduction to Robotics",
+     "min": 68,
+     "lecture": 2,
+     "inPath": true
+    },
+    {
+     "idx": 3,
+     "id": "Mm5Tfm04cKk",
+     "title": "Lecture 3 | Introduction to Robotics",
+     "min": 77,
+     "lecture": 3,
+     "inPath": true
+    },
+    {
+     "idx": 4,
+     "id": "IY38-bK6yXs",
+     "title": "Lecture 4 | Introduction to Robotics",
+     "min": 72,
+     "lecture": 4,
+     "inPath": true
+    },
+    {
+     "idx": 5,
+     "id": "u79KfNgP1Cc",
+     "title": "Lecture 5 | Introduction to Robotics",
+     "min": 67,
+     "lecture": 5,
+     "inPath": true
+    },
+    {
+     "idx": 6,
+     "id": "fwHc0a8DMQ0",
+     "title": "Lecture 6 | Introduction to Robotics",
+     "min": 71,
+     "lecture": 6,
+     "inPath": true
+    },
+    {
+     "idx": 7,
+     "id": "6SRTAoyzC6A",
+     "title": "Lecture 7 | Introduction to Robotics",
+     "min": 69,
+     "lecture": 7,
+     "inPath": true
+    },
+    {
+     "idx": 8,
+     "id": "XrNdB4k5kUk",
+     "title": "Lecture 8 | Introduction to Robotics",
+     "min": 75,
+     "lecture": 8,
+     "inPath": true
+    },
+    {
+     "idx": 9,
+     "id": "-B3cyFXrhos",
+     "title": "Lecture 9 | Introduction to Robotics",
+     "min": 76,
+     "lecture": 9,
+     "inPath": true
+    },
+    {
+     "idx": 10,
+     "id": "7wIqGavQjTQ",
+     "title": "Lecture 10 | Introduction to Robotics",
+     "min": 62,
+     "lecture": 10,
+     "inPath": true
+    },
+    {
+     "idx": 11,
+     "id": "o3Xx3vi6qzo",
+     "title": "Lecture 11 | Introduction to Robotics",
+     "min": 74,
+     "lecture": 11,
+     "inPath": true
+    },
+    {
+     "idx": 12,
+     "id": "MCmkUJGYvOY",
+     "title": "Lecture 12 | Introduction to Robotics",
+     "min": 74,
+     "lecture": 12,
+     "inPath": true
+    },
+    {
+     "idx": 13,
+     "id": "5-k2RzfIgoU",
+     "title": "Lecture 13 | Introduction to Robotics",
+     "min": 70,
+     "lecture": 13,
+     "inPath": true
+    },
+    {
+     "idx": 14,
+     "id": "U3diaQ-iU0I",
+     "title": "Lecture 14 | Introduction to Robotics",
+     "min": 73,
+     "lecture": 14,
+     "inPath": true
+    },
+    {
+     "idx": 15,
+     "id": "A6QEQFTBKnA",
+     "title": "Lecture 15 | Introduction to Robotics",
+     "min": 72,
+     "lecture": 15,
+     "inPath": true
+    },
+    {
+     "idx": 16,
+     "id": "DdqNdpcFcF8",
+     "title": "Lecture 16 | Introduction to Robotics",
+     "min": 70,
+     "lecture": 16,
+     "inPath": true
+    }
+   ]
+  },
+  {
+   "key": "cs231n",
+   "name": "CS231N",
+   "full": "Deep Learning for Computer Vision (Spring 2025)",
+   "who": "Stanford CS231N staff",
+   "playlist": "https://www.youtube.com/playlist?list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16",
+   "page": "https://cs231n.stanford.edu/",
+   "items": [
+    {
+     "idx": 1,
+     "id": "2fq9wYslV0A",
+     "title": "Stanford CS231N Deep Learning for Computer Vision | Spring 2025 | Lecture 1: Introduction",
+     "min": 63,
+     "lecture": 1,
+     "inPath": true
+    },
+    {
+     "idx": 2,
+     "id": "pdqofxJeBN8",
+     "title": "Stanford CS231N | Spring 2025 | Lecture 2: Image Classification with Linear Classifiers",
+     "min": 67,
+     "lecture": 2,
+     "inPath": true
+    },
+    {
+     "idx": 3,
+     "id": "dyNGd06MWn4",
+     "title": "Stanford CS231N | Spring 2025 | Lecture 3: Regularization and Optimization",
+     "min": 69,
+     "lecture": 3,
+     "inPath": true
+    },
+    {
+     "idx": 4,
+     "id": "25zD5qJHYsk",
+     "title": "Stanford CS231N | Spring 2025 | Lecture 4: Neural Networks and Backpropagation",
+     "min": 77,
+     "lecture": 4,
+     "inPath": true
+    },
+    {
+     "idx": 5,
+     "id": "f3g1zGdxptI",
+     "title": "Stanford CS231N | Spring 2025 | Lecture 5: Image Classification with CNNs",
+     "min": 68,
+     "lecture": 5,
+     "inPath": true
+    },
+    {
+     "idx": 6,
+     "id": "aVJy4O5TOk8",
+     "title": "Stanford CS231N Deep Learning for Computer Vision | Spring 2025 | Lecture 6: CNN Architectures",
+     "min": 71,
+     "lecture": 6,
+     "inPath": true
+    },
+    {
+     "idx": 7,
+     "id": "kG2lAPBF7zA",
+     "title": "Stanford CS231N | Spring 2025 | Lecture 7: Recurrent Neural Networks",
+     "min": 72,
+     "lecture": 7,
+     "inPath": false
+    },
+    {
+     "idx": 8,
+     "id": "RQowiOF_FvQ",
+     "title": "Stanford CS231N | Spring 2025 | Lecture 8: Attention and Transformers",
+     "min": 67,
+     "lecture": 8,
+     "inPath": true
+    },
+    {
+     "idx": 9,
+     "id": "PTypu6GqEd4",
+     "title": "Stanford CS231N | Spring 2025 | Lecture 9: Object Detection, Image Segmentation, Visualizing",
+     "min": 74,
+     "lecture": 9,
+     "inPath": true
+    },
+    {
+     "idx": 10,
+     "id": "wElqklprhPE",
+     "title": "Stanford CS231N Deep Learning for Computer Vision | Spring 2025 | Lecture 10: Video Understanding",
+     "min": 69,
+     "lecture": 10,
+     "inPath": false
+    },
+    {
+     "idx": 11,
+     "id": "9MvD-XsowsE",
+     "title": "Stanford CS231N | Spring 2025 | Lecture 11: Large Scale Distributed Training",
+     "min": 73,
+     "lecture": 11,
+     "inPath": false
+    },
+    {
+     "idx": 12,
+     "id": "4howBU7THbM",
+     "title": "Stanford CS231N | Spring 2025 | Lecture 12: Self-Supervised Learning",
+     "min": 75,
+     "lecture": 12,
+     "inPath": false
+    },
+    {
+     "idx": 13,
+     "id": "zbHXQRUNlH0",
+     "title": "Stanford CS231N Deep Learning for Computer Vision | Spring 2025 | Lecture 13: Generative Models 1",
+     "min": 73,
+     "lecture": 13,
+     "inPath": false
+    },
+    {
+     "idx": 14,
+     "id": "Edr4uZFh4EE",
+     "title": "Stanford CS231N Deep Learning for Computer Vision | Spring 2025 | Lecture 14: Generative Models 2",
+     "min": 72,
+     "lecture": 14,
+     "inPath": false
+    },
+    {
+     "idx": 15,
+     "id": "7lxrKDKtykM",
+     "title": "Stanford CS231N Deep Learning for Computer Vision | Spring 2025 | Lecture 15: 3D Vision",
+     "min": 72,
+     "lecture": 15,
+     "inPath": true
+    },
+    {
+     "idx": 16,
+     "id": "mQOK0Mfyrkk",
+     "title": "Stanford CS231N Deep Learning for Computer Vision | Spring 2025 | Lecture 16: Vision and Language",
+     "min": 70,
+     "lecture": 16,
+     "inPath": false
+    },
+    {
+     "idx": 17,
+     "id": "XSfmOH_xVSU",
+     "title": "Stanford CS231N Deep Learning for Computer Vision | Spring 2025 | Lecture 17: Robot Learning",
+     "min": 79,
+     "lecture": 17,
+     "inPath": true
+    },
+    {
+     "idx": 18,
+     "id": "g8UaBfj6Sh8",
+     "title": "Stanford CS231N Deep Learning for Computer Vision | Spring 2025 | Lecture 18: Human-Centered AI",
+     "min": 65,
+     "lecture": 18,
+     "inPath": false
+    }
+   ]
+  },
+  {
+   "key": "ee259",
+   "name": "EE259",
+   "full": "Principles of Sensing for Autonomy (2023)",
+   "who": "Stanford EE259 (2023)",
+   "playlist": "https://www.youtube.com/playlist?list=PLoROMvodv4rOhE007XQu707Dy52qXiZGV",
+   "page": null,
+   "items": [
+    {
+     "idx": 1,
+     "id": "VvoKJ6xvssQ",
+     "title": "Stanford EE259 Principles of Sensing for Autonomy I Introduction, GPS overview I 2023 I Lecture 1",
+     "min": 72,
+     "lecture": 1,
+     "inPath": false
+    },
+    {
+     "idx": 2,
+     "id": "v5OW9aZHWfk",
+     "title": "Stanford EE259 I GPS principle of operation, ranging codes & navigation messages I 2023 I Lecture 2",
+     "min": 78,
+     "lecture": 2,
+     "inPath": false
+    },
+    {
+     "idx": 3,
+     "id": "a_feUoPuePA",
+     "title": "Stanford EE259 I GPS satellite orbits, PRN ranging I 2023 I Lecture 3",
+     "min": 80,
+     "lecture": 3,
+     "inPath": false
+    },
+    {
+     "idx": 4,
+     "id": "14ZmOyvG9aQ",
+     "title": "Stanford EE259 I GPS receiver architecture, acquisition & tracking, position est. I 2023 I Lecture 4",
+     "min": 81,
+     "lecture": 4,
+     "inPath": false
+    },
+    {
+     "idx": 5,
+     "id": "JZ9uAG_NXi0",
+     "title": "Stanford EE259 I Inertial sensors: accelerometer principle of operation & architecture I 2023 I Lec5",
+     "min": 80,
+     "lecture": 5,
+     "inPath": true
+    },
+    {
+     "idx": 6,
+     "id": "qg9uN_pYF8E",
+     "title": "Stanford EE259 I Inertial sensors: gyroscope principle of operation and architecture I 2023 I Lec. 6",
+     "min": 81,
+     "lecture": 6,
+     "inPath": true
+    },
+    {
+     "idx": 7,
+     "id": "h8vVU3vjHpY",
+     "title": "Stanford EE259 I Inertial navigation, dead reckoning I 2023 I Lecture 7",
+     "min": 79,
+     "lecture": 7,
+     "inPath": true
+    },
+    {
+     "idx": 8,
+     "id": "fQbHSX-G_Pg",
+     "title": "Stanford EE259 I Ultrasonic sensor (Sonar) principle of operation & architecture I 2023 I Lecture 8",
+     "min": 81,
+     "lecture": 8,
+     "inPath": false
+    },
+    {
+     "idx": 9,
+     "id": "AkTkEEfeXLA",
+     "title": "Stanford EE259 I Sonar ranging and bearing angle estimation I 2023 I Lecture 9",
+     "min": 83,
+     "lecture": 9,
+     "inPath": false
+    },
+    {
+     "idx": 10,
+     "id": "CPkht7C0tEY",
+     "title": "Stanford EE259 I Radar principle of operation & architectures (pulsed, FMCW, PMCW) I 2023 I Lec. 10",
+     "min": 79,
+     "lecture": 10,
+     "inPath": false
+    },
+    {
+     "idx": 11,
+     "id": "tWqFcSbD8FA",
+     "title": "Stanford EE259 I Radar antenna designs and characteristics I 2023 I Lecture 11",
+     "min": 79,
+     "lecture": 11,
+     "inPath": false
+    },
+    {
+     "idx": 12,
+     "id": "zfrudmIQvik",
+     "title": "Stanford EE259 I Radar range and velocity estimation, performance tradeoffs I 2023 I Lecture 12",
+     "min": 71,
+     "lecture": 12,
+     "inPath": false
+    },
+    {
+     "idx": 13,
+     "id": "56MwUp5FnUo",
+     "title": "Stanford EE259 I 2023 I Lecture 12 (Extra Session)",
+     "min": 83,
+     "lecture": 12,
+     "inPath": false
+    },
+    {
+     "idx": 14,
+     "id": "2JYMXDoHiDY",
+     "title": "Stanford EE259 I MIMO imaging radar, direction of arrival est, target detection I 2023 I Lecture 13",
+     "min": 81,
+     "lecture": 13,
+     "inPath": false
+    },
+    {
+     "idx": 15,
+     "id": "RajTLcrJDOo",
+     "title": "Stanford EE259 I Waveform orthogonality in MIMO radar, radar noise and interference I 2023 I Lec. 14",
+     "min": 83,
+     "lecture": 14,
+     "inPath": false
+    },
+    {
+     "idx": 16,
+     "id": "JlQKunkJgbA",
+     "title": "Stanford EE259 I Lidar principle of operation, laser physics I 2023 I Lecture 15",
+     "min": 82,
+     "lecture": 15,
+     "inPath": true
+    },
+    {
+     "idx": 17,
+     "id": "mvIDwIWQP_M",
+     "title": "Stanford EE259 I Gaussian beams, beam scanning techniques I 2023 I Lecture 16",
+     "min": 82,
+     "lecture": 16,
+     "inPath": false
+    },
+    {
+     "idx": 18,
+     "id": "0XBan0nC1Ok",
+     "title": "Stanford EE259 I Photodetection principles (direct vs. coherent), lidar system arch. I 2023 I Lec 17",
+     "min": 82,
+     "lecture": 17,
+     "inPath": false
+    },
+    {
+     "idx": 19,
+     "id": "VvKJN8yS1k4",
+     "title": "Stanford EE259 I Lidar range and direction of arrival estimation I 2023 I Lecture 18",
+     "min": 80,
+     "lecture": 18,
+     "inPath": false
+    },
+    {
+     "idx": 20,
+     "id": "NQlYpDQf-SE",
+     "title": "Stanford EE259 I Camera principle of operation and architectures, image formation I 2023 I Lec. 19",
+     "min": 77,
+     "lecture": 19,
+     "inPath": true
+    },
+    {
+     "idx": 21,
+     "id": "BpZaQC5WiZo",
+     "title": "Stanford EE259 I Lenses, image sensors, image signal processing I 2023 I Lecture 20",
+     "min": 129,
+     "lecture": 20,
+     "inPath": false
+    }
+   ]
+  },
+  {
+   "key": "aa203",
+   "name": "AA203",
+   "full": "Optimal and Learning-Based Control (Spring 2026)",
+   "who": "Marco Pavone, Daniele Gammelli",
+   "playlist": "https://www.youtube.com/playlist?list=PLoROMvodv4rNsMOMF1LG3ohsTqZVJVeVp",
+   "page": "https://stanfordasl.github.io/aa203/sp2526/",
+   "items": [
+    {
+     "idx": 1,
+     "id": "ZXMThMHFD_w",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 19: Model-Based RL",
+     "min": 82,
+     "lecture": 19,
+     "inPath": true
+    },
+    {
+     "idx": 2,
+     "id": "a1g9U_5zO54",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 18: RL Policy Optimization",
+     "min": 80,
+     "lecture": 18,
+     "inPath": true
+    },
+    {
+     "idx": 3,
+     "id": "zanXSI7zSws",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 17: RL Value-Based Methods",
+     "min": 78,
+     "lecture": 17,
+     "inPath": true
+    },
+    {
+     "idx": 4,
+     "id": "cqPbt3OfRK4",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 16: Fundamentals of RL",
+     "min": 74,
+     "lecture": 16,
+     "inPath": true
+    },
+    {
+     "idx": 5,
+     "id": "udHX5Auj7ik",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 15: Imitation Learning",
+     "min": 80,
+     "lecture": 15,
+     "inPath": true
+    },
+    {
+     "idx": 6,
+     "id": "7YdOx-ih0II",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 14: Intro to IL and RL",
+     "min": 74,
+     "lecture": 14,
+     "inPath": true
+    },
+    {
+     "idx": 7,
+     "id": "RtJSHiqOdgQ",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 13: Intro to Learning",
+     "min": 80,
+     "lecture": 13,
+     "inPath": true
+    },
+    {
+     "idx": 8,
+     "id": "8Elrw30y0tg",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 12: Feasibility of MPC",
+     "min": 75,
+     "lecture": 12,
+     "inPath": true
+    },
+    {
+     "idx": 9,
+     "id": "3_gxaB_Pp3k",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 11: Introduction to MPC",
+     "min": 74,
+     "lecture": 11,
+     "inPath": true
+    },
+    {
+     "idx": 10,
+     "id": "Fl5EjGhQjgs",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 10: Reachibility Analysis",
+     "min": 77,
+     "lecture": 10,
+     "inPath": true
+    },
+    {
+     "idx": 11,
+     "id": "C9mLpI8Td9g",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 9: Stochastic Dyn. Program",
+     "min": 77,
+     "lecture": 9,
+     "inPath": true
+    },
+    {
+     "idx": 12,
+     "id": "1YdgSwEtf_s",
+     "title": "AStanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 8: LQR-Style Algorithms",
+     "min": 74,
+     "lecture": 8,
+     "inPath": true
+    },
+    {
+     "idx": 13,
+     "id": "hy-e9g4nugE",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 7: Dynamic Programming",
+     "min": 75,
+     "lecture": 7,
+     "inPath": true
+    },
+    {
+     "idx": 14,
+     "id": "zX8raxUa2DE",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 6: Direct Methods",
+     "min": 80,
+     "lecture": 6,
+     "inPath": true
+    },
+    {
+     "idx": 15,
+     "id": "R4_fHzTo0IM",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 5: Computational Methods",
+     "min": 78,
+     "lecture": 5,
+     "inPath": true
+    },
+    {
+     "idx": 16,
+     "id": "7rejaoMWviw",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 4: Indirect Methods",
+     "min": 85,
+     "lecture": 4,
+     "inPath": true
+    },
+    {
+     "idx": 17,
+     "id": "duZJ2_ajLso",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 3: Calculus of Variations",
+     "min": 83,
+     "lecture": 3,
+     "inPath": true
+    },
+    {
+     "idx": 18,
+     "id": "FbkNYklySak",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 2: Optimization Theory",
+     "min": 79,
+     "lecture": 2,
+     "inPath": true
+    },
+    {
+     "idx": 19,
+     "id": "Au2stLALZew",
+     "title": "Stanford AA203 Optimal and Learning-Based Control | Spring 2026 | Lecture 1: Course Overview",
+     "min": 73,
+     "lecture": 1,
+     "inPath": true
+    }
+   ]
+  },
+  {
+   "key": "cs224r",
+   "name": "CS224R",
+   "full": "Deep Reinforcement Learning (Spring 2025)",
+   "who": "Chelsea Finn",
+   "playlist": "https://www.youtube.com/playlist?list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL",
+   "page": "https://cs224r.stanford.edu/",
+   "items": [
+    {
+     "idx": 1,
+     "id": "EvHRQhMX7_w",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 1: Class Intro",
+     "min": 53,
+     "lecture": 1,
+     "inPath": false
+    },
+    {
+     "idx": 2,
+     "id": "WxRDyObrm_M",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 2: Imitation Learning",
+     "min": 67,
+     "lecture": 2,
+     "inPath": true
+    },
+    {
+     "idx": 3,
+     "id": "KCAOXd4IO9o",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 3: Policy Gradients",
+     "min": 63,
+     "lecture": 3,
+     "inPath": true
+    },
+    {
+     "idx": 4,
+     "id": "oejFZShW9hU",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 4: Actor-Critic Methods",
+     "min": 64,
+     "lecture": 4,
+     "inPath": true
+    },
+    {
+     "idx": 5,
+     "id": "cRGKc-nAWho",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 5: Off-Policy Actor Critic",
+     "min": 69,
+     "lecture": 5,
+     "inPath": false
+    },
+    {
+     "idx": 6,
+     "id": "-7kv6jf0isQ",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 6: Q-Learning",
+     "min": 62,
+     "lecture": 6,
+     "inPath": true
+    },
+    {
+     "idx": 7,
+     "id": "lRDaXnPIzks",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 7: Offline RL",
+     "min": 68,
+     "lecture": 7,
+     "inPath": true
+    },
+    {
+     "idx": 8,
+     "id": "PDIxDhA9Z6Y",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 8: Reward Learning",
+     "min": 66,
+     "lecture": 8,
+     "inPath": false
+    },
+    {
+     "idx": 9,
+     "id": "XKLGuwvSKvI",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 9: RL for LLMs",
+     "min": 63,
+     "lecture": 9,
+     "inPath": false
+    },
+    {
+     "idx": 10,
+     "id": "O2VpNnwB4lM",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 10: RL for LLM Reasoning",
+     "min": 70,
+     "lecture": 10,
+     "inPath": false
+    },
+    {
+     "idx": 11,
+     "id": "PvqyGnOirgA",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 11: Model-Based RL",
+     "min": 73,
+     "lecture": 11,
+     "inPath": true
+    },
+    {
+     "idx": 12,
+     "id": "qNdsI_4AQJw",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 12: Multi-Task RL",
+     "min": 70,
+     "lecture": 12,
+     "inPath": false
+    },
+    {
+     "idx": 13,
+     "id": "wSiyEpvoGkA",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 13: Meta RL",
+     "min": 69,
+     "lecture": 13,
+     "inPath": false
+    },
+    {
+     "idx": 14,
+     "id": "4tlSKdi8teU",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 14: Exploration",
+     "min": 73,
+     "lecture": 14,
+     "inPath": false
+    },
+    {
+     "idx": 15,
+     "id": "iKWYLSVAtfM",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 15: Hierarchical RL and IL",
+     "min": 70,
+     "lecture": 15,
+     "inPath": false
+    },
+    {
+     "idx": 16,
+     "id": "rbaWQQLrzl0",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 16: RL for Robots",
+     "min": 66,
+     "lecture": 16,
+     "inPath": true
+    },
+    {
+     "idx": 17,
+     "id": "Hp1WBWghrak",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 17: Advancing Robot Intelligence",
+     "min": 50,
+     "lecture": 17,
+     "inPath": true
+    },
+    {
+     "idx": 18,
+     "id": "07MQNMcxhZU",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Tutorial Session: Review of Q-Learning",
+     "min": 51,
+     "lecture": null,
+     "inPath": false
+    },
+    {
+     "idx": 19,
+     "id": "FacJ_1tTSx4",
+     "title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 18: Frontiers",
+     "min": 71,
+     "lecture": 18,
+     "inPath": true
+    }
+   ]
+  },
+  {
+   "key": "cs234",
+   "name": "CS234",
+   "full": "Reinforcement Learning (optional deeper theory)",
+   "who": "Emma Brunskill",
+   "playlist": "https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX",
+   "page": "https://web.stanford.edu/class/cs234/",
+   "items": [
+    {
+     "idx": 1,
+     "id": "WsvFL-LjA6U",
+     "title": "Stanford CS234 Reinforcement Learning I Introduction to Reinforcement Learning I 2024 I Lecture 1",
+     "min": 79,
+     "lecture": 1,
+     "inPath": false
+    },
+    {
+     "idx": 2,
+     "id": "gHdsUUGcBC0",
+     "title": "Stanford CS234 Reinforcement Learning I Tabular MDP Planning I 2024 I Lecture 2",
+     "min": 73,
+     "lecture": 2,
+     "inPath": false
+    },
+    {
+     "idx": 3,
+     "id": "jjq51TRNVvk",
+     "title": "Stanford CS234 Reinforcement Learning I Policy Evaluation I 2024 I Lecture 3",
+     "min": 80,
+     "lecture": 3,
+     "inPath": false
+    },
+    {
+     "idx": 4,
+     "id": "b_wvosA70f8",
+     "title": "Stanford CS234 Reinforcement Learning I Q learning and Function Approximation I 2024 I Lecture 4",
+     "min": 79,
+     "lecture": 4,
+     "inPath": false
+    },
+    {
+     "idx": 5,
+     "id": "L6OVEmV3NcE",
+     "title": "Stanford CS234 Reinforcement Learning I Policy Search 1 I 2024 I Lecture 5",
+     "min": 68,
+     "lecture": 5,
+     "inPath": false
+    },
+    {
+     "idx": 6,
+     "id": "8PwvNQ5WS-o",
+     "title": "Stanford CS234 Reinforcement Learning I Policy Search 2 I 2024 I Lecture 6",
+     "min": 79,
+     "lecture": 6,
+     "inPath": false
+    },
+    {
+     "idx": 7,
+     "id": "4ngb0IZTg8I",
+     "title": "Stanford CS234 Reinforcement Learning I Policy Search 3 I 2024 I Lecture 7",
+     "min": 79,
+     "lecture": 7,
+     "inPath": false
+    },
+    {
+     "idx": 8,
+     "id": "IEbuJtjqtMU",
+     "title": "Stanford CS234 Reinforcement Learning I Offline RL 1 I 2024 I Lecture 8",
+     "min": 74,
+     "lecture": 8,
+     "inPath": false
+    },
+    {
+     "idx": 9,
+     "id": "Q7rl8ovBWwQ",
+     "title": "Stanford CS234 I Guest Lecture on DPO: Rafael Rafailov, Archit Sharma, Eric Mitchell I Lecture 9",
+     "min": 79,
+     "lecture": 9,
+     "inPath": false
+    },
+    {
+     "idx": 10,
+     "id": "F6APGIAm5fw",
+     "title": "Stanford CS234 Reinforcement Learning I Offline RL 3 I 2024 I Lecture 10",
+     "min": 80,
+     "lecture": 10,
+     "inPath": false
+    },
+    {
+     "idx": 11,
+     "id": "sqYii3nd78w",
+     "title": "Stanford CS234 Reinforcement Learning I Exploration 1 I 2024 I Lecture 11",
+     "min": 75,
+     "lecture": 11,
+     "inPath": false
+    },
+    {
+     "idx": 12,
+     "id": "gFJNsfg_35E",
+     "title": "Stanford CS234 Reinforcement Learning I Exploration 2 I 2024 I Lecture 12",
+     "min": 78,
+     "lecture": 12,
+     "inPath": false
+    },
+    {
+     "idx": 13,
+     "id": "pc7oayCSZmQ",
+     "title": "Stanford CS234 Reinforcement Learning I Exploration 3 I 2024 I Lecture 13",
+     "min": 70,
+     "lecture": 13,
+     "inPath": false
+    },
+    {
+     "idx": 14,
+     "id": "UgANzoWc0nc",
+     "title": "Stanford CS234 Reinforcement Learning I Multi-Agent Game Playing I 2024 I Lecture 14",
+     "min": 73,
+     "lecture": 14,
+     "inPath": false
+    },
+    {
+     "idx": 15,
+     "id": "FOlPpjNbHjE",
+     "title": "Stanford CS234 Reinforcement Learning I Emma Brunskill & Dan Webber I 2024 I Lecture 15",
+     "min": 74,
+     "lecture": 15,
+     "inPath": false
+    },
+    {
+     "idx": 16,
+     "id": "eenJzay5aLo",
+     "title": "Stanford CS234 Reinforcement Learning I Value Alignment I 2024 I Lecture 16",
+     "min": 70,
+     "lecture": 16,
+     "inPath": false
+    }
+   ]
+  }
+ ]
+}
