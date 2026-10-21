@@ -41,6 +41,10 @@ Month 3 CS231N (10: 1–6, 8, 9, 15, 17) + EE259 (5: 5, 6, 7, 15, 19) · Month 4
 Month 6 CS231N L17 again, CS224R L17 & L18, 5 seminars + the Finn/Ng conversation, and the final project.
 
 **Month 7 (bonus, added 2026-10-21):** MIT 6.4210 Robotic Manipulation (Russ Tedrake, Fall 2023, 23 lectures; book https://manipulation.csail.mit.edu, code https://github.com/RussTedrake/manipulation), shared by @0x_meden, plus a career-map sidebar from his article on 412 humanoid robot job posts. Appended after Month 6 so existing module ids (and saved progress) do not change.
+
+**Month 8 (bonus, added 2026-10-21, m239-m283):** MIT 6.8210 Underactuated Robotics (Russ Tedrake, Spring 2024; 21 recorded lectures, L2/L3/L13 were not posted; book https://underactuated.mit.edu, code https://github.com/RobotLocomotion/drake), shared by @0x_meden (https://x.com/0x_meden/status/2112875067273068637), plus a swing-up/stabilize/verify project.
+
+**Month 9 (bonus, added 2026-10-21, m284-m319):** ETH Zurich Robot Learning: From Fundamentals to Foundation Models (Oier Mees, Spring 2026; 11 lectures + 10 guest talks; https://cvg.ethz.ch/lectures/Robot-Learning/, homeworks https://github.com/mees-robot-learning-course/ethz-course-2026), shared by @rahim_mirani (https://x.com/rahim_mirani/status/2112282923395379537), plus a homework + paper-replication project.
 = 116 distinct lectures/talks in the path (+3 optional ENGR108 lectures = the article's 119), ≈ 95 h of video, 24 project modules (the article's six practice projects broken into sessions) and 6 monthly milestone checks.
 
 ### Honest notes / known gaps

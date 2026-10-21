@@ -24,6 +24,12 @@ PLAYLISTS = {
     pl='PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL', page='https://cs224r.stanford.edu/'),
  'mit64210': dict(name='MIT 6.4210', full='Robotic Manipulation: Perception, Planning, and Control (Fall 2023)', who='Russ Tedrake (MIT)',
     pl=None, url='https://www.youtube.com/watch?v=v04rn86Dehg', page='https://manipulation.csail.mit.edu'),
+ 'underactuated': dict(name='MIT 6.8210', full='Underactuated Robotics (Spring 2024)', who='Russ Tedrake (MIT)',
+    pl=None, url='https://www.youtube.com/watch?v=uyyBT-MHhLE', page='https://underactuated.mit.edu'),
+ 'ethrl': dict(name='ETH Robot Learning', full='Robot Learning: From Fundamentals to Foundation Models (Spring 2026)', who='Oier Mees (ETH Zurich)',
+    pl=None, url='https://www.youtube.com/watch?v=X0k14u6pSxw', page='https://cvg.ethz.ch/lectures/Robot-Learning/'),
+ 'ethguest': dict(name='ETH guest', full='ETH Robot Learning 2026: guest lectures', who='Various (see each talk)',
+    pl=None, url='https://www.youtube.com/watch?v=aG8NPTPhwkE', page='https://cvg.ethz.ch/lectures/Robot-Learning/'),
  'cs234': dict(name='CS234', full='Reinforcement Learning (optional deeper theory)', who='Emma Brunskill',
     pl='PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX', page='https://web.stanford.edu/class/cs234/'),
 }
@@ -204,7 +210,7 @@ def project_module(pid, c, month, kind):
 
 def main():
     rows = {k: read_pl(k) for k in PLAYLISTS}
-    C = {k: parse_md(f'{ROOT}/content/{k}.md') for k in ['engr108', 'cs223a', 'cs231n', 'ee259', 'aa203', 'cs224r', 'mit64210']}
+    C = {k: parse_md(f'{ROOT}/content/{k}.md') for k in ['engr108', 'cs223a', 'cs231n', 'ee259', 'aa203', 'cs224r', 'mit64210', 'underactuated', 'ethrl', 'ethguest']}
     SEM = parse_md(f'{ROOT}/content/seminars.md')
     PROJ = parse_md(f'{ROOT}/content/projects.md')
 
@@ -304,6 +310,20 @@ def main():
     for lec in L('mit64210', range(1, 24)):
         M += modules_for_lecture('mit64210', lec, 7)
     M.append(pm('M7'))
+    # ---- Month 8 (bonus): MIT 6.8210 Underactuated Robotics ----
+    M.append(pm('P8.0'))
+    for lec in L('underactuated', [1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]):
+        M += modules_for_lecture('underactuated', lec, 8)
+        if lec['n'] == 12: M.append(pm('P8.1'))
+    M.append(pm('M8'))
+    # ---- Month 9 (bonus): ETH Zurich Robot Learning, each guest talk after its lecture ----
+    M.append(pm('P9.0'))
+    for lec in L('ethrl', range(1, 12)):
+        M += modules_for_lecture('ethrl', lec, 9)
+        for g in L('ethguest', [lec['n']]) if str(lec['n']) in C['ethguest'] else []:
+            ms = modules_for_lecture('ethguest', g, 9); [m.update(seminar=True) for m in ms]; M += ms
+        if lec['n'] == 5: M.append(pm('P9.1'))
+    M.append(pm('M9'))
 
     PH = {1:('Month 1','The math everything else stands on','ENGR108 Applied Linear Algebra (Boyd)'),
           2:('Month 2',"The robot's body",'CS223A Introduction to Robotics (Khatib)'),
@@ -311,7 +331,9 @@ def main():
           4:('Month 4','Planning and control','AA203 lectures 1-12 (Pavone, Gammelli)'),
           5:('Month 5','Teaching robots instead of programming them','AA203 13-19 + CS224R (Finn)'),
           6:('Month 6','The frontier, and your first real robot','Seminars + final project'),
-          7:('Month 7 (bonus)','Robotic manipulation, end to end','MIT 6.4210 (Tedrake) + humanoid career map')}
+          7:('Month 7 (bonus)','Robotic manipulation, end to end','MIT 6.4210 (Tedrake) + humanoid career map'),
+          8:('Month 8 (bonus)','Underactuated robotics: walking, balancing, humanoids','MIT 6.8210 (Tedrake)'),
+          9:('Month 9 (bonus)','Robot learning, fundamentals to foundation models','ETH Zurich Robot Learning 2026 (Mees) + guest talks')}
     for i, m in enumerate(M):
         m['id'] = f'm{i+1:03d}'; m['day'] = i+1; m['minutes'] = 30
     # sanity

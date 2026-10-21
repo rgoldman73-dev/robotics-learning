@@ -1,9 +1,9 @@
 {
  "meta": {
   "source": "X Article by @0x_meden: Stanford's Robotics Degree, for Free: the 6-month path to Robot Learning Engineer",
-  "modules": 238,
-  "pathLectures": 139,
-  "videoHours": 124.5,
+  "modules": 319,
+  "pathLectures": 181,
+  "videoHours": 169.2,
   "months": {
    "1": {
     "label": "Month 1",
@@ -39,6 +39,16 @@
     "label": "Month 7 (bonus)",
     "title": "Robotic manipulation, end to end",
     "sub": "MIT 6.4210 (Tedrake) + humanoid career map"
+   },
+   "8": {
+    "label": "Month 8 (bonus)",
+    "title": "Underactuated robotics: walking, balancing, humanoids",
+    "sub": "MIT 6.8210 (Tedrake)"
+   },
+   "9": {
+    "label": "Month 9 (bonus)",
+    "title": "Robot learning, fundamentals to foundation models",
+    "sub": "ETH Zurich Robot Learning 2026 (Mees) + guest talks"
    }
   },
   "built": "2026-10-03"
@@ -11746,6 +11756,4116 @@
    "videoMin": 0,
    "id": "m238",
    "day": 238,
+   "minutes": 30
+  },
+  {
+   "kind": "project",
+   "month": 8,
+   "title": "Start here: MIT 6.8210 Underactuated Robotics (Tedrake)",
+   "course": "Project",
+   "watch": [],
+   "read": [],
+   "topics": [],
+   "steps": "Bonus month, shared by @0x_meden (x.com/0x_meden/status/2112875067273068637). Russ Tedrake's MIT 6.8210 \"Underactuated Robotics\" (Spring 2024) is free: 21 recorded lectures (about 28 h) on his YouTube channel, a free 21-chapter textbook, and Python notebooks built on Drake. \"Underactuated\" means the robot has fewer motors than ways it can move: a walking humanoid can't push its body anywhere it wants, so it falls forward and catches itself. Topics: pendulums, acrobots, cart-poles, quadrotors, dynamic programming, LQR, Lyapunov analysis, trajectory optimization, control through contact, humanoids (L16, from the professor who led MIT's DARPA Robotics Challenge Atlas team), motion planning, robust/stochastic control and imitation learning. It is the deep version of Month 4 (AA203): same LQR/DP/MPC ideas, applied to walking and balancing robots. It pairs with Month 7 (same instructor, same Drake toolkit). Note: the Spring 2024 recordings skip lectures 2, 3 and 13 (they were not posted), so the numbering jumps; the book covers that material (Ch 2 Simple Pendulum, Ch 3 Acrobots/Cart-Poles, Ch 8 LQR). Today: bookmark the book, read Ch 1-2, and open one notebook.",
+   "questions": [
+    {
+     "q": "What does \"underactuated\" mean?",
+     "a": "The robot cannot command arbitrary accelerations in all its degrees of freedom (fewer actuators than DOFs, or limits), e.g. a humanoid's floating base."
+    },
+    {
+     "q": "Which earlier month does this course deepen?",
+     "a": "Month 4 (AA203 optimal control: DP, LQR, MPC, trajectory optimization)."
+    },
+    {
+     "q": "Which lecture is about humanoids?",
+     "a": "Lecture 16 (79 minutes), taught by the professor who led MIT's Atlas team in the DARPA Robotics Challenge."
+    }
+   ],
+   "exercise": "Read underactuated.mit.edu Ch 2 (The Simple Pendulum) to cover the unrecorded lectures 2-3, and run its first notebook.",
+   "recap": "The math behind robots that walk, run and flip: exploit the dynamics instead of fighting them.",
+   "speaker": null,
+   "seminar": false,
+   "links": [
+    {
+     "label": "Textbook (free)",
+     "url": "https://underactuated.mit.edu"
+    },
+    {
+     "label": "Lecture 1 on YouTube",
+     "url": "https://www.youtube.com/watch?v=uyyBT-MHhLE"
+    },
+    {
+     "label": "Course notebooks repo",
+     "url": "https://github.com/RussTedrake/underactuated"
+    },
+    {
+     "label": "Drake",
+     "url": "https://github.com/RobotLocomotion/drake"
+    },
+    {
+     "label": "Source post (@0x_meden)",
+     "url": "https://x.com/0x_meden/status/2112875067273068637"
+    },
+    {
+     "label": "Related: Month 4 (AA203 control)",
+     "url": "https://rgoldman73-dev.github.io/robotics-learning/#/modules?month=4"
+    },
+    {
+     "label": "Related: Month 7 (MIT 6.4210, same instructor)",
+     "url": "https://rgoldman73-dev.github.io/robotics-learning/#/modules?month=7"
+    }
+   ],
+   "videoMin": 0,
+   "id": "m239",
+   "day": 239,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L1: Robot dynamics and model-based control (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 1,
+     "title": "6.8210 Spring 2024 Lecture 1: Robot dynamics and model-based control",
+     "id": "uyyBT-MHhLE",
+     "url": "https://www.youtube.com/watch?v=uyyBT-MHhLE",
+     "start": 0.0,
+     "end": 42.6,
+     "lengthMin": 85.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 1 \"Fully-actuated vs Underactuated Systems\" (intro.html) and Appendix B Multi-Body"
+   ],
+   "topics": [
+    "Fully-actuated vs underactuated",
+    "manipulator equations",
+    "feedback equivalence",
+    "why walking robots are underactuated"
+   ],
+   "questions": [
+    {
+     "q": "What makes a system underactuated?",
+     "a": "It cannot command an arbitrary instantaneous acceleration in every degree of freedom: it has fewer independent actuators than configuration DOFs (or input limits), so B in the manipulator equation is not full rank."
+    },
+    {
+     "q": "Write the manipulator equations.",
+     "a": "M(q) qdd + C(q, qd) qd = tau_g(q) + B u."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Fully-actuated vs underactuated, manipulator equations. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 42.6,
+   "id": "m240",
+   "day": 240,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L1: Robot dynamics and model-based control (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 1,
+     "title": "6.8210 Spring 2024 Lecture 1: Robot dynamics and model-based control",
+     "id": "uyyBT-MHhLE",
+     "url": "https://www.youtube.com/watch?v=uyyBT-MHhLE&t=2553s",
+     "start": 42.6,
+     "end": 85.1,
+     "lengthMin": 85.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 1 \"Fully-actuated vs Underactuated Systems\" (intro.html) and Appendix B Multi-Body"
+   ],
+   "topics": [
+    "Fully-actuated vs underactuated",
+    "manipulator equations",
+    "feedback equivalence",
+    "why walking robots are underactuated"
+   ],
+   "questions": [
+    {
+     "q": "Why is a walking humanoid underactuated even with a motor in every joint?",
+     "a": "The floating base (its 6-DOF body pose) has no actuator; it can only be moved through contact forces with the ground."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Write M(q), C and tau_g for a simple pendulum and a 2-link arm, then check against the Month 2 CS223A dynamics you derived.",
+   "recap": "Underactuated control means exploiting the natural dynamics rather than cancelling them; the robot cannot simply be pushed wherever you want.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 42.6,
+   "id": "m241",
+   "day": 241,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L4: Dynamic programming II (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 4,
+     "title": "6.8210 Spring 2024 Lecture 4: Dynamic Programming II",
+     "id": "GElVy0WTOys",
+     "url": "https://www.youtube.com/watch?v=GElVy0WTOys",
+     "start": 0.0,
+     "end": 41.1,
+     "lengthMin": 82.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 7 \"Dynamic Programming\" (dp.html)"
+   ],
+   "topics": [
+    "Optimal control as graph search",
+    "value iteration",
+    "continuous dynamic programming",
+    "Hamilton-Jacobi-Bellman"
+   ],
+   "questions": [
+    {
+     "q": "What does the Bellman equation say?",
+     "a": "The optimal cost-to-go is the minimum over actions of the instantaneous cost plus the cost-to-go of the next state."
+    },
+    {
+     "q": "What is the HJB equation?",
+     "a": "The continuous-time Bellman equation: 0 = min_u [ l(x,u) + dJ*/dx f(x,u) ]."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Optimal control as graph search, value iteration. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 41.1,
+   "id": "m242",
+   "day": 242,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L4: Dynamic programming II (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 4,
+     "title": "6.8210 Spring 2024 Lecture 4: Dynamic Programming II",
+     "id": "GElVy0WTOys",
+     "url": "https://www.youtube.com/watch?v=GElVy0WTOys&t=2464s",
+     "start": 41.1,
+     "end": 82.1,
+     "lengthMin": 82.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 7 \"Dynamic Programming\" (dp.html)"
+   ],
+   "topics": [
+    "Optimal control as graph search",
+    "value iteration",
+    "continuous dynamic programming",
+    "Hamilton-Jacobi-Bellman"
+   ],
+   "questions": [
+    {
+     "q": "Why does value iteration on a grid not scale?",
+     "a": "The curse of dimensionality: the number of grid cells grows exponentially with state dimension."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Run value iteration on a discretised pendulum (or double integrator) in the course notebook and plot the resulting policy.",
+   "recap": "DP gives the globally optimal feedback policy, but only for low-dimensional systems; it's the same Bellman idea as AA203 L7 and RL in Month 5.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 41.1,
+   "id": "m243",
+   "day": 243,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L5: Acrobots, cart-poles, and quadrotors I (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 5,
+     "title": "6.8210 Spring 2024 Lecture 5: Acrobots, Cart-poles, and Quadrotors I",
+     "id": "UBPL0IbyJy4",
+     "url": "https://www.youtube.com/watch?v=UBPL0IbyJy4",
+     "start": 0.0,
+     "end": 40.7,
+     "lengthMin": 81.4,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 3 \"Acrobots, Cart-Poles, and Quadrotors\" (acrobot.html)"
+   ],
+   "topics": [
+    "Acrobot and cart-pole dynamics",
+    "linearization",
+    "LQR balancing",
+    "partial feedback linearization",
+    "swing-up via energy shaping",
+    "quadrotors"
+   ],
+   "questions": [
+    {
+     "q": "How do you balance a cart-pole at the top?",
+     "a": "Linearize the dynamics about the upright fixed point and design an LQR controller."
+    },
+    {
+     "q": "What is energy-shaping swing-up?",
+     "a": "Pump energy into the system until its total energy matches the upright state's energy, then hand over to LQR."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Acrobot and cart-pole dynamics, linearization, LQR balancing. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.7,
+   "id": "m244",
+   "day": 244,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L5: Acrobots, cart-poles, and quadrotors I (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 5,
+     "title": "6.8210 Spring 2024 Lecture 5: Acrobots, Cart-poles, and Quadrotors I",
+     "id": "UBPL0IbyJy4",
+     "url": "https://www.youtube.com/watch?v=UBPL0IbyJy4&t=2442s",
+     "start": 40.7,
+     "end": 81.4,
+     "lengthMin": 81.4,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 3 \"Acrobots, Cart-Poles, and Quadrotors\" (acrobot.html)"
+   ],
+   "topics": [
+    "Acrobot and cart-pole dynamics",
+    "linearization",
+    "LQR balancing",
+    "partial feedback linearization",
+    "swing-up via energy shaping",
+    "quadrotors"
+   ],
+   "questions": [
+    {
+     "q": "What is partial feedback linearization?",
+     "a": "Using the actuated DOF to cancel dynamics so one coordinate behaves like a double integrator, leaving the unactuated dynamics."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Reuse your Month 4 cart-pole: add an energy-shaping swing-up controller and switch to LQR near the top.",
+   "recap": "The canonical underactuated systems: swing up with energy, balance with LQR.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.7,
+   "id": "m245",
+   "day": 245,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L6: Dynamic programming III (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 6,
+     "title": "6.8210 Spring 2024 Lecture 6: Dynamic Programming III",
+     "id": "ZBS9-4LkSIQ",
+     "url": "https://www.youtube.com/watch?v=ZBS9-4LkSIQ",
+     "start": 0.0,
+     "end": 39.9,
+     "lengthMin": 79.8,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 7 (continuous DP, extensions) and Ch 8 \"Linear Quadratic Regulators\" (lqr.html)"
+   ],
+   "topics": [
+    "Function approximation for DP",
+    "fitted value iteration",
+    "LQR as a special case of DP",
+    "connections to RL"
+   ],
+   "questions": [
+    {
+     "q": "Why is LQR a special case of DP?",
+     "a": "For linear dynamics and quadratic cost the cost-to-go is exactly quadratic, x'Sx, and the Riccati equation solves the HJB."
+    },
+    {
+     "q": "What is fitted value iteration?",
+     "a": "Represent the value function with a function approximator (e.g. a neural net) and repeatedly fit it to Bellman backups on sampled states."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Function approximation for DP, fitted value iteration. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.9,
+   "id": "m246",
+   "day": 246,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L6: Dynamic programming III (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 6,
+     "title": "6.8210 Spring 2024 Lecture 6: Dynamic Programming III",
+     "id": "ZBS9-4LkSIQ",
+     "url": "https://www.youtube.com/watch?v=ZBS9-4LkSIQ&t=2393s",
+     "start": 39.9,
+     "end": 79.8,
+     "lengthMin": 79.8,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 7 (continuous DP, extensions) and Ch 8 \"Linear Quadratic Regulators\" (lqr.html)"
+   ],
+   "topics": [
+    "Function approximation for DP",
+    "fitted value iteration",
+    "LQR as a special case of DP",
+    "connections to RL"
+   ],
+   "questions": [
+    {
+     "q": "How does this connect to deep RL?",
+     "a": "Deep Q-learning and actor-critic methods are approximate DP from samples without a known model."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Derive the continuous-time algebraic Riccati equation from the HJB with J = x'Sx.",
+   "recap": "DP + approximation = the bridge from classical optimal control to deep RL.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.9,
+   "id": "m247",
+   "day": 247,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L7: Lyapunov analysis I (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 7,
+     "title": "6.8210 Spring 2024 Lecture 7: Lyapunov Analysis I",
+     "id": "qbuyy7ZcP9M",
+     "url": "https://www.youtube.com/watch?v=qbuyy7ZcP9M",
+     "start": 0.0,
+     "end": 40.4,
+     "lengthMin": 80.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 9 \"Lyapunov Analysis\" (lyapunov.html)"
+   ],
+   "topics": [
+    "Stability definitions",
+    "Lyapunov functions",
+    "energy as a Lyapunov candidate",
+    "regions of attraction"
+   ],
+   "questions": [
+    {
+     "q": "What are the conditions on a Lyapunov function?",
+     "a": "V(x) positive definite and Vdot(x) negative (semi)definite along system trajectories."
+    },
+    {
+     "q": "What does a region of attraction mean?",
+     "a": "The set of initial states from which trajectories converge to the fixed point."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Stability definitions, Lyapunov functions. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.4,
+   "id": "m248",
+   "day": 248,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L7: Lyapunov analysis I (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 7,
+     "title": "6.8210 Spring 2024 Lecture 7: Lyapunov Analysis I",
+     "id": "qbuyy7ZcP9M",
+     "url": "https://www.youtube.com/watch?v=qbuyy7ZcP9M&t=2422s",
+     "start": 40.4,
+     "end": 80.7,
+     "lengthMin": 80.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 9 \"Lyapunov Analysis\" (lyapunov.html)"
+   ],
+   "topics": [
+    "Stability definitions",
+    "Lyapunov functions",
+    "energy as a Lyapunov candidate",
+    "regions of attraction"
+   ],
+   "questions": [
+    {
+     "q": "Why do safety teams care?",
+     "a": "A Lyapunov certificate is a proof the controller stays stable over a region, not just in tested cases."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Show that total energy is a Lyapunov function for the damped pendulum and estimate its region of attraction.",
+   "recap": "Lyapunov functions turn \"it seems stable in sim\" into a proof.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.4,
+   "id": "m249",
+   "day": 249,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L8: Computing Lyapunov functions I (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 8,
+     "title": "6.8210 Spring 2024 Lecture 8: Computing Lyapunov Functions I",
+     "id": "ywFpp1dy0zQ",
+     "url": "https://www.youtube.com/watch?v=ywFpp1dy0zQ",
+     "start": 0.0,
+     "end": 42.0,
+     "lengthMin": 84.0,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 9 (lyapunov.html), Appendix C Optimization"
+   ],
+   "topics": [
+    "Lyapunov for linear systems",
+    "sums-of-squares (SOS) optimization",
+    "semidefinite programming"
+   ],
+   "questions": [
+    {
+     "q": "How do you find a Lyapunov function for a linear system?",
+     "a": "Solve the Lyapunov equation A'P + PA = -Q for P positive definite; V = x'Px."
+    },
+    {
+     "q": "What is sums-of-squares optimization?",
+     "a": "Searching for polynomials certified non-negative by writing them as sums of squares, which becomes a semidefinite program."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Lyapunov for linear systems, sums-of-squares (SOS) optimization. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 42.0,
+   "id": "m250",
+   "day": 250,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L8: Computing Lyapunov functions I (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 8,
+     "title": "6.8210 Spring 2024 Lecture 8: Computing Lyapunov Functions I",
+     "id": "ywFpp1dy0zQ",
+     "url": "https://www.youtube.com/watch?v=ywFpp1dy0zQ&t=2518s",
+     "start": 42.0,
+     "end": 84.0,
+     "lengthMin": 84.0,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 9 (lyapunov.html), Appendix C Optimization"
+   ],
+   "topics": [
+    "Lyapunov for linear systems",
+    "sums-of-squares (SOS) optimization",
+    "semidefinite programming"
+   ],
+   "questions": [
+    {
+     "q": "Why use SOS for nonlinear systems?",
+     "a": "It lets you search for polynomial Lyapunov functions and certify regions of attraction with convex optimization."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Use the course notebook (Drake MathematicalProgram) to compute a quadratic Lyapunov function for a linearized pendulum.",
+   "recap": "Convex optimization can search for stability certificates automatically.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 42.0,
+   "id": "m251",
+   "day": 251,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L9: Computing Lyapunov functions II (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 9,
+     "title": "6.8210 Spring 2024 Lecture 9: Computing Lyapunov Functions II",
+     "id": "e1BXMe64xJ8",
+     "url": "https://www.youtube.com/watch?v=e1BXMe64xJ8",
+     "start": 0.0,
+     "end": 40.6,
+     "lengthMin": 81.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 9 (lyapunov.html)"
+   ],
+   "topics": [
+    "Region-of-attraction estimation with SOS",
+    "S-procedure",
+    "verifying LQR controllers on nonlinear systems"
+   ],
+   "questions": [
+    {
+     "q": "What does the S-procedure let you do?",
+     "a": "Impose a non-negativity condition only within a region (e.g. a sublevel set) by adding multiplier polynomials."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Region-of-attraction estimation with SOS, S-procedure. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.6,
+   "id": "m252",
+   "day": 252,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L9: Computing Lyapunov functions II (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 9,
+     "title": "6.8210 Spring 2024 Lecture 9: Computing Lyapunov Functions II",
+     "id": "e1BXMe64xJ8",
+     "url": "https://www.youtube.com/watch?v=e1BXMe64xJ8&t=2434s",
+     "start": 40.6,
+     "end": 81.1,
+     "lengthMin": 81.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 9 (lyapunov.html)"
+   ],
+   "topics": [
+    "Region-of-attraction estimation with SOS",
+    "S-procedure",
+    "verifying LQR controllers on nonlinear systems"
+   ],
+   "questions": [
+    {
+     "q": "Why verify LQR on the nonlinear system?",
+     "a": "LQR is designed on the linearization; only nearby states are guaranteed to be stabilised."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Estimate the region of attraction of your LQR cart-pole or pendulum controller (simulation sweep or SOS notebook).",
+   "recap": "Certified regions of attraction tell you where your controller actually works.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.6,
+   "id": "m253",
+   "day": 253,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L10: Trajectory optimization I (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 10,
+     "title": "6.8210 Spring 2024 Lecture 10: Trajectory Optimization I",
+     "id": "wND0k16gCdk",
+     "url": "https://www.youtube.com/watch?v=wND0k16gCdk",
+     "start": 0.0,
+     "end": 39.5,
+     "lengthMin": 78.9,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 10 \"Trajectory Optimization\" (trajopt.html)"
+   ],
+   "topics": [
+    "Direct transcription",
+    "direct shooting",
+    "direct collocation",
+    "nonlinear programming"
+   ],
+   "questions": [
+    {
+     "q": "Shooting vs transcription?",
+     "a": "Shooting optimises only the inputs and simulates the states; transcription treats states and inputs as decision variables with dynamics as constraints."
+    },
+    {
+     "q": "What is direct collocation?",
+     "a": "Representing trajectories with polynomials and enforcing dynamics at collocation points, giving accurate, sparse NLPs."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Direct transcription, direct shooting. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.5,
+   "id": "m254",
+   "day": 254,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L10: Trajectory optimization I (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 10,
+     "title": "6.8210 Spring 2024 Lecture 10: Trajectory Optimization I",
+     "id": "wND0k16gCdk",
+     "url": "https://www.youtube.com/watch?v=wND0k16gCdk&t=2367s",
+     "start": 39.5,
+     "end": 78.9,
+     "lengthMin": 78.9,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 10 \"Trajectory Optimization\" (trajopt.html)"
+   ],
+   "topics": [
+    "Direct transcription",
+    "direct shooting",
+    "direct collocation",
+    "nonlinear programming"
+   ],
+   "questions": [
+    {
+     "q": "Which Month 4 idea is this?",
+     "a": "AA203's direct methods for optimal control (L2-6)."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Use Drake's DirectCollocation to swing up a pendulum or acrobot in the course notebook.",
+   "recap": "Trajectory optimization finds locally optimal motions for systems too big for DP.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.5,
+   "id": "m255",
+   "day": 255,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L11: Trajectory optimization II (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 11,
+     "title": "6.8210 Spring 2024 Lecture 11: Trajectory Optimization II",
+     "id": "IQlwn9wLnJs",
+     "url": "https://www.youtube.com/watch?v=IQlwn9wLnJs",
+     "start": 0.0,
+     "end": 41.4,
+     "lengthMin": 82.9,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 10 (trajopt.html)"
+   ],
+   "topics": [
+    "Constraints",
+    "initialization",
+    "local minima",
+    "differential dynamic programming / iLQR",
+    "solver choices"
+   ],
+   "questions": [
+    {
+     "q": "What is iLQR / DDP?",
+     "a": "An iterative method that alternates rolling out a trajectory and solving a time-varying LQR on its local quadratic approximation."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Constraints, initialization, local minima. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 41.4,
+   "id": "m256",
+   "day": 256,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L11: Trajectory optimization II (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 11,
+     "title": "6.8210 Spring 2024 Lecture 11: Trajectory Optimization II",
+     "id": "IQlwn9wLnJs",
+     "url": "https://www.youtube.com/watch?v=IQlwn9wLnJs&t=2486s",
+     "start": 41.4,
+     "end": 82.9,
+     "lengthMin": 82.9,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 10 (trajopt.html)"
+   ],
+   "topics": [
+    "Constraints",
+    "initialization",
+    "local minima",
+    "differential dynamic programming / iLQR",
+    "solver choices"
+   ],
+   "questions": [
+    {
+     "q": "Why does initialization matter?",
+     "a": "The problems are non-convex; a poor initial guess leads to bad local minima or infeasibility."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Implement a small iLQR for the cart-pole swing-up and compare with your collocation solution.",
+   "recap": "Trajectory optimization is powerful but local; good initial guesses and constraints are half the work.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 41.4,
+   "id": "m257",
+   "day": 257,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L12: Trajectory stabilization (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 12,
+     "title": "6.8210 Spring 2024 Lecture 12: Trajectory Stabilization",
+     "id": "j0Phrs3ATK0",
+     "url": "https://www.youtube.com/watch?v=j0Phrs3ATK0",
+     "start": 0.0,
+     "end": 39.1,
+     "lengthMin": 78.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 8 \"Linear Quadratic Regulators\" (finite-horizon/time-varying sections) and Ch 10"
+   ],
+   "topics": [
+    "Time-varying LQR (TVLQR) along a nominal trajectory",
+    "model predictive control",
+    "funnels"
+   ],
+   "questions": [
+    {
+     "q": "Why can't you just play back an optimized trajectory open-loop?",
+     "a": "Model errors and disturbances make the state drift off the nominal; feedback is needed."
+    },
+    {
+     "q": "What does TVLQR do?",
+     "a": "Linearizes around the nominal trajectory at each time and computes time-varying feedback gains to stay on it."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Time-varying LQR (TVLQR) along a nominal trajectory, model predictive control. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.1,
+   "id": "m258",
+   "day": 258,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L12: Trajectory stabilization (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 12,
+     "title": "6.8210 Spring 2024 Lecture 12: Trajectory Stabilization",
+     "id": "j0Phrs3ATK0",
+     "url": "https://www.youtube.com/watch?v=j0Phrs3ATK0&t=2343s",
+     "start": 39.1,
+     "end": 78.1,
+     "lengthMin": 78.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 8 \"Linear Quadratic Regulators\" (finite-horizon/time-varying sections) and Ch 10"
+   ],
+   "topics": [
+    "Time-varying LQR (TVLQR) along a nominal trajectory",
+    "model predictive control",
+    "funnels"
+   ],
+   "questions": [
+    {
+     "q": "How is MPC related?",
+     "a": "MPC re-solves the trajectory optimization online at each step instead of using fixed gains."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Stabilize your swing-up trajectory with TVLQR and push it with random disturbances.",
+   "recap": "Plan with trajectory optimization, track with TVLQR or MPC.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.1,
+   "id": "m259",
+   "day": 259,
+   "minutes": 30
+  },
+  {
+   "kind": "project",
+   "month": 8,
+   "title": "Project: acrobot / cart-pole swing-up, stabilize and verify",
+   "course": "Project",
+   "watch": [],
+   "read": [],
+   "topics": [],
+   "steps": "Pull Months 4 and 8 together on one system (cart-pole from Month 4, or the acrobot from the book). 1) Swing up with energy shaping (L5). 2) Compute a swing-up trajectory with direct collocation (L10-11). 3) Track it with TVLQR and finish with LQR at the top (L12). 4) Estimate the region of attraction of the final LQR controller by simulation sweep or SOS (L7-9). 5) Add random pushes and noise and report success rate. Put it on GitHub with plots and one honest paragraph about what failed.",
+   "questions": [
+    {
+     "q": "Why combine trajectory optimization with TVLQR?",
+     "a": "The optimized trajectory is open-loop; TVLQR adds feedback to stay on it under disturbances."
+    },
+    {
+     "q": "What does the region-of-attraction estimate tell you?",
+     "a": "From which states the final LQR controller is guaranteed (or empirically shown) to balance."
+    },
+    {
+     "q": "Which number matters most in the write-up?",
+     "a": "Success rate under disturbances, not the single best run."
+    }
+   ],
+   "exercise": "Ship the repo with a swing-up GIF, the ROA plot and the disturbance success rate.",
+   "recap": "One system, end to end: plan, track, balance, verify.",
+   "speaker": null,
+   "seminar": false,
+   "links": [
+    {
+     "label": "Ch 3 Acrobots, Cart-Poles, and Quadrotors",
+     "url": "https://underactuated.mit.edu/acrobot.html"
+    },
+    {
+     "label": "Ch 10 Trajectory Optimization",
+     "url": "https://underactuated.mit.edu/trajopt.html"
+    },
+    {
+     "label": "Ch 9 Lyapunov Analysis",
+     "url": "https://underactuated.mit.edu/lyapunov.html"
+    }
+   ],
+   "videoMin": 0,
+   "id": "m260",
+   "day": 260,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L14: Hybrid trajectory optimization (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 14,
+     "title": "6.8210 Spring 2024 Lecture 14: Hybrid Trajectory Optimization",
+     "id": "P64JhXLsjwY",
+     "url": "https://www.youtube.com/watch?v=P64JhXLsjwY",
+     "start": 0.0,
+     "end": 40.0,
+     "lengthMin": 79.9,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 4 \"Simple Models of Walking and Running\" (simple_legs.html), Ch 16 limit cycles (limit_cycles.html), Ch 17 contact.html (hybrid systems)"
+   ],
+   "topics": [
+    "Hybrid systems",
+    "impacts and mode switches",
+    "walking as a hybrid system",
+    "limit cycles"
+   ],
+   "questions": [
+    {
+     "q": "What makes walking a hybrid system?",
+     "a": "Continuous swing dynamics are interrupted by discrete impact events when a foot touches down."
+    },
+    {
+     "q": "What is a limit cycle?",
+     "a": "A periodic orbit that nearby trajectories converge to; a steady gait is one."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Hybrid systems, impacts and mode switches. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.0,
+   "id": "m261",
+   "day": 261,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L14: Hybrid trajectory optimization (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 14,
+     "title": "6.8210 Spring 2024 Lecture 14: Hybrid Trajectory Optimization",
+     "id": "P64JhXLsjwY",
+     "url": "https://www.youtube.com/watch?v=P64JhXLsjwY&t=2398s",
+     "start": 40.0,
+     "end": 79.9,
+     "lengthMin": 79.9,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 4 \"Simple Models of Walking and Running\" (simple_legs.html), Ch 16 limit cycles (limit_cycles.html), Ch 17 contact.html (hybrid systems)"
+   ],
+   "topics": [
+    "Hybrid systems",
+    "impacts and mode switches",
+    "walking as a hybrid system",
+    "limit cycles"
+   ],
+   "questions": [
+    {
+     "q": "How do you optimise across modes?",
+     "a": "Fix the mode sequence and optimise each phase with transition (guard/reset) constraints."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Simulate the rimless wheel or compass gait from the book and find its stable limit cycle.",
+   "recap": "Legged robots are hybrid systems; gaits are limit cycles.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.0,
+   "id": "m262",
+   "day": 262,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L15: Planning and control through contact (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 15,
+     "title": "6.8210 Spring 2024 Lecture 15: Planning + Control Through Contact",
+     "id": "LF6IkHSRtaY",
+     "url": "https://www.youtube.com/watch?v=LF6IkHSRtaY",
+     "start": 0.0,
+     "end": 38.3,
+     "lengthMin": 76.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 17 \"Planning and Control through Contact\" (contact.html)"
+   ],
+   "topics": [
+    "Contact-implicit trajectory optimization",
+    "complementarity constraints",
+    "combinatorial structure of contact"
+   ],
+   "questions": [
+    {
+     "q": "What is a complementarity constraint?",
+     "a": "Two non-negative quantities whose product is zero, e.g. contact force > 0 only when the distance is 0."
+    },
+    {
+     "q": "What does contact-implicit optimization avoid?",
+     "a": "Specifying the contact mode sequence in advance; the solver discovers when contacts happen."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Contact-implicit trajectory optimization, complementarity constraints. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 38.3,
+   "id": "m263",
+   "day": 263,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L15: Planning and control through contact (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 15,
+     "title": "6.8210 Spring 2024 Lecture 15: Planning + Control Through Contact",
+     "id": "LF6IkHSRtaY",
+     "url": "https://www.youtube.com/watch?v=LF6IkHSRtaY&t=2299s",
+     "start": 38.3,
+     "end": 76.7,
+     "lengthMin": 76.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 17 \"Planning and Control through Contact\" (contact.html)"
+   ],
+   "topics": [
+    "Contact-implicit trajectory optimization",
+    "complementarity constraints",
+    "combinatorial structure of contact"
+   ],
+   "questions": [
+    {
+     "q": "How does this link to MIT 6.4210 (Month 7)?",
+     "a": "Manipulation in clutter and grasping face the same non-smooth contact problem."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Write the complementarity conditions for a block sliding on a table with friction.",
+   "recap": "Contact is where control gets combinatorial; contact-implicit methods let the optimizer choose contacts.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 38.3,
+   "id": "m264",
+   "day": 264,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L16: Humanoid robots (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 16,
+     "title": "6.8210 Spring 2024 Lecture 16: Humanoid Robots",
+     "id": "cRu4EqBswbk",
+     "url": "https://www.youtube.com/watch?v=cRu4EqBswbk",
+     "start": 0.0,
+     "end": 39.4,
+     "lengthMin": 78.8,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 5 \"Highly-articulated Legged Robots\" (humanoids.html)"
+   ],
+   "topics": [
+    "Centroidal dynamics",
+    "center of pressure and ZMP",
+    "ZMP-based walking",
+    "footstep planning",
+    "whole-body control",
+    "Atlas in the DARPA Robotics Challenge"
+   ],
+   "questions": [
+    {
+     "q": "What is the zero-moment point (ZMP)?",
+     "a": "The point on the ground where the resultant contact force acts with no horizontal moment; keeping it inside the support polygon keeps feet flat."
+    },
+    {
+     "q": "What are centroidal dynamics?",
+     "a": "The dynamics of the robot's total linear and angular momentum about its center of mass, driven only by contact forces and gravity."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Centroidal dynamics, center of pressure and ZMP, ZMP-based walking. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.4,
+   "id": "m265",
+   "day": 265,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L16: Humanoid robots (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 16,
+     "title": "6.8210 Spring 2024 Lecture 16: Humanoid Robots",
+     "id": "cRu4EqBswbk",
+     "url": "https://www.youtube.com/watch?v=cRu4EqBswbk&t=2363s",
+     "start": 39.4,
+     "end": 78.8,
+     "lengthMin": 78.8,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 5 \"Highly-articulated Legged Robots\" (humanoids.html)"
+   ],
+   "topics": [
+    "Centroidal dynamics",
+    "center of pressure and ZMP",
+    "ZMP-based walking",
+    "footstep planning",
+    "whole-body control",
+    "Atlas in the DARPA Robotics Challenge"
+   ],
+   "questions": [
+    {
+     "q": "What does whole-body control solve?",
+     "a": "A QP each control step that picks joint torques and contact forces to track tasks while respecting dynamics, friction and limits."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Simulate the linear inverted pendulum model and plan a CoM trajectory that keeps the ZMP inside a sequence of footsteps.",
+   "recap": "The professor who led MIT's DRC Atlas team explains how humanoid controllers really work; this is the math behind the Figure, 1X and Apptronik control jobs.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.4,
+   "id": "m266",
+   "day": 266,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L17: Mixed-discrete and continuous optimization (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 17,
+     "title": "6.8210 Spring 2024 Lecture 17: Mixed-discrete (combinatorial) and continuous optimization",
+     "id": "mqyAs9CKVGw",
+     "url": "https://www.youtube.com/watch?v=mqyAs9CKVGw",
+     "start": 0.0,
+     "end": 40.5,
+     "lengthMin": 81.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 17 (leveraging combinatorial optimization) and Appendix C"
+   ],
+   "topics": [
+    "Mixed-integer programming",
+    "graphs of convex sets (GCS)",
+    "footstep and motion planning with discrete choices"
+   ],
+   "questions": [
+    {
+     "q": "When do you need integer variables?",
+     "a": "When the problem has discrete choices: which contact surface, which side of an obstacle, which mode."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Mixed-integer programming, graphs of convex sets (GCS). Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.5,
+   "id": "m267",
+   "day": 267,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L17: Mixed-discrete and continuous optimization (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 17,
+     "title": "6.8210 Spring 2024 Lecture 17: Mixed-discrete (combinatorial) and continuous optimization",
+     "id": "mqyAs9CKVGw",
+     "url": "https://www.youtube.com/watch?v=mqyAs9CKVGw&t=2432s",
+     "start": 40.5,
+     "end": 81.1,
+     "lengthMin": 81.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 17 (leveraging combinatorial optimization) and Appendix C"
+   ],
+   "topics": [
+    "Mixed-integer programming",
+    "graphs of convex sets (GCS)",
+    "footstep and motion planning with discrete choices"
+   ],
+   "questions": [
+    {
+     "q": "What are graphs of convex sets?",
+     "a": "A formulation where nodes are convex regions and edges connect them, letting shortest-path style planning be solved with strong convex relaxations."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Formulate footstep planning across three stepping stones as a mixed-integer problem on paper.",
+   "recap": "Many hard robotics choices are combinatorial; modern MIP/GCS methods handle them with guarantees.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.5,
+   "id": "m268",
+   "day": 268,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L18: Sampling-based (kinodynamic) motion planning (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 18,
+     "title": "6.8210 Spring 2024 Lecture 18: Sampling-based (kinodynamic) motion planning",
+     "id": "ChiQgvVvgKM",
+     "url": "https://www.youtube.com/watch?v=ChiQgvVvgKM",
+     "start": 0.0,
+     "end": 40.4,
+     "lengthMin": 80.8,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 12 \"Sampling-based motion planning\" (planning.html)"
+   ],
+   "topics": [
+    "RRT",
+    "RRT*",
+    "PRM",
+    "kinodynamic planning",
+    "distance metrics for dynamic systems"
+   ],
+   "questions": [
+    {
+     "q": "How does an RRT grow?",
+     "a": "Sample a random state, find the nearest tree node, extend toward the sample, repeat."
+    },
+    {
+     "q": "What makes kinodynamic planning harder?",
+     "a": "The path must satisfy the dynamics, so you cannot connect two states with a straight line."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: RRT, RRT*, PRM. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.4,
+   "id": "m269",
+   "day": 269,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L18: Sampling-based (kinodynamic) motion planning (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 18,
+     "title": "6.8210 Spring 2024 Lecture 18: Sampling-based (kinodynamic) motion planning",
+     "id": "ChiQgvVvgKM",
+     "url": "https://www.youtube.com/watch?v=ChiQgvVvgKM&t=2423s",
+     "start": 40.4,
+     "end": 80.8,
+     "lengthMin": 80.8,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 12 \"Sampling-based motion planning\" (planning.html)"
+   ],
+   "topics": [
+    "RRT",
+    "RRT*",
+    "PRM",
+    "kinodynamic planning",
+    "distance metrics for dynamic systems"
+   ],
+   "questions": [
+    {
+     "q": "Which Month 7 lecture covered this for arms?",
+     "a": "MIT 6.4210 L12, sampling-based motion planning."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Implement a basic RRT for a 2D point among obstacles, then try it on pendulum swing-up in (theta, thetadot).",
+   "recap": "Sampling finds feasible paths in high-dimensional spaces; dynamics make the connections hard.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.4,
+   "id": "m270",
+   "day": 270,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L19: Stochastic dynamics (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 19,
+     "title": "6.8210 Spring 2024 Lecture 19: Stochastic dynamics",
+     "id": "Nj8FvDZ4d9I",
+     "url": "https://www.youtube.com/watch?v=Nj8FvDZ4d9I",
+     "start": 0.0,
+     "end": 39.3,
+     "lengthMin": 78.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 13 \"Robust and Stochastic Control\" (robust.html)"
+   ],
+   "topics": [
+    "Noise and uncertainty",
+    "Markov chains on continuous states",
+    "stochastic stability",
+    "master equation"
+   ],
+   "questions": [
+    {
+     "q": "Why model dynamics as stochastic?",
+     "a": "Real robots face uncertain terrain, sensor noise and disturbances; deterministic stability can be misleading."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Noise and uncertainty, Markov chains on continuous states. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.3,
+   "id": "m271",
+   "day": 271,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L19: Stochastic dynamics (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 19,
+     "title": "6.8210 Spring 2024 Lecture 19: Stochastic dynamics",
+     "id": "Nj8FvDZ4d9I",
+     "url": "https://www.youtube.com/watch?v=Nj8FvDZ4d9I&t=2359s",
+     "start": 39.3,
+     "end": 78.6,
+     "lengthMin": 78.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 13 \"Robust and Stochastic Control\" (robust.html)"
+   ],
+   "topics": [
+    "Noise and uncertainty",
+    "Markov chains on continuous states",
+    "stochastic stability",
+    "master equation"
+   ],
+   "questions": [
+    {
+     "q": "What is a metastable system?",
+     "a": "One that stays near an attractor for a long but finite time before noise drives it away, like a walker that eventually falls."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Add random disturbances to your compass-gait/rimless-wheel simulation and measure the mean steps to failure.",
+   "recap": "With noise, \"stable\" becomes \"how long until failure.\"",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.3,
+   "id": "m272",
+   "day": 272,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L20: Stochastic control (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 20,
+     "title": "6.8210 Spring 2024 Lecture 20: Stochastic Control",
+     "id": "QYDsB0qs_x8",
+     "url": "https://www.youtube.com/watch?v=QYDsB0qs_x8",
+     "start": 0.0,
+     "end": 39.3,
+     "lengthMin": 78.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 13 (robust.html)"
+   ],
+   "topics": [
+    "Optimal control under noise",
+    "LQG",
+    "expected cost",
+    "risk"
+   ],
+   "questions": [
+    {
+     "q": "What is the certainty-equivalence result for LQG?",
+     "a": "With linear dynamics, quadratic cost and Gaussian noise, the optimal controller is LQR applied to the Kalman-filter state estimate."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Optimal control under noise, LQG. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.3,
+   "id": "m273",
+   "day": 273,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L20: Stochastic control (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 20,
+     "title": "6.8210 Spring 2024 Lecture 20: Stochastic Control",
+     "id": "QYDsB0qs_x8",
+     "url": "https://www.youtube.com/watch?v=QYDsB0qs_x8&t=2358s",
+     "start": 39.3,
+     "end": 78.6,
+     "lengthMin": 78.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 13 (robust.html)"
+   ],
+   "topics": [
+    "Optimal control under noise",
+    "LQG",
+    "expected cost",
+    "risk"
+   ],
+   "questions": [
+    {
+     "q": "Why might you optimise risk rather than expected cost?",
+     "a": "Rare catastrophic failures (falls, collisions) matter more than average performance."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Compare LQR performance on your cart-pole with and without process noise; plot the cost distribution.",
+   "recap": "Stochastic control plans for uncertainty instead of ignoring it.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.3,
+   "id": "m274",
+   "day": 274,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L21: Robust control and policy search (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 21,
+     "title": "6.8210 Spring 2024 Lecture 21: Robust Control & Policy Search",
+     "id": "eEOmmpA1GAw",
+     "url": "https://www.youtube.com/watch?v=eEOmmpA1GAw",
+     "start": 0.0,
+     "end": 38.5,
+     "lengthMin": 77.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 11 \"Policy Search\" (policy_search.html), Ch 13 robust.html, Ch 20 \"Model-Free Policy Search\" (rl_policy_search.html)"
+   ],
+   "topics": [
+    "Robust control",
+    "H-infinity ideas",
+    "domain randomization",
+    "policy search",
+    "model-free policy gradients"
+   ],
+   "questions": [
+    {
+     "q": "What is policy search?",
+     "a": "Directly optimising the parameters of a controller (e.g. a neural network) for a cost, rather than computing a value function."
+    },
+    {
+     "q": "How does domain randomization relate to robust control?",
+     "a": "Training over randomized dynamics approximates optimising a policy that works across the uncertainty set."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Robust control, H-infinity ideas, domain randomization. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 38.5,
+   "id": "m275",
+   "day": 275,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L21: Robust control and policy search (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 21,
+     "title": "6.8210 Spring 2024 Lecture 21: Robust Control & Policy Search",
+     "id": "eEOmmpA1GAw",
+     "url": "https://www.youtube.com/watch?v=eEOmmpA1GAw&t=2313s",
+     "start": 38.5,
+     "end": 77.1,
+     "lengthMin": 77.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 11 \"Policy Search\" (policy_search.html), Ch 13 robust.html, Ch 20 \"Model-Free Policy Search\" (rl_policy_search.html)"
+   ],
+   "topics": [
+    "Robust control",
+    "H-infinity ideas",
+    "domain randomization",
+    "policy search",
+    "model-free policy gradients"
+   ],
+   "questions": [
+    {
+     "q": "Which Month 5 method is model-free policy search?",
+     "a": "Policy gradients / PPO from CS224R and AA203."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Train a small policy for the cart-pole with random search or PPO under randomized pole mass and compare robustness to LQR.",
+   "recap": "RL for locomotion is robust policy search; this lecture connects the control view to the RL view.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 38.5,
+   "id": "m276",
+   "day": 276,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L22: Output feedback (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 22,
+     "title": "6.8210 Spring 2024 Lecture 22: Output feedback",
+     "id": "QIDisUxobFk",
+     "url": "https://www.youtube.com/watch?v=QIDisUxobFk",
+     "start": 0.0,
+     "end": 35.3,
+     "lengthMin": 70.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 15 \"Output Feedback\" (output_feedback.html) and Ch 19 \"State Estimation\" (state_estimation.html)"
+   ],
+   "topics": [
+    "Partial observability",
+    "state estimation",
+    "observers",
+    "Kalman filtering",
+    "output-feedback controllers"
+   ],
+   "questions": [
+    {
+     "q": "What is output feedback?",
+     "a": "Control using only measured outputs (sensors) rather than the full state."
+    },
+    {
+     "q": "Why is it harder?",
+     "a": "The controller must estimate the state, and the estimator and controller interact."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Partial observability, state estimation, observers. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 35.3,
+   "id": "m277",
+   "day": 277,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L22: Output feedback (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 22,
+     "title": "6.8210 Spring 2024 Lecture 22: Output feedback",
+     "id": "QIDisUxobFk",
+     "url": "https://www.youtube.com/watch?v=QIDisUxobFk&t=2120s",
+     "start": 35.3,
+     "end": 70.7,
+     "lengthMin": 70.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 15 \"Output Feedback\" (output_feedback.html) and Ch 19 \"State Estimation\" (state_estimation.html)"
+   ],
+   "topics": [
+    "Partial observability",
+    "state estimation",
+    "observers",
+    "Kalman filtering",
+    "output-feedback controllers"
+   ],
+   "questions": [
+    {
+     "q": "Which earlier month covered sensors and drift?",
+     "a": "Month 3 (EE259 IMUs/dead reckoning)."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Add a noisy angle-only sensor to your pendulum and stabilize it with a Kalman filter + LQR.",
+   "recap": "Real robots never see their full state; estimation is part of control.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 35.3,
+   "id": "m278",
+   "day": 278,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L23: Feedback motion planning (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 23,
+     "title": "6.8210 Spring 2024 Lecture 23: Feedback motion planning",
+     "id": "5fYG1JLwBSc",
+     "url": "https://www.youtube.com/watch?v=5fYG1JLwBSc",
+     "start": 0.0,
+     "end": 39.0,
+     "lengthMin": 78.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 14 \"Feedback Motion Planning\" (feedback_motion_planning.html)"
+   ],
+   "topics": [
+    "LQR-trees",
+    "funnels",
+    "combining planning with verified feedback",
+    "online planning"
+   ],
+   "questions": [
+    {
+     "q": "What is an LQR-tree?",
+     "a": "A tree of trajectories each stabilised by TVLQR with verified funnels, covering the state space with certified feedback."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: LQR-trees, funnels. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.0,
+   "id": "m279",
+   "day": 279,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L23: Feedback motion planning (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 23,
+     "title": "6.8210 Spring 2024 Lecture 23: Feedback motion planning",
+     "id": "5fYG1JLwBSc",
+     "url": "https://www.youtube.com/watch?v=5fYG1JLwBSc&t=2343s",
+     "start": 39.0,
+     "end": 78.1,
+     "lengthMin": 78.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 14 \"Feedback Motion Planning\" (feedback_motion_planning.html)"
+   ],
+   "topics": [
+    "LQR-trees",
+    "funnels",
+    "combining planning with verified feedback",
+    "online planning"
+   ],
+   "questions": [
+    {
+     "q": "What is a funnel?",
+     "a": "A time-varying region of attraction around a trajectory: start inside it and you are guaranteed to reach the end region."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Sketch how you'd sequence funnels to get the cart-pole from any start to upright.",
+   "recap": "Combine planning (many trajectories) with verification (funnels) for global, certified feedback.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.0,
+   "id": "m280",
+   "day": 280,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L24: Imitation learning, foundation models and course wrap-up (part 1/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 24,
+     "title": "6.8210 Spring 2024 Lecture 24: Imitation learning / Foundation models / Course wrap-up",
+     "id": "ww1flzLixHo",
+     "url": "https://www.youtube.com/watch?v=ww1flzLixHo",
+     "start": 0.0,
+     "end": 41.0,
+     "lengthMin": 82.0,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 21 \"Imitation Learning\" (imitation.html)"
+   ],
+   "topics": [
+    "Behavior cloning",
+    "diffusion policy",
+    "visuomotor policies",
+    "foundation models for robots",
+    "how learning and control fit together"
+   ],
+   "questions": [
+    {
+     "q": "Why did diffusion policy help behavior cloning?",
+     "a": "It models multimodal action distributions and predicts action sequences, avoiding averaging between demonstrated modes."
+    },
+    {
+     "q": "Where does model-based control still win over learned policies?",
+     "a": "Low-level, safety-critical, dynamic tasks where models are good and guarantees matter."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Behavior cloning, diffusion policy, visuomotor policies. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 41.0,
+   "id": "m281",
+   "day": 281,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 8,
+   "title": "MIT 6.8210 L24: Imitation learning, foundation models and course wrap-up (part 2/2)",
+   "course": "MIT 6.8210",
+   "watch": [
+    {
+     "course": "MIT 6.8210",
+     "lecture": 24,
+     "title": "6.8210 Spring 2024 Lecture 24: Imitation learning / Foundation models / Course wrap-up",
+     "id": "ww1flzLixHo",
+     "url": "https://www.youtube.com/watch?v=ww1flzLixHo&t=2461s",
+     "start": 41.0,
+     "end": 82.0,
+     "lengthMin": 82.0,
+     "partial": true
+    }
+   ],
+   "read": [
+    "underactuated.mit.edu Ch 21 \"Imitation Learning\" (imitation.html)"
+   ],
+   "topics": [
+    "Behavior cloning",
+    "diffusion policy",
+    "visuomotor policies",
+    "foundation models for robots",
+    "how learning and control fit together"
+   ],
+   "questions": [
+    {
+     "q": "Which other modules cover this?",
+     "a": "Month 5 CS224R imitation learning, Month 7 MIT 6.4210 L18, and Month 9 ETH L3 and L6."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Write one paragraph: for a humanoid, which layers would you learn and which would you control with optimization, and why?",
+   "recap": "The course ends where learning meets control; you now know the control half deeply.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 41.0,
+   "id": "m282",
+   "day": 282,
+   "minutes": 30
+  },
+  {
+   "kind": "milestone",
+   "month": 8,
+   "title": "Month 8 milestone check",
+   "course": "Milestone",
+   "watch": [],
+   "read": [],
+   "topics": [],
+   "steps": "Self-assess after MIT 6.8210.",
+   "questions": [
+    {
+     "q": "Can you explain why a humanoid is underactuated and what ZMP/centroidal dynamics are?",
+     "a": "Yes (L1, L16)."
+    },
+    {
+     "q": "Can you balance an underactuated system with LQR and swing it up?",
+     "a": "Yes (L5, P8.1)."
+    },
+    {
+     "q": "Can you set up a direct-collocation trajectory optimization and stabilise it with TVLQR?",
+     "a": "Yes (L10-12)."
+    },
+    {
+     "q": "Can you state what a Lyapunov function certifies?",
+     "a": "Yes (L7-9)."
+    }
+   ],
+   "exercise": "Rate yourself 1-5 per line; revisit weak lectures.",
+   "recap": "You now have the control half of the humanoid stack, the part learning sits on top of.",
+   "speaker": null,
+   "seminar": false,
+   "links": [
+    {
+     "label": "Textbook",
+     "url": "https://underactuated.mit.edu"
+    }
+   ],
+   "videoMin": 0,
+   "id": "m283",
+   "day": 283,
+   "minutes": 30
+  },
+  {
+   "kind": "project",
+   "month": 9,
+   "title": "Start here: ETH Zurich Robot Learning (Oier Mees, Spring 2026)",
+   "course": "Project",
+   "watch": [],
+   "read": [],
+   "topics": [],
+   "steps": "Bonus month, shared by @rahim_mirani (x.com/rahim_mirani/status/2112282923395379537). ETH Zurich 263-5911-00L \"Robot Learning: From Fundamentals to Foundation Models\" (Spring 2026, Oier Mees): 11 recorded lectures plus 10 recorded guest talks, slides for every lecture, and four coding homeworks on GitHub. It runs MDPs and imitation learning, then RL, generative models (diffusion), sequence models, world models, generalist policies (VLAs), embodied reasoning and open problems. Guest speakers include Quan Vuong (Physical Intelligence co-founder), Cheng Chi (Diffusion Policy/UMI), Ted Xiao (RT-1/RT-2), Scott Reed (Gato, NVIDIA), Archit Sharma (Gemini Deep Think) and Lucas Beyer (ViT). Each lecture module lists that week's three paper-discussion readings. Guest talks follow the lecture they accompanied. It is the 2026 follow-on to Month 5 (CS224R, AA203 learning) and Month 6 (seminars), and is the most current material in the path. Today: open the course page and clone the homework repo.",
+   "questions": [
+    {
+     "q": "What is the course arc?",
+     "a": "MDPs/imitation -> RL -> generative models -> sequence/world models -> generalist policies (VLAs) -> reasoning and open problems."
+    },
+    {
+     "q": "What earlier months does it build on?",
+     "a": "Month 5 (imitation learning and RL) and Month 6 (foundation-model seminars); L7 links to Month 7/8 imitation-learning material."
+    },
+    {
+     "q": "Where are the exercises?",
+     "a": "Four homeworks in github.com/mees-robot-learning-course/ethz-course-2026 (PyTorch, control/MDPs, imitation learning, RL)."
+    }
+   ],
+   "exercise": "Clone the homework repo and get hw1 running.",
+   "recap": "A current, free course from fundamentals to VLAs, with guest talks from the people building them.",
+   "speaker": null,
+   "seminar": false,
+   "links": [
+    {
+     "label": "Course page (slides + recordings)",
+     "url": "https://cvg.ethz.ch/lectures/Robot-Learning/"
+    },
+    {
+     "label": "Homework repo",
+     "url": "https://github.com/mees-robot-learning-course/ethz-course-2026"
+    },
+    {
+     "label": "Lecture 1 on YouTube",
+     "url": "https://www.youtube.com/watch?v=X0k14u6pSxw"
+    },
+    {
+     "label": "Oier Mees",
+     "url": "https://www.oiermees.com"
+    },
+    {
+     "label": "Source post (@rahim_mirani)",
+     "url": "https://x.com/rahim_mirani/status/2112282923395379537"
+    },
+    {
+     "label": "Related: Month 5 (imitation learning & RL)",
+     "url": "https://rgoldman73-dev.github.io/robotics-learning/#/modules?month=5"
+    },
+    {
+     "label": "Related: Month 6 (frontier seminars)",
+     "url": "https://rgoldman73-dev.github.io/robotics-learning/#/modules?month=6"
+    }
+   ],
+   "videoMin": 0,
+   "id": "m284",
+   "day": 284,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L1: Introduction to robot learning (part 1/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 1,
+     "title": "Robot Learning 2026 – Lecture 1: Introduction to Robot Learning | ETH Zürich",
+     "id": "X0k14u6pSxw",
+     "url": "https://www.youtube.com/watch?v=X0k14u6pSxw",
+     "start": 0.0,
+     "end": 32.3,
+     "lengthMin": 64.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 1 slides (cvg.ethz.ch/lectures/Robot-Learning/lectures/lecture1_intro.pdf)"
+   ],
+   "topics": [
+    "What robot learning is",
+    "classical vs learned robotics",
+    "data sources",
+    "the course roadmap from MDPs to VLAs"
+   ],
+   "questions": [
+    {
+     "q": "What is the course roadmap?",
+     "a": "MDPs and imitation learning, then RL, generative models, sequence models, world models, generalist policies (VLAs), reasoning and open problems."
+    },
+    {
+     "q": "Why is data the central problem in robot learning?",
+     "a": "Unlike text and images, there is no internet-scale dataset of robot actions; collection is slow and expensive."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: What robot learning is, classical vs learned robotics. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 32.3,
+   "id": "m285",
+   "day": 285,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L1: Introduction to robot learning (part 2/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 1,
+     "title": "Robot Learning 2026 – Lecture 1: Introduction to Robot Learning | ETH Zürich",
+     "id": "X0k14u6pSxw",
+     "url": "https://www.youtube.com/watch?v=X0k14u6pSxw&t=1937s",
+     "start": 32.3,
+     "end": 64.6,
+     "lengthMin": 64.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 1 slides (cvg.ethz.ch/lectures/Robot-Learning/lectures/lecture1_intro.pdf)"
+   ],
+   "topics": [
+    "What robot learning is",
+    "classical vs learned robotics",
+    "data sources",
+    "the course roadmap from MDPs to VLAs"
+   ],
+   "questions": [
+    {
+     "q": "What earlier months does this course build on?",
+     "a": "Month 5 (AA203 + CS224R imitation/RL) and Month 6 (foundation-model seminars)."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Clone github.com/mees-robot-learning-course/ethz-course-2026 and run hw1 (PyTorch & NumPy tutorial) if you need a refresher.",
+   "recap": "A 2026 survey course that runs from fundamentals to foundation models.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 32.3,
+   "id": "m286",
+   "day": 286,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L2: Robot control and MDPs (part 1/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 2,
+     "title": "Robot Learning 2026 – Lecture 2: Robot Control & Markov Decision Processes | ETH Zürich",
+     "id": "5-Bb84eTTqQ",
+     "url": "https://www.youtube.com/watch?v=5-Bb84eTTqQ",
+     "start": 0.0,
+     "end": 23.1,
+     "lengthMin": 46.2,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 2 slides; paper discussion: Mania et al. 2018 \"Simple random search provides a competitive approach to RL\" (arxiv.org/abs/1803.07055); Irpan 2018 \"Deep RL Doesn't Work Yet\""
+   ],
+   "topics": [
+    "Markov decision processes",
+    "policies",
+    "value functions",
+    "robot control as an MDP",
+    "exploration"
+   ],
+   "questions": [
+    {
+     "q": "What are the parts of an MDP?",
+     "a": "States, actions, transition dynamics, reward and discount factor."
+    },
+    {
+     "q": "What did Mania et al. show?",
+     "a": "Simple random search over linear policies matched deep RL on MuJoCo locomotion benchmarks, questioning benchmark difficulty."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Markov decision processes, policies, value functions. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 23.1,
+   "id": "m287",
+   "day": 287,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L2: Robot control and MDPs (part 2/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 2,
+     "title": "Robot Learning 2026 – Lecture 2: Robot Control & Markov Decision Processes | ETH Zürich",
+     "id": "5-Bb84eTTqQ",
+     "url": "https://www.youtube.com/watch?v=5-Bb84eTTqQ&t=1385s",
+     "start": 23.1,
+     "end": 46.2,
+     "lengthMin": 46.2,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 2 slides; paper discussion: Mania et al. 2018 \"Simple random search provides a competitive approach to RL\" (arxiv.org/abs/1803.07055); Irpan 2018 \"Deep RL Doesn't Work Yet\""
+   ],
+   "topics": [
+    "Markov decision processes",
+    "policies",
+    "value functions",
+    "robot control as an MDP",
+    "exploration"
+   ],
+   "questions": [
+    {
+     "q": "Why does Irpan argue deep RL is hard?",
+     "a": "Sample inefficiency, reward design, local optima, instability and poor reproducibility."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Do hw2 (robot control & MDPs) from the course repo.",
+   "recap": "Every RL method starts here; the paper discussion is a healthy dose of skepticism.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 23.1,
+   "id": "m288",
+   "day": 288,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH guest L2: Abishek Gupta - Simulation for robotic manipulation, without the pain",
+   "course": "ETH guest",
+   "watch": [
+    {
+     "course": "ETH guest",
+     "lecture": 2,
+     "title": "Guest Lecture 2: Abishek Gupta - Simulation for Robotic Manipulation, without the Pain [ETHZ Robot Learning 2026]",
+     "id": "aG8NPTPhwkE",
+     "url": "https://www.youtube.com/watch?v=aG8NPTPhwkE",
+     "start": 0.0,
+     "end": 32.1,
+     "lengthMin": 32.1,
+     "partial": false
+    }
+   ],
+   "read": [],
+   "topics": [
+    "Building simulation cheaply from real scenes",
+    "real-to-sim-to-real",
+    "RL fine-tuning in simulation"
+   ],
+   "questions": [
+    {
+     "q": "What problem does real-to-sim address?",
+     "a": "Building accurate simulators of real scenes is slow; reconstructing them from real data makes sim training practical."
+    },
+    {
+     "q": "Why train manipulation in sim at all?",
+     "a": "Cheap, safe, parallel experience for RL that would be too slow on hardware."
+    },
+    {
+     "q": "Main risk?",
+     "a": "The sim-to-real gap in contact, appearance and dynamics."
+    }
+   ],
+   "exercise": "Note one claim from the talk you would want to see measured on real hardware.",
+   "recap": "Simulation is valuable again once scene creation is cheap.",
+   "speaker": "Abishek Gupta (University of Washington)",
+   "seminar": true,
+   "links": [],
+   "videoMin": 32.1,
+   "id": "m289",
+   "day": 289,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L3: Imitation learning (part 1/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 3,
+     "title": "Robot Learning 2026 – Lecture 3: Imitation Learning | ETH Zürich",
+     "id": "Ef4R5s1LqoQ",
+     "url": "https://www.youtube.com/watch?v=Ef4R5s1LqoQ",
+     "start": 0.0,
+     "end": 25.3,
+     "lengthMin": 50.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 3 slides; papers: de Haan et al. 2019 \"Causal Confusion in Imitation Learning\" (arxiv.org/abs/1905.11979); Zeng et al. 2020 Transporter Networks (arxiv.org/abs/2010.14406)"
+   ],
+   "topics": [
+    "Behavior cloning",
+    "covariate shift",
+    "DAgger",
+    "causal confusion",
+    "visual representations for imitation"
+   ],
+   "questions": [
+    {
+     "q": "What is covariate shift in behavior cloning?",
+     "a": "The policy's small errors take it to states not in the demonstrations, where errors compound."
+    },
+    {
+     "q": "What is causal confusion?",
+     "a": "The policy latches onto features correlated with the expert's actions (e.g. a brake light) instead of the true causes."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Behavior cloning, covariate shift, DAgger. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 25.3,
+   "id": "m290",
+   "day": 290,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L3: Imitation learning (part 2/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 3,
+     "title": "Robot Learning 2026 – Lecture 3: Imitation Learning | ETH Zürich",
+     "id": "Ef4R5s1LqoQ",
+     "url": "https://www.youtube.com/watch?v=Ef4R5s1LqoQ&t=1518s",
+     "start": 25.3,
+     "end": 50.6,
+     "lengthMin": 50.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 3 slides; papers: de Haan et al. 2019 \"Causal Confusion in Imitation Learning\" (arxiv.org/abs/1905.11979); Zeng et al. 2020 Transporter Networks (arxiv.org/abs/2010.14406)"
+   ],
+   "topics": [
+    "Behavior cloning",
+    "covariate shift",
+    "DAgger",
+    "causal confusion",
+    "visual representations for imitation"
+   ],
+   "questions": [
+    {
+     "q": "How does DAgger fix drift?",
+     "a": "It queries the expert on states visited by the learned policy and adds those labels to the dataset."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Do hw3 (imitation learning) from the course repo; compare with your Month 5 cart-pole BC experiment.",
+   "recap": "Imitation learning is the workhorse of modern manipulation, but it drifts and can learn the wrong cause.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 25.3,
+   "id": "m291",
+   "day": 291,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH guest L3: Danfei Xu - Human data as a foundation for robot learning",
+   "course": "ETH guest",
+   "watch": [
+    {
+     "course": "ETH guest",
+     "lecture": 3,
+     "title": "Guest Lecture 3: Danfei Xu - Human Data as a Foundation for Robot Learning [ETHZ Robot Learning 2026]",
+     "id": "qvTP6T5oq1w",
+     "url": "https://www.youtube.com/watch?v=qvTP6T5oq1w",
+     "start": 0.0,
+     "end": 36.8,
+     "lengthMin": 36.8,
+     "partial": false
+    }
+   ],
+   "read": [],
+   "topics": [
+    "Learning from human video and egocentric data",
+    "embodiment gap"
+   ],
+   "questions": [
+    {
+     "q": "Why use human data?",
+     "a": "It is far more plentiful and diverse than robot data."
+    },
+    {
+     "q": "What is the embodiment gap?",
+     "a": "Human hands and bodies differ from robot grippers, so actions must be retargeted or abstracted."
+    },
+    {
+     "q": "Which Month 6 seminar covered similar ground?",
+     "a": "Danfei Xu's Stanford Robotics Seminar, Robot Learning from Human Experience."
+    }
+   ],
+   "exercise": "List three kinds of human data and what each lacks for robot training.",
+   "recap": "Human data can scale robot learning if the embodiment gap is handled.",
+   "speaker": "Danfei Xu (Georgia Tech)",
+   "seminar": true,
+   "links": [],
+   "videoMin": 36.8,
+   "id": "m292",
+   "day": 292,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L4: Reinforcement learning I (part 1/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 4,
+     "title": "Robot Learning 2026 – Lecture 4: Reinforcement Learning I | ETH Zürich",
+     "id": "90raNpc11tQ",
+     "url": "https://www.youtube.com/watch?v=90raNpc11tQ",
+     "start": 0.0,
+     "end": 26.3,
+     "lengthMin": 52.5,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 4 slides; papers: Salimans et al. 2017 Evolution Strategies (arxiv.org/abs/1703.03864); Luo et al. 2024 HIL-SERL (arxiv.org/pdf/2410.21845)"
+   ],
+   "topics": [
+    "Policy gradients",
+    "value-based methods",
+    "evolution strategies",
+    "RL for grasping",
+    "human-in-the-loop RL"
+   ],
+   "questions": [
+    {
+     "q": "What is the REINFORCE estimator?",
+     "a": "The gradient of expected return equals the expectation of grad log pi(a|s) times return (minus a baseline)."
+    },
+    {
+     "q": "Why are evolution strategies attractive at scale?",
+     "a": "They need only returns, not gradients, and parallelise trivially across many workers."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Policy gradients, value-based methods, evolution strategies. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 26.3,
+   "id": "m293",
+   "day": 293,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L4: Reinforcement learning I (part 2/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 4,
+     "title": "Robot Learning 2026 – Lecture 4: Reinforcement Learning I | ETH Zürich",
+     "id": "90raNpc11tQ",
+     "url": "https://www.youtube.com/watch?v=90raNpc11tQ&t=1576s",
+     "start": 26.3,
+     "end": 52.5,
+     "lengthMin": 52.5,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 4 slides; papers: Salimans et al. 2017 Evolution Strategies (arxiv.org/abs/1703.03864); Luo et al. 2024 HIL-SERL (arxiv.org/pdf/2410.21845)"
+   ],
+   "topics": [
+    "Policy gradients",
+    "value-based methods",
+    "evolution strategies",
+    "RL for grasping",
+    "human-in-the-loop RL"
+   ],
+   "questions": [
+    {
+     "q": "What does human-in-the-loop RL add on real robots?",
+     "a": "Human corrections and demonstrations speed learning and keep exploration safe."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Start hw4 (reinforcement learning) from the course repo.",
+   "recap": "RL basics, plus evidence that RL can now train precise real-world manipulation.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 26.3,
+   "id": "m294",
+   "day": 294,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH guest L4: Aviral Kumar - How to replicate the LLM recipe in robot learning",
+   "course": "ETH guest",
+   "watch": [
+    {
+     "course": "ETH guest",
+     "lecture": 4,
+     "title": "Guest Lecture 4: Aviral Kumar - How to Replicate the LLM Recipe in Robot Learning [ETHZ Robot Learning 2026]",
+     "id": "fHHLmTu9sFk",
+     "url": "https://www.youtube.com/watch?v=fHHLmTu9sFk",
+     "start": 0.0,
+     "end": 36.1,
+     "lengthMin": 36.1,
+     "partial": false
+    }
+   ],
+   "read": [],
+   "topics": [
+    "Pretraining + RL fine-tuning",
+    "offline RL at scale",
+    "scaling laws for robotics"
+   ],
+   "questions": [
+    {
+     "q": "What is the \"LLM recipe\"?",
+     "a": "Large-scale pretraining followed by fine-tuning and RL on targeted objectives."
+    },
+    {
+     "q": "What makes it harder for robots?",
+     "a": "Scarce, heterogeneous action data and costly evaluation."
+    },
+    {
+     "q": "Where does offline RL fit?",
+     "a": "It can improve policies from large logged datasets before any online interaction."
+    }
+   ],
+   "exercise": "Map each LLM training stage to a robot equivalent.",
+   "recap": "The open question is whether robotics can follow the pretrain-then-RL path.",
+   "speaker": "Aviral Kumar (CMU / Google DeepMind)",
+   "seminar": true,
+   "links": [],
+   "videoMin": 36.1,
+   "id": "m295",
+   "day": 295,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L5: Reinforcement learning II (part 1/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 5,
+     "title": "Robot Learning 2026 – Lecture 5: Reinforcement Learning II | ETH Zürich",
+     "id": "AdTGz8YnnlE",
+     "url": "https://www.youtube.com/watch?v=AdTGz8YnnlE",
+     "start": 0.0,
+     "end": 26.2,
+     "lengthMin": 52.4,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 5 slides; papers: Levine et al. 2015 end-to-end visuomotor policies (arxiv.org/abs/1504.00702); Ma et al. 2023 Eureka (arxiv.org/abs/2310.12931)"
+   ],
+   "topics": [
+    "Actor-critic",
+    "off-policy and offline RL",
+    "reward design with LLMs",
+    "end-to-end visuomotor training"
+   ],
+   "questions": [
+    {
+     "q": "What does Eureka do?",
+     "a": "Uses an LLM to write and iteratively refine reward functions as code for RL."
+    },
+    {
+     "q": "Why does offline RL matter for robots?",
+     "a": "Real-robot data is expensive; offline RL learns from fixed logged datasets without new interaction."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Actor-critic, off-policy and offline RL. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 26.2,
+   "id": "m296",
+   "day": 296,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L5: Reinforcement learning II (part 2/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 5,
+     "title": "Robot Learning 2026 – Lecture 5: Reinforcement Learning II | ETH Zürich",
+     "id": "AdTGz8YnnlE",
+     "url": "https://www.youtube.com/watch?v=AdTGz8YnnlE&t=1571s",
+     "start": 26.2,
+     "end": 52.4,
+     "lengthMin": 52.4,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 5 slides; papers: Levine et al. 2015 end-to-end visuomotor policies (arxiv.org/abs/1504.00702); Ma et al. 2023 Eureka (arxiv.org/abs/2310.12931)"
+   ],
+   "topics": [
+    "Actor-critic",
+    "off-policy and offline RL",
+    "reward design with LLMs",
+    "end-to-end visuomotor training"
+   ],
+   "questions": [
+    {
+     "q": "What did Levine et al. 2015 show?",
+     "a": "Training perception and control jointly, end-to-end from pixels to torques, on real robot tasks."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Finish hw4; plot learning curves and compare two algorithms.",
+   "recap": "Modern RL: off-policy, offline, and LLM-designed rewards.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 26.2,
+   "id": "m297",
+   "day": 297,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH guest L5: Andrew Wagenmaker - Robots that learn from experience",
+   "course": "ETH guest",
+   "watch": [
+    {
+     "course": "ETH guest",
+     "lecture": 5,
+     "title": "Guest Lecture 5: Andrew Wagenmaker - Robots That Learn From Experience [ETHZ Robot Learning 2026]",
+     "id": "CPmTpXA5azw",
+     "url": "https://www.youtube.com/watch?v=CPmTpXA5azw",
+     "start": 0.0,
+     "end": 31.5,
+     "lengthMin": 31.5,
+     "partial": false
+    }
+   ],
+   "read": [],
+   "topics": [
+    "Online RL fine-tuning of pretrained policies",
+    "steering diffusion policies",
+    "sample efficiency"
+   ],
+   "questions": [
+    {
+     "q": "Why fine-tune a pretrained policy with RL?",
+     "a": "Demonstrations get you close; experience lets the robot improve beyond them."
+    },
+    {
+     "q": "What is steering a diffusion policy in latent space?",
+     "a": "Doing RL over the policy's noise input rather than its weights, so learning is cheaper and safer."
+    },
+    {
+     "q": "What limits real-world RL?",
+     "a": "Sample efficiency, resets and safe exploration."
+    }
+   ],
+   "exercise": "Describe how you would let your Month 6 LeRobot policy improve from its own failures.",
+   "recap": "Learning from experience is how policies get past demonstration quality.",
+   "speaker": "Andrew Wagenmaker (UC Berkeley)",
+   "seminar": true,
+   "links": [],
+   "videoMin": 31.5,
+   "id": "m298",
+   "day": 298,
+   "minutes": 30
+  },
+  {
+   "kind": "project",
+   "month": 9,
+   "title": "Project: ETH homeworks 2-4 + one paper replication",
+   "course": "Project",
+   "watch": [],
+   "read": [],
+   "topics": [],
+   "steps": "Complete the course's coding homeworks hw2 (robot control & MDPs), hw3 (imitation learning) and hw4 (reinforcement learning) from the ETH repo. Then pick one paper from the weekly paper-discussion lists (e.g. Implicit BC, ACT/ALOHA, Decision Transformer) and replicate its key result in simulation at small scale with LeRobot or your own code. Report success rate, a perturbation test, and what didn't replicate.",
+   "questions": [
+    {
+     "q": "Why replicate a paper rather than only read it?",
+     "a": "Replication exposes hidden details, hyperparameters and failure modes, and makes a strong portfolio piece."
+    },
+    {
+     "q": "What must the report include?",
+     "a": "Success rate, a robustness/perturbation test, and an honest account of what didn't replicate."
+    },
+    {
+     "q": "Which homework covers DAgger-style imitation?",
+     "a": "hw3 imitation learning."
+    }
+   ],
+   "exercise": "Push the homeworks and replication to GitHub with a README.",
+   "recap": "Homework + replication = proof you can do modern robot learning, not just watch it.",
+   "speaker": null,
+   "seminar": false,
+   "links": [
+    {
+     "label": "Homework repo",
+     "url": "https://github.com/mees-robot-learning-course/ethz-course-2026"
+    },
+    {
+     "label": "Course page (paper lists)",
+     "url": "https://cvg.ethz.ch/lectures/Robot-Learning/"
+    },
+    {
+     "label": "LeRobot",
+     "url": "https://huggingface.co/docs/lerobot/index"
+    }
+   ],
+   "videoMin": 0,
+   "id": "m299",
+   "day": 299,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L6: Generative models (part 1/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 6,
+     "title": "Robot Learning 2026 – Lecture 6: Generative Models | ETH Zürich",
+     "id": "qd6Ldsuu46I",
+     "url": "https://www.youtube.com/watch?v=qd6Ldsuu46I",
+     "start": 0.0,
+     "end": 25.5,
+     "lengthMin": 51.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 6 slides; papers: Janner et al. 2022 Diffuser (arxiv.org/abs/2205.09991); Florence et al. 2021 Implicit BC (arxiv.org/pdf/2109.00137)"
+   ],
+   "topics": [
+    "VAEs",
+    "diffusion and flow matching",
+    "diffusion policy",
+    "implicit behavior cloning",
+    "planning with diffusion"
+   ],
+   "questions": [
+    {
+     "q": "Why use generative models for policies?",
+     "a": "Demonstrations are multimodal; a generative model can represent several valid actions instead of averaging them."
+    },
+    {
+     "q": "What is a diffusion policy?",
+     "a": "A policy that generates action sequences by iteratively denoising random noise conditioned on observations."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: VAEs, diffusion and flow matching, diffusion policy. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 25.5,
+   "id": "m300",
+   "day": 300,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L6: Generative models (part 2/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 6,
+     "title": "Robot Learning 2026 – Lecture 6: Generative Models | ETH Zürich",
+     "id": "qd6Ldsuu46I",
+     "url": "https://www.youtube.com/watch?v=qd6Ldsuu46I&t=1532s",
+     "start": 25.5,
+     "end": 51.1,
+     "lengthMin": 51.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 6 slides; papers: Janner et al. 2022 Diffuser (arxiv.org/abs/2205.09991); Florence et al. 2021 Implicit BC (arxiv.org/pdf/2109.00137)"
+   ],
+   "topics": [
+    "VAEs",
+    "diffusion and flow matching",
+    "diffusion policy",
+    "implicit behavior cloning",
+    "planning with diffusion"
+   ],
+   "questions": [
+    {
+     "q": "What does implicit BC use instead of a direct regressor?",
+     "a": "An energy-based model whose minimum over actions is the chosen action."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Explain on paper why averaging two demonstrations (go left / go right of an obstacle) crashes a regression policy but not a diffusion policy.",
+   "recap": "Generative models (especially diffusion) made imitation learning work for dexterous tasks.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 25.5,
+   "id": "m301",
+   "day": 301,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH guest L6: Cheng Chi - Robotics beyond algorithms",
+   "course": "ETH guest",
+   "watch": [
+    {
+     "course": "ETH guest",
+     "lecture": 6,
+     "title": "Guest Lecture 6: Cheng Chi - Robotics Beyond Algorithms [ETHZ Robot Learning 2026]",
+     "id": "tvFvIEOBKfM",
+     "url": "https://www.youtube.com/watch?v=tvFvIEOBKfM",
+     "start": 0.0,
+     "end": 33.9,
+     "lengthMin": 33.9,
+     "partial": false
+    }
+   ],
+   "read": [],
+   "topics": [
+    "Data collection hardware (UMI)",
+    "systems engineering",
+    "what actually makes robots work"
+   ],
+   "questions": [
+    {
+     "q": "What is UMI?",
+     "a": "The Universal Manipulation Interface, a handheld gripper for collecting in-the-wild demonstrations without a robot."
+    },
+    {
+     "q": "Main message of \"beyond algorithms\"?",
+     "a": "Hardware, data collection and systems engineering often matter more than the learning algorithm."
+    },
+    {
+     "q": "Which ETH lecture pairs with this?",
+     "a": "L6 Generative Models (diffusion policy)."
+    }
+   ],
+   "exercise": "Design a cheap data-collection rig for one task and estimate demos per hour.",
+   "recap": "The diffusion policy author argues that data and systems are the bottleneck.",
+   "speaker": "Cheng Chi (Sunday Robotics; Diffusion Policy & UMI)",
+   "seminar": true,
+   "links": [],
+   "videoMin": 33.9,
+   "id": "m302",
+   "day": 302,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L7: Sequence modeling and transformers (part 1/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 7,
+     "title": "Robot Learning 2026 – Lecture 7: Sequence Modeling & Transformers | ETH Zürich",
+     "id": "imSTfMJjp7M",
+     "url": "https://www.youtube.com/watch?v=imSTfMJjp7M",
+     "start": 0.0,
+     "end": 27.6,
+     "lengthMin": 55.2,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 7 slides; papers: Chen et al. 2021 Decision Transformer (arxiv.org/abs/2106.01345); Zhao et al. 2023 ALOHA/ACT (arxiv.org/abs/2304.13705)"
+   ],
+   "topics": [
+    "Transformers for control",
+    "Decision Transformer",
+    "action chunking (ACT/ALOHA)",
+    "next-token prediction for locomotion"
+   ],
+   "questions": [
+    {
+     "q": "What does Decision Transformer condition on?",
+     "a": "Desired return-to-go, past states and actions; it predicts the next action like a language model."
+    },
+    {
+     "q": "What is action chunking in ACT?",
+     "a": "Predicting a chunk of future actions at once, reducing compounding error and handling pauses in demos."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Transformers for control, Decision Transformer. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 27.6,
+   "id": "m303",
+   "day": 303,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L7: Sequence modeling and transformers (part 2/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 7,
+     "title": "Robot Learning 2026 – Lecture 7: Sequence Modeling & Transformers | ETH Zürich",
+     "id": "imSTfMJjp7M",
+     "url": "https://www.youtube.com/watch?v=imSTfMJjp7M&t=1656s",
+     "start": 27.6,
+     "end": 55.2,
+     "lengthMin": 55.2,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 7 slides; papers: Chen et al. 2021 Decision Transformer (arxiv.org/abs/2106.01345); Zhao et al. 2023 ALOHA/ACT (arxiv.org/abs/2304.13705)"
+   ],
+   "topics": [
+    "Transformers for control",
+    "Decision Transformer",
+    "action chunking (ACT/ALOHA)",
+    "next-token prediction for locomotion"
+   ],
+   "questions": [
+    {
+     "q": "Which Month 6 seminar previewed this?",
+     "a": "Max Simchowitz's talk on generative control and action chunking."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Modify a BC policy to output a 10-step action chunk and use temporal ensembling; compare smoothness.",
+   "recap": "Robot control as sequence modeling: chunks, transformers and next-token prediction.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 27.6,
+   "id": "m304",
+   "day": 304,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH guest L7: Ted Xiao - Three eras of robot learning",
+   "course": "ETH guest",
+   "watch": [
+    {
+     "course": "ETH guest",
+     "lecture": 7,
+     "title": "Guest Lecture 7: Ted Xiao - Three Eras of Robot Learning [ETHZ Robot Learning 2026]",
+     "id": "VS7Ulaugevg",
+     "url": "https://www.youtube.com/watch?v=VS7Ulaugevg",
+     "start": 0.0,
+     "end": 36.6,
+     "lengthMin": 36.6,
+     "partial": false
+    }
+   ],
+   "read": [],
+   "topics": [
+    "History of robot learning at Google (RT-1",
+    "RT-2)",
+    "scaling eras",
+    "where the field is going"
+   ],
+   "questions": [
+    {
+     "q": "What did RT-2 show?",
+     "a": "A vision-language model fine-tuned on robot data can transfer web knowledge to robot actions."
+    },
+    {
+     "q": "Why talk about \"eras\"?",
+     "a": "Each era changed the main bottleneck: algorithms, then data scale, then foundation models."
+    },
+    {
+     "q": "Which ETH lecture follows from this?",
+     "a": "L9 Generalist Robot Policies."
+    }
+   ],
+   "exercise": "Write a one-line summary for each of the three eras.",
+   "recap": "A field history from someone who built RT-1 and RT-2.",
+   "speaker": "Ted Xiao (Prometheus; ex-Google)",
+   "seminar": true,
+   "links": [],
+   "videoMin": 36.6,
+   "id": "m305",
+   "day": 305,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L8: World models (part 1/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 8,
+     "title": "Robot Learning 2026 – Lecture 8: World Models | ETH Zürich",
+     "id": "cTTmUZlOF2s",
+     "url": "https://www.youtube.com/watch?v=cTTmUZlOF2s",
+     "start": 0.0,
+     "end": 35.9,
+     "lengthMin": 71.8,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 8 slides; papers: Du et al. 2023 UniPi (arxiv.org/abs/2302.00111); Hafner et al. 2025 (arxiv.org/abs/2509.24527)"
+   ],
+   "topics": [
+    "Learned dynamics models",
+    "video prediction as planning",
+    "training agents inside world models",
+    "world action models"
+   ],
+   "questions": [
+    {
+     "q": "What is a world model?",
+     "a": "A learned model that predicts future observations or latent states given actions, usable for planning or training policies in imagination."
+    },
+    {
+     "q": "Why train agents inside a world model?",
+     "a": "Imagined rollouts are cheap and safe compared with real-robot interaction."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Learned dynamics models, video prediction as planning. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 35.9,
+   "id": "m306",
+   "day": 306,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L8: World models (part 2/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 8,
+     "title": "Robot Learning 2026 – Lecture 8: World Models | ETH Zürich",
+     "id": "cTTmUZlOF2s",
+     "url": "https://www.youtube.com/watch?v=cTTmUZlOF2s&t=2154s",
+     "start": 35.9,
+     "end": 71.8,
+     "lengthMin": 71.8,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 8 slides; papers: Du et al. 2023 UniPi (arxiv.org/abs/2302.00111); Hafner et al. 2025 (arxiv.org/abs/2509.24527)"
+   ],
+   "topics": [
+    "Learned dynamics models",
+    "video prediction as planning",
+    "training agents inside world models",
+    "world action models"
+   ],
+   "questions": [
+    {
+     "q": "What is the main risk (also in AA203 model-based RL)?",
+     "a": "The policy exploits model errors, doing well in imagination but failing in reality."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Write a one-paragraph comparison between a physics simulator (MuJoCo/Drake) and a learned video world model for robot training.",
+   "recap": "World models turn video prediction into a planning and training tool.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 35.9,
+   "id": "m307",
+   "day": 307,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH guest L8: Scott Reed - What is the right backbone for embodied agents?",
+   "course": "ETH guest",
+   "watch": [
+    {
+     "course": "ETH guest",
+     "lecture": 8,
+     "title": "Guest Lecture 8: Scott Reed - What is the right Backbone for Embodied Agents? [ETHZ Robot Learning 2026]",
+     "id": "fqkp_wkov6M",
+     "url": "https://www.youtube.com/watch?v=fqkp_wkov6M",
+     "start": 0.0,
+     "end": 36.2,
+     "lengthMin": 36.2,
+     "partial": false
+    }
+   ],
+   "read": [],
+   "topics": [
+    "Backbone architectures for generalist agents",
+    "video/world-model backbones vs VLMs",
+    "Gato"
+   ],
+   "questions": [
+    {
+     "q": "What is the backbone question?",
+     "a": "Whether robot policies should be built on language models, video models, or something else."
+    },
+    {
+     "q": "Why might video models be good backbones?",
+     "a": "They learn physics and dynamics from video, which matter for action."
+    },
+    {
+     "q": "Which earlier paper did he lead?",
+     "a": "Gato, a generalist agent (2022)."
+    }
+   ],
+   "exercise": "Argue for one backbone choice in a paragraph.",
+   "recap": "The backbone choice decides what prior knowledge a robot policy inherits.",
+   "speaker": "Scott Reed (NVIDIA GEAR Lab)",
+   "seminar": true,
+   "links": [],
+   "videoMin": 36.2,
+   "id": "m308",
+   "day": 308,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L9: Generalist robot policies (part 1/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 9,
+     "title": "Robot Learning 2026 – Lecture 9: Generalist Robot Policies | ETH Zürich",
+     "id": "dtofzDY9zuo",
+     "url": "https://www.youtube.com/watch?v=dtofzDY9zuo",
+     "start": 0.0,
+     "end": 31.7,
+     "lengthMin": 63.5,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 9 slides; papers: Lynch et al. language-conditioned imitation (arxiv.org/pdf/2005.07648); Reed et al. 2022 Gato (arxiv.org/abs/2205.06175); Physical Intelligence pi*0.6 (arxiv.org/abs/2511.14759)"
+   ],
+   "topics": [
+    "Vision-language-action models",
+    "cross-embodiment data",
+    "Gato",
+    "pi0.6/pi*0.6",
+    "language-conditioned imitation"
+   ],
+   "questions": [
+    {
+     "q": "What is a VLA?",
+     "a": "A vision-language model fine-tuned to output robot actions, conditioned on images and a language instruction."
+    },
+    {
+     "q": "Why train across many robot embodiments?",
+     "a": "More diverse data improves generalization and shares skills between robots."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Vision-language-action models, cross-embodiment data, Gato. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 31.7,
+   "id": "m309",
+   "day": 309,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L9: Generalist robot policies (part 2/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 9,
+     "title": "Robot Learning 2026 – Lecture 9: Generalist Robot Policies | ETH Zürich",
+     "id": "dtofzDY9zuo",
+     "url": "https://www.youtube.com/watch?v=dtofzDY9zuo&t=1904s",
+     "start": 31.7,
+     "end": 63.5,
+     "lengthMin": 63.5,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 9 slides; papers: Lynch et al. language-conditioned imitation (arxiv.org/pdf/2005.07648); Reed et al. 2022 Gato (arxiv.org/abs/2205.06175); Physical Intelligence pi*0.6 (arxiv.org/abs/2511.14759)"
+   ],
+   "topics": [
+    "Vision-language-action models",
+    "cross-embodiment data",
+    "Gato",
+    "pi0.6/pi*0.6",
+    "language-conditioned imitation"
+   ],
+   "questions": [
+    {
+     "q": "What does pi*0.6 add over plain imitation?",
+     "a": "Learning from its own experience (RL-style improvement) on top of demonstrations."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Run a pretrained policy from LeRobot (e.g. SmolVLA or pi0) in simulation and change the instruction or object to test generalization.",
+   "recap": "Generalist policies are where the field is headed; Month 6's seminars meet their technical details here.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 31.7,
+   "id": "m310",
+   "day": 310,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH guest L9: Quan Vuong - pi0.7, a generalist model with emergent capabilities",
+   "course": "ETH guest",
+   "watch": [
+    {
+     "course": "ETH guest",
+     "lecture": 9,
+     "title": "Guest Lecture 9: Quan Vuong - pi0.7, A Generalist Model with Emergent Capabilities [ETHZ Robot Learning 2026]",
+     "id": "pzolgvyWEFY",
+     "url": "https://www.youtube.com/watch?v=pzolgvyWEFY",
+     "start": 0.0,
+     "end": 37.0,
+     "lengthMin": 37.0,
+     "partial": false
+    }
+   ],
+   "read": [],
+   "topics": [
+    "Physical Intelligence's pi models",
+    "scaling data and models",
+    "emergent generalization"
+   ],
+   "questions": [
+    {
+     "q": "What does \"emergent capabilities\" mean here?",
+     "a": "Behaviors the model shows that were not explicitly trained, appearing with scale."
+    },
+    {
+     "q": "What feeds a pi-series model?",
+     "a": "Large mixtures of cross-embodiment robot data plus vision-language pretraining."
+    },
+    {
+     "q": "How would you test a claim of emergence?",
+     "a": "Evaluate on held-out tasks/scenes with clear success metrics and compare with smaller models."
+    }
+   ],
+   "exercise": "Write down the evaluation protocol you'd demand before believing an emergence claim.",
+   "recap": "A first-hand view of the frontier generalist model; treat capability claims with measured skepticism.",
+   "speaker": "Quan Vuong (Physical Intelligence co-founder)",
+   "seminar": true,
+   "links": [],
+   "videoMin": 37.0,
+   "id": "m311",
+   "day": 311,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L10: Embodied reasoning and test-time scaling (part 1/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 10,
+     "title": "Robot Learning 2026 – Lecture 10: Embodied Reasoning and Test-time Scaling | ETH Zürich",
+     "id": "CxhrjQuGEuE",
+     "url": "https://www.youtube.com/watch?v=CxhrjQuGEuE",
+     "start": 0.0,
+     "end": 27.8,
+     "lengthMin": 55.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 10 slides; papers: Fu et al. 2024 in-context imitation (arxiv.org/pdf/2408.15980); Wang et al. 2023 Voyager (arxiv.org/abs/2305.16291)"
+   ],
+   "topics": [
+    "In-context imitation",
+    "LLM agents for embodied tasks (Voyager)",
+    "chain-of-thought for robots",
+    "test-time compute"
+   ],
+   "questions": [
+    {
+     "q": "What is test-time scaling?",
+     "a": "Spending more computation at inference (sampling, search, reasoning) to improve decisions without retraining."
+    },
+    {
+     "q": "What does Voyager do?",
+     "a": "An LLM agent in Minecraft that writes code skills, stores them in a library and builds a curriculum for itself."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: In-context imitation, LLM agents for embodied tasks (Voyager). Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 27.8,
+   "id": "m312",
+   "day": 312,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L10: Embodied reasoning and test-time scaling (part 2/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 10,
+     "title": "Robot Learning 2026 – Lecture 10: Embodied Reasoning and Test-time Scaling | ETH Zürich",
+     "id": "CxhrjQuGEuE",
+     "url": "https://www.youtube.com/watch?v=CxhrjQuGEuE&t=1670s",
+     "start": 27.8,
+     "end": 55.7,
+     "lengthMin": 55.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 10 slides; papers: Fu et al. 2024 in-context imitation (arxiv.org/pdf/2408.15980); Wang et al. 2023 Voyager (arxiv.org/abs/2305.16291)"
+   ],
+   "topics": [
+    "In-context imitation",
+    "LLM agents for embodied tasks (Voyager)",
+    "chain-of-thought for robots",
+    "test-time compute"
+   ],
+   "questions": [
+    {
+     "q": "Why add reasoning to robot policies?",
+     "a": "To handle long-horizon, novel tasks that need planning beyond reactive control."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Pick one household task and write the reasoning steps a VLA would need before acting; mark where it could fail.",
+   "recap": "Reasoning and extra inference compute are the newest lever on robot capability.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 27.8,
+   "id": "m313",
+   "day": 313,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH guest L10: Archit Sharma - Scaling test-time compute at the frontier",
+   "course": "ETH guest",
+   "watch": [
+    {
+     "course": "ETH guest",
+     "lecture": 10,
+     "title": "Guest Lecture 10: Archit Sharma - Scaling Test-Time Compute at the Frontier [ETHZ Robot Learning 2026]",
+     "id": "oBEkY6NeE_o",
+     "url": "https://www.youtube.com/watch?v=oBEkY6NeE_o",
+     "start": 0.0,
+     "end": 32.3,
+     "lengthMin": 32.3,
+     "partial": false
+    }
+   ],
+   "read": [],
+   "topics": [
+    "Test-time compute",
+    "reasoning models",
+    "how it transfers to embodied agents"
+   ],
+   "questions": [
+    {
+     "q": "What does scaling test-time compute mean?",
+     "a": "Improving answers by spending more inference compute (longer reasoning, sampling, search)."
+    },
+    {
+     "q": "Why is it harder for robots?",
+     "a": "Actions must happen in real time and errors are physical."
+    },
+    {
+     "q": "Which ETH lecture pairs with this?",
+     "a": "L10 Embodied Reasoning and Test-time Scaling."
+    }
+   ],
+   "exercise": "List where in a robot stack you could afford extra thinking time.",
+   "recap": "Reasoning-at-inference is the newest scaling axis.",
+   "speaker": "Archit Sharma (Google DeepMind)",
+   "seminar": true,
+   "links": [],
+   "videoMin": 32.3,
+   "id": "m314",
+   "day": 314,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L11: Frontiers and open problems (part 1/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 11,
+     "title": "Robot Learning 2026 – Lecture 11: Frontier & Open Problems | ETH Zürich",
+     "id": "eL4lcy1KNzE",
+     "url": "https://www.youtube.com/watch?v=eL4lcy1KNzE",
+     "start": 0.0,
+     "end": 31.0,
+     "lengthMin": 62.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 11 slides; Sutton \"The Bitter Lesson\" (incompleteideas.net/IncIdeas/BitterLesson.html); Brooks 1991 \"Intelligence without Representation\"; LeCun 2022 \"A Path Towards Autonomous Machine Intelligence\""
+   ],
+   "topics": [
+    "The Bitter Lesson",
+    "intelligence without representation",
+    "autonomous machine intelligence",
+    "what is still unsolved"
+   ],
+   "questions": [
+    {
+     "q": "What is the Bitter Lesson?",
+     "a": "General methods that scale with computation (search and learning) eventually beat hand-built human knowledge."
+    },
+    {
+     "q": "What did Brooks argue?",
+     "a": "Intelligent behavior can emerge from layered reactive systems coupled to the world, without central symbolic models."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: The Bitter Lesson, intelligence without representation. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 31.0,
+   "id": "m315",
+   "day": 315,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH Robot Learning L11: Frontiers and open problems (part 2/2)",
+   "course": "ETH Robot Learning",
+   "watch": [
+    {
+     "course": "ETH Robot Learning",
+     "lecture": 11,
+     "title": "Robot Learning 2026 – Lecture 11: Frontier & Open Problems | ETH Zürich",
+     "id": "eL4lcy1KNzE",
+     "url": "https://www.youtube.com/watch?v=eL4lcy1KNzE&t=1862s",
+     "start": 31.0,
+     "end": 62.1,
+     "lengthMin": 62.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "Lecture 11 slides; Sutton \"The Bitter Lesson\" (incompleteideas.net/IncIdeas/BitterLesson.html); Brooks 1991 \"Intelligence without Representation\"; LeCun 2022 \"A Path Towards Autonomous Machine Intelligence\""
+   ],
+   "topics": [
+    "The Bitter Lesson",
+    "intelligence without representation",
+    "autonomous machine intelligence",
+    "what is still unsolved"
+   ],
+   "questions": [
+    {
+     "q": "Name two open problems in robot learning.",
+     "a": "E.g. data scale, reliability/safety, long-horizon tasks, evaluation and sim-to-real."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Write a 1-page position: which open problem would you work on and what data would you need?",
+   "recap": "The course ends with the big debates; you can now take a side with evidence.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 31.0,
+   "id": "m316",
+   "day": 316,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH guest L11: Lucas Beyer - Vision in the age of LLMs (part 1/2)",
+   "course": "ETH guest",
+   "watch": [
+    {
+     "course": "ETH guest",
+     "lecture": 11,
+     "title": "Guest Lecture 11: Lucas Beyer - Vision in the Age of LLMs [ETHZ Robot Learning 2026]",
+     "id": "0XB7fNS_ONg",
+     "url": "https://www.youtube.com/watch?v=0XB7fNS_ONg",
+     "start": 0.0,
+     "end": 34.5,
+     "lengthMin": 69.1,
+     "partial": true
+    }
+   ],
+   "read": [],
+   "topics": [
+    "Vision transformers",
+    "vision-language pretraining",
+    "what vision still needs"
+   ],
+   "questions": [
+    {
+     "q": "What did ViT show?",
+     "a": "Plain transformers on image patches match or beat CNNs given enough data."
+    },
+    {
+     "q": "Why does vision matter for robots in the LLM era?",
+     "a": "Policies are only as good as their visual understanding of space and objects."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Vision transformers, vision-language pretraining. Finish the lecture in the next module.",
+   "speaker": "Lucas Beyer (Meta Superintelligence Labs)",
+   "seminar": true,
+   "links": [],
+   "videoMin": 34.5,
+   "id": "m317",
+   "day": 317,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 9,
+   "title": "ETH guest L11: Lucas Beyer - Vision in the age of LLMs (part 2/2)",
+   "course": "ETH guest",
+   "watch": [
+    {
+     "course": "ETH guest",
+     "lecture": 11,
+     "title": "Guest Lecture 11: Lucas Beyer - Vision in the Age of LLMs [ETHZ Robot Learning 2026]",
+     "id": "0XB7fNS_ONg",
+     "url": "https://www.youtube.com/watch?v=0XB7fNS_ONg&t=2072s",
+     "start": 34.5,
+     "end": 69.1,
+     "lengthMin": 69.1,
+     "partial": true
+    }
+   ],
+   "read": [],
+   "topics": [
+    "Vision transformers",
+    "vision-language pretraining",
+    "what vision still needs"
+   ],
+   "questions": [
+    {
+     "q": "Which earlier month covered ViT/attention?",
+     "a": "Month 3 (CS231N L8 attention and transformers)."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Note one weakness of current VLMs for spatial reasoning that matters for manipulation.",
+   "recap": "The ViT co-author on where vision goes next.",
+   "speaker": "Lucas Beyer (Meta Superintelligence Labs)",
+   "seminar": true,
+   "links": [],
+   "videoMin": 34.5,
+   "id": "m318",
+   "day": 318,
+   "minutes": 30
+  },
+  {
+   "kind": "milestone",
+   "month": 9,
+   "title": "Month 9 milestone check",
+   "course": "Milestone",
+   "watch": [],
+   "read": [],
+   "topics": [],
+   "steps": "Self-assess after ETH Robot Learning.",
+   "questions": [
+    {
+     "q": "Can you explain covariate shift, causal confusion and DAgger?",
+     "a": "Yes (L3)."
+    },
+    {
+     "q": "Can you explain why diffusion policies and action chunking help imitation learning?",
+     "a": "Yes (L6-7)."
+    },
+    {
+     "q": "Can you explain what a VLA is and how generalist policies are trained?",
+     "a": "Yes (L9)."
+    },
+    {
+     "q": "Can you describe what a world model is and its main failure mode?",
+     "a": "Yes (L8)."
+    }
+   ],
+   "exercise": "Rate yourself 1-5 per line; revisit weak lectures.",
+   "recap": "You can follow and critique current robot learning research.",
+   "speaker": null,
+   "seminar": false,
+   "links": [
+    {
+     "label": "Course page",
+     "url": "https://cvg.ethz.ch/lectures/Robot-Learning/"
+    }
+   ],
+   "videoMin": 0,
+   "id": "m319",
+   "day": 319,
    "minutes": 30
   }
  ]

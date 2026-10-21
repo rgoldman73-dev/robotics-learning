@@ -1431,6 +1431,372 @@
    ]
   },
   {
+   "key": "underactuated",
+   "name": "MIT 6.8210",
+   "full": "Underactuated Robotics (Spring 2024)",
+   "who": "Russ Tedrake (MIT)",
+   "playlist": "https://www.youtube.com/watch?v=uyyBT-MHhLE",
+   "page": "https://underactuated.mit.edu",
+   "items": [
+    {
+     "idx": 1,
+     "id": "uyyBT-MHhLE",
+     "title": "6.8210 Spring 2024 Lecture 1: Robot dynamics and model-based control",
+     "min": 85,
+     "lecture": 1,
+     "inPath": true
+    },
+    {
+     "idx": 4,
+     "id": "GElVy0WTOys",
+     "title": "6.8210 Spring 2024 Lecture 4: Dynamic Programming II",
+     "min": 82,
+     "lecture": 4,
+     "inPath": true
+    },
+    {
+     "idx": 5,
+     "id": "UBPL0IbyJy4",
+     "title": "6.8210 Spring 2024 Lecture 5: Acrobots, Cart-poles, and Quadrotors I",
+     "min": 81,
+     "lecture": 5,
+     "inPath": true
+    },
+    {
+     "idx": 6,
+     "id": "ZBS9-4LkSIQ",
+     "title": "6.8210 Spring 2024 Lecture 6: Dynamic Programming III",
+     "min": 80,
+     "lecture": 6,
+     "inPath": true
+    },
+    {
+     "idx": 7,
+     "id": "qbuyy7ZcP9M",
+     "title": "6.8210 Spring 2024 Lecture 7: Lyapunov Analysis I",
+     "min": 81,
+     "lecture": 7,
+     "inPath": true
+    },
+    {
+     "idx": 8,
+     "id": "ywFpp1dy0zQ",
+     "title": "6.8210 Spring 2024 Lecture 8: Computing Lyapunov Functions I",
+     "min": 84,
+     "lecture": 8,
+     "inPath": true
+    },
+    {
+     "idx": 9,
+     "id": "e1BXMe64xJ8",
+     "title": "6.8210 Spring 2024 Lecture 9: Computing Lyapunov Functions II",
+     "min": 81,
+     "lecture": 9,
+     "inPath": true
+    },
+    {
+     "idx": 10,
+     "id": "wND0k16gCdk",
+     "title": "6.8210 Spring 2024 Lecture 10: Trajectory Optimization I",
+     "min": 79,
+     "lecture": 10,
+     "inPath": true
+    },
+    {
+     "idx": 11,
+     "id": "IQlwn9wLnJs",
+     "title": "6.8210 Spring 2024 Lecture 11: Trajectory Optimization II",
+     "min": 83,
+     "lecture": 11,
+     "inPath": true
+    },
+    {
+     "idx": 12,
+     "id": "j0Phrs3ATK0",
+     "title": "6.8210 Spring 2024 Lecture 12: Trajectory Stabilization",
+     "min": 78,
+     "lecture": 12,
+     "inPath": true
+    },
+    {
+     "idx": 14,
+     "id": "P64JhXLsjwY",
+     "title": "6.8210 Spring 2024 Lecture 14: Hybrid Trajectory Optimization",
+     "min": 80,
+     "lecture": 14,
+     "inPath": true
+    },
+    {
+     "idx": 15,
+     "id": "LF6IkHSRtaY",
+     "title": "6.8210 Spring 2024 Lecture 15: Planning + Control Through Contact",
+     "min": 77,
+     "lecture": 15,
+     "inPath": true
+    },
+    {
+     "idx": 16,
+     "id": "cRu4EqBswbk",
+     "title": "6.8210 Spring 2024 Lecture 16: Humanoid Robots",
+     "min": 79,
+     "lecture": 16,
+     "inPath": true
+    },
+    {
+     "idx": 17,
+     "id": "mqyAs9CKVGw",
+     "title": "6.8210 Spring 2024 Lecture 17: Mixed-discrete (combinatorial) and continuous optimization",
+     "min": 81,
+     "lecture": 17,
+     "inPath": true
+    },
+    {
+     "idx": 18,
+     "id": "ChiQgvVvgKM",
+     "title": "6.8210 Spring 2024 Lecture 18: Sampling-based (kinodynamic) motion planning",
+     "min": 81,
+     "lecture": 18,
+     "inPath": true
+    },
+    {
+     "idx": 19,
+     "id": "Nj8FvDZ4d9I",
+     "title": "6.8210 Spring 2024 Lecture 19: Stochastic dynamics",
+     "min": 79,
+     "lecture": 19,
+     "inPath": true
+    },
+    {
+     "idx": 20,
+     "id": "QYDsB0qs_x8",
+     "title": "6.8210 Spring 2024 Lecture 20: Stochastic Control",
+     "min": 79,
+     "lecture": 20,
+     "inPath": true
+    },
+    {
+     "idx": 21,
+     "id": "eEOmmpA1GAw",
+     "title": "6.8210 Spring 2024 Lecture 21: Robust Control & Policy Search",
+     "min": 77,
+     "lecture": 21,
+     "inPath": true
+    },
+    {
+     "idx": 22,
+     "id": "QIDisUxobFk",
+     "title": "6.8210 Spring 2024 Lecture 22: Output feedback",
+     "min": 71,
+     "lecture": 22,
+     "inPath": true
+    },
+    {
+     "idx": 23,
+     "id": "5fYG1JLwBSc",
+     "title": "6.8210 Spring 2024 Lecture 23: Feedback motion planning",
+     "min": 78,
+     "lecture": 23,
+     "inPath": true
+    },
+    {
+     "idx": 24,
+     "id": "ww1flzLixHo",
+     "title": "6.8210 Spring 2024 Lecture 24: Imitation learning / Foundation models / Course wrap-up",
+     "min": 82,
+     "lecture": 24,
+     "inPath": true
+    }
+   ]
+  },
+  {
+   "key": "ethrl",
+   "name": "ETH Robot Learning",
+   "full": "Robot Learning: From Fundamentals to Foundation Models (Spring 2026)",
+   "who": "Oier Mees (ETH Zurich)",
+   "playlist": "https://www.youtube.com/watch?v=X0k14u6pSxw",
+   "page": "https://cvg.ethz.ch/lectures/Robot-Learning/",
+   "items": [
+    {
+     "idx": 1,
+     "id": "X0k14u6pSxw",
+     "title": "Robot Learning 2026 – Lecture 1: Introduction to Robot Learning | ETH Zürich",
+     "min": 65,
+     "lecture": 1,
+     "inPath": true
+    },
+    {
+     "idx": 2,
+     "id": "5-Bb84eTTqQ",
+     "title": "Robot Learning 2026 – Lecture 2: Robot Control & Markov Decision Processes | ETH Zürich",
+     "min": 46,
+     "lecture": 2,
+     "inPath": true
+    },
+    {
+     "idx": 3,
+     "id": "Ef4R5s1LqoQ",
+     "title": "Robot Learning 2026 – Lecture 3: Imitation Learning | ETH Zürich",
+     "min": 51,
+     "lecture": 3,
+     "inPath": true
+    },
+    {
+     "idx": 4,
+     "id": "90raNpc11tQ",
+     "title": "Robot Learning 2026 – Lecture 4: Reinforcement Learning I | ETH Zürich",
+     "min": 53,
+     "lecture": 4,
+     "inPath": true
+    },
+    {
+     "idx": 5,
+     "id": "AdTGz8YnnlE",
+     "title": "Robot Learning 2026 – Lecture 5: Reinforcement Learning II | ETH Zürich",
+     "min": 52,
+     "lecture": 5,
+     "inPath": true
+    },
+    {
+     "idx": 6,
+     "id": "qd6Ldsuu46I",
+     "title": "Robot Learning 2026 – Lecture 6: Generative Models | ETH Zürich",
+     "min": 51,
+     "lecture": 6,
+     "inPath": true
+    },
+    {
+     "idx": 7,
+     "id": "imSTfMJjp7M",
+     "title": "Robot Learning 2026 – Lecture 7: Sequence Modeling & Transformers | ETH Zürich",
+     "min": 55,
+     "lecture": 7,
+     "inPath": true
+    },
+    {
+     "idx": 8,
+     "id": "cTTmUZlOF2s",
+     "title": "Robot Learning 2026 – Lecture 8: World Models | ETH Zürich",
+     "min": 72,
+     "lecture": 8,
+     "inPath": true
+    },
+    {
+     "idx": 9,
+     "id": "dtofzDY9zuo",
+     "title": "Robot Learning 2026 – Lecture 9: Generalist Robot Policies | ETH Zürich",
+     "min": 63,
+     "lecture": 9,
+     "inPath": true
+    },
+    {
+     "idx": 10,
+     "id": "CxhrjQuGEuE",
+     "title": "Robot Learning 2026 – Lecture 10: Embodied Reasoning and Test-time Scaling | ETH Zürich",
+     "min": 56,
+     "lecture": 10,
+     "inPath": true
+    },
+    {
+     "idx": 11,
+     "id": "eL4lcy1KNzE",
+     "title": "Robot Learning 2026 – Lecture 11: Frontier & Open Problems | ETH Zürich",
+     "min": 62,
+     "lecture": 11,
+     "inPath": true
+    }
+   ]
+  },
+  {
+   "key": "ethguest",
+   "name": "ETH guest",
+   "full": "ETH Robot Learning 2026: guest lectures",
+   "who": "Various (see each talk)",
+   "playlist": "https://www.youtube.com/watch?v=aG8NPTPhwkE",
+   "page": "https://cvg.ethz.ch/lectures/Robot-Learning/",
+   "items": [
+    {
+     "idx": 2,
+     "id": "aG8NPTPhwkE",
+     "title": "Guest Lecture 2: Abishek Gupta - Simulation for Robotic Manipulation, without the Pain [ETHZ Robot Learning 2026]",
+     "min": 32,
+     "lecture": 2,
+     "inPath": true
+    },
+    {
+     "idx": 3,
+     "id": "qvTP6T5oq1w",
+     "title": "Guest Lecture 3: Danfei Xu - Human Data as a Foundation for Robot Learning [ETHZ Robot Learning 2026]",
+     "min": 37,
+     "lecture": 3,
+     "inPath": true
+    },
+    {
+     "idx": 4,
+     "id": "fHHLmTu9sFk",
+     "title": "Guest Lecture 4: Aviral Kumar - How to Replicate the LLM Recipe in Robot Learning [ETHZ Robot Learning 2026]",
+     "min": 36,
+     "lecture": 4,
+     "inPath": true
+    },
+    {
+     "idx": 5,
+     "id": "CPmTpXA5azw",
+     "title": "Guest Lecture 5: Andrew Wagenmaker - Robots That Learn From Experience [ETHZ Robot Learning 2026]",
+     "min": 32,
+     "lecture": 5,
+     "inPath": true
+    },
+    {
+     "idx": 6,
+     "id": "tvFvIEOBKfM",
+     "title": "Guest Lecture 6: Cheng Chi - Robotics Beyond Algorithms [ETHZ Robot Learning 2026]",
+     "min": 34,
+     "lecture": 6,
+     "inPath": true
+    },
+    {
+     "idx": 7,
+     "id": "VS7Ulaugevg",
+     "title": "Guest Lecture 7: Ted Xiao - Three Eras of Robot Learning [ETHZ Robot Learning 2026]",
+     "min": 37,
+     "lecture": 7,
+     "inPath": true
+    },
+    {
+     "idx": 8,
+     "id": "fqkp_wkov6M",
+     "title": "Guest Lecture 8: Scott Reed - What is the right Backbone for Embodied Agents? [ETHZ Robot Learning 2026]",
+     "min": 36,
+     "lecture": 8,
+     "inPath": true
+    },
+    {
+     "idx": 9,
+     "id": "pzolgvyWEFY",
+     "title": "Guest Lecture 9: Quan Vuong - pi0.7, A Generalist Model with Emergent Capabilities [ETHZ Robot Learning 2026]",
+     "min": 37,
+     "lecture": 9,
+     "inPath": true
+    },
+    {
+     "idx": 10,
+     "id": "oBEkY6NeE_o",
+     "title": "Guest Lecture 10: Archit Sharma - Scaling Test-Time Compute at the Frontier [ETHZ Robot Learning 2026]",
+     "min": 32,
+     "lecture": 10,
+     "inPath": true
+    },
+    {
+     "idx": 11,
+     "id": "0XB7fNS_ONg",
+     "title": "Guest Lecture 11: Lucas Beyer - Vision in the Age of LLMs [ETHZ Robot Learning 2026]",
+     "min": 69,
+     "lecture": 11,
+     "inPath": true
+    }
+   ]
+  },
+  {
    "key": "cs234",
    "name": "CS234",
    "full": "Reinforcement Learning (optional deeper theory)",

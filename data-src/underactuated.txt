@@ -1,0 +1,21 @@
+1|uyyBT-MHhLE|5107|6.8210 Spring 2024 Lecture 1: Robot dynamics and model-based control
+4|GElVy0WTOys|4928|6.8210 Spring 2024 Lecture 4: Dynamic Programming II
+5|UBPL0IbyJy4|4884|6.8210 Spring 2024 Lecture 5: Acrobots, Cart-poles, and Quadrotors I
+6|ZBS9-4LkSIQ|4787|6.8210 Spring 2024 Lecture 6: Dynamic Programming III
+7|qbuyy7ZcP9M|4844|6.8210 Spring 2024 Lecture 7: Lyapunov Analysis I
+8|ywFpp1dy0zQ|5037|6.8210 Spring 2024 Lecture 8: Computing Lyapunov Functions I
+9|e1BXMe64xJ8|4868|6.8210 Spring 2024 Lecture 9: Computing Lyapunov Functions II
+10|wND0k16gCdk|4735|6.8210 Spring 2024 Lecture 10: Trajectory Optimization I
+11|IQlwn9wLnJs|4972|6.8210 Spring 2024 Lecture 11: Trajectory Optimization II
+12|j0Phrs3ATK0|4687|6.8210 Spring 2024 Lecture 12: Trajectory Stabilization
+14|P64JhXLsjwY|4796|6.8210 Spring 2024 Lecture 14: Hybrid Trajectory Optimization
+15|LF6IkHSRtaY|4599|6.8210 Spring 2024 Lecture 15: Planning + Control Through Contact
+16|cRu4EqBswbk|4727|6.8210 Spring 2024 Lecture 16: Humanoid Robots
+17|mqyAs9CKVGw|4864|6.8210 Spring 2024 Lecture 17: Mixed-discrete (combinatorial) and continuous optimization
+18|ChiQgvVvgKM|4847|6.8210 Spring 2024 Lecture 18: Sampling-based (kinodynamic) motion planning
+19|Nj8FvDZ4d9I|4718|6.8210 Spring 2024 Lecture 19: Stochastic dynamics
+20|QYDsB0qs_x8|4717|6.8210 Spring 2024 Lecture 20: Stochastic Control
+21|eEOmmpA1GAw|4626|6.8210 Spring 2024 Lecture 21: Robust Control & Policy Search
+22|QIDisUxobFk|4241|6.8210 Spring 2024 Lecture 22: Output feedback
+23|5fYG1JLwBSc|4686|6.8210 Spring 2024 Lecture 23: Feedback motion planning
+24|ww1flzLixHo|4922|6.8210 Spring 2024 Lecture 24: Imitation learning / Foundation models / Course wrap-up

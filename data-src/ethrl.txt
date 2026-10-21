@@ -1,0 +1,11 @@
+1|X0k14u6pSxw|3875|Robot Learning 2026 – Lecture 1: Introduction to Robot Learning | ETH Zürich
+2|5-Bb84eTTqQ|2770|Robot Learning 2026 – Lecture 2: Robot Control & Markov Decision Processes | ETH Zürich
+3|Ef4R5s1LqoQ|3037|Robot Learning 2026 – Lecture 3: Imitation Learning | ETH Zürich
+4|90raNpc11tQ|3153|Robot Learning 2026 – Lecture 4: Reinforcement Learning I | ETH Zürich
+5|AdTGz8YnnlE|3143|Robot Learning 2026 – Lecture 5: Reinforcement Learning II | ETH Zürich
+6|qd6Ldsuu46I|3064|Robot Learning 2026 – Lecture 6: Generative Models | ETH Zürich
+7|imSTfMJjp7M|3312|Robot Learning 2026 – Lecture 7: Sequence Modeling & Transformers | ETH Zürich
+8|cTTmUZlOF2s|4308|Robot Learning 2026 – Lecture 8: World Models | ETH Zürich
+9|dtofzDY9zuo|3808|Robot Learning 2026 – Lecture 9: Generalist Robot Policies | ETH Zürich
+10|CxhrjQuGEuE|3341|Robot Learning 2026 – Lecture 10: Embodied Reasoning and Test-time Scaling | ETH Zürich
+11|eL4lcy1KNzE|3725|Robot Learning 2026 – Lecture 11: Frontier & Open Problems | ETH Zürich

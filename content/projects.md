@@ -336,3 +336,65 @@ Q: Can you estimate an object's pose from a point cloud and explain ICP's failur
 Q: Can you explain behavior cloning, compounding error and action chunking? => Yes (L18).
 X: Rate yourself 1-5 per line; revisit weak lectures.
 R: You can now build an end-to-end manipulation system in simulation.
+## P8.0
+month: 8
+title: Start here: MIT 6.8210 Underactuated Robotics (Tedrake)
+steps: Bonus month, shared by @0x_meden (x.com/0x_meden/status/2112875067273068637). Russ Tedrake's MIT 6.8210 "Underactuated Robotics" (Spring 2024) is free: 21 recorded lectures (about 28 h) on his YouTube channel, a free 21-chapter textbook, and Python notebooks built on Drake. "Underactuated" means the robot has fewer motors than ways it can move: a walking humanoid can't push its body anywhere it wants, so it falls forward and catches itself. Topics: pendulums, acrobots, cart-poles, quadrotors, dynamic programming, LQR, Lyapunov analysis, trajectory optimization, control through contact, humanoids (L16, from the professor who led MIT's DARPA Robotics Challenge Atlas team), motion planning, robust/stochastic control and imitation learning. It is the deep version of Month 4 (AA203): same LQR/DP/MPC ideas, applied to walking and balancing robots. It pairs with Month 7 (same instructor, same Drake toolkit). Note: the Spring 2024 recordings skip lectures 2, 3 and 13 (they were not posted), so the numbering jumps; the book covers that material (Ch 2 Simple Pendulum, Ch 3 Acrobots/Cart-Poles, Ch 8 LQR). Today: bookmark the book, read Ch 1-2, and open one notebook.
+links: Textbook (free)|https://underactuated.mit.edu|Lecture 1 on YouTube|https://www.youtube.com/watch?v=uyyBT-MHhLE|Course notebooks repo|https://github.com/RussTedrake/underactuated|Drake|https://github.com/RobotLocomotion/drake|Source post (@0x_meden)|https://x.com/0x_meden/status/2112875067273068637|Related: Month 4 (AA203 control)|https://rgoldman73-dev.github.io/robotics-learning/#/modules?month=4|Related: Month 7 (MIT 6.4210, same instructor)|https://rgoldman73-dev.github.io/robotics-learning/#/modules?month=7
+Q: What does "underactuated" mean? => The robot cannot command arbitrary accelerations in all its degrees of freedom (fewer actuators than DOFs, or limits), e.g. a humanoid's floating base.
+Q: Which earlier month does this course deepen? => Month 4 (AA203 optimal control: DP, LQR, MPC, trajectory optimization).
+Q: Which lecture is about humanoids? => Lecture 16 (79 minutes), taught by the professor who led MIT's Atlas team in the DARPA Robotics Challenge.
+X: Read underactuated.mit.edu Ch 2 (The Simple Pendulum) to cover the unrecorded lectures 2-3, and run its first notebook.
+R: The math behind robots that walk, run and flip: exploit the dynamics instead of fighting them.
+## P8.1
+month: 8
+title: Project: acrobot / cart-pole swing-up, stabilize and verify
+steps: Pull Months 4 and 8 together on one system (cart-pole from Month 4, or the acrobot from the book). 1) Swing up with energy shaping (L5). 2) Compute a swing-up trajectory with direct collocation (L10-11). 3) Track it with TVLQR and finish with LQR at the top (L12). 4) Estimate the region of attraction of the final LQR controller by simulation sweep or SOS (L7-9). 5) Add random pushes and noise and report success rate. Put it on GitHub with plots and one honest paragraph about what failed.
+links: Ch 3 Acrobots, Cart-Poles, and Quadrotors|https://underactuated.mit.edu/acrobot.html|Ch 10 Trajectory Optimization|https://underactuated.mit.edu/trajopt.html|Ch 9 Lyapunov Analysis|https://underactuated.mit.edu/lyapunov.html
+Q: Why combine trajectory optimization with TVLQR? => The optimized trajectory is open-loop; TVLQR adds feedback to stay on it under disturbances.
+Q: What does the region-of-attraction estimate tell you? => From which states the final LQR controller is guaranteed (or empirically shown) to balance.
+Q: Which number matters most in the write-up? => Success rate under disturbances, not the single best run.
+X: Ship the repo with a swing-up GIF, the ROA plot and the disturbance success rate.
+R: One system, end to end: plan, track, balance, verify.
+## M8
+month: 8
+title: Month 8 milestone check
+steps: Self-assess after MIT 6.8210.
+links: Textbook|https://underactuated.mit.edu
+Q: Can you explain why a humanoid is underactuated and what ZMP/centroidal dynamics are? => Yes (L1, L16).
+Q: Can you balance an underactuated system with LQR and swing it up? => Yes (L5, P8.1).
+Q: Can you set up a direct-collocation trajectory optimization and stabilise it with TVLQR? => Yes (L10-12).
+Q: Can you state what a Lyapunov function certifies? => Yes (L7-9).
+X: Rate yourself 1-5 per line; revisit weak lectures.
+R: You now have the control half of the humanoid stack, the part learning sits on top of.
+## P9.0
+month: 9
+title: Start here: ETH Zurich Robot Learning (Oier Mees, Spring 2026)
+steps: Bonus month, shared by @rahim_mirani (x.com/rahim_mirani/status/2112282923395379537). ETH Zurich 263-5911-00L "Robot Learning: From Fundamentals to Foundation Models" (Spring 2026, Oier Mees): 11 recorded lectures plus 10 recorded guest talks, slides for every lecture, and four coding homeworks on GitHub. It runs MDPs and imitation learning, then RL, generative models (diffusion), sequence models, world models, generalist policies (VLAs), embodied reasoning and open problems. Guest speakers include Quan Vuong (Physical Intelligence co-founder), Cheng Chi (Diffusion Policy/UMI), Ted Xiao (RT-1/RT-2), Scott Reed (Gato, NVIDIA), Archit Sharma (Gemini Deep Think) and Lucas Beyer (ViT). Each lecture module lists that week's three paper-discussion readings. Guest talks follow the lecture they accompanied. It is the 2026 follow-on to Month 5 (CS224R, AA203 learning) and Month 6 (seminars), and is the most current material in the path. Today: open the course page and clone the homework repo.
+links: Course page (slides + recordings)|https://cvg.ethz.ch/lectures/Robot-Learning/|Homework repo|https://github.com/mees-robot-learning-course/ethz-course-2026|Lecture 1 on YouTube|https://www.youtube.com/watch?v=X0k14u6pSxw|Oier Mees|https://www.oiermees.com|Source post (@rahim_mirani)|https://x.com/rahim_mirani/status/2112282923395379537|Related: Month 5 (imitation learning & RL)|https://rgoldman73-dev.github.io/robotics-learning/#/modules?month=5|Related: Month 6 (frontier seminars)|https://rgoldman73-dev.github.io/robotics-learning/#/modules?month=6
+Q: What is the course arc? => MDPs/imitation -> RL -> generative models -> sequence/world models -> generalist policies (VLAs) -> reasoning and open problems.
+Q: What earlier months does it build on? => Month 5 (imitation learning and RL) and Month 6 (foundation-model seminars); L7 links to Month 7/8 imitation-learning material.
+Q: Where are the exercises? => Four homeworks in github.com/mees-robot-learning-course/ethz-course-2026 (PyTorch, control/MDPs, imitation learning, RL).
+X: Clone the homework repo and get hw1 running.
+R: A current, free course from fundamentals to VLAs, with guest talks from the people building them.
+## P9.1
+month: 9
+title: Project: ETH homeworks 2-4 + one paper replication
+steps: Complete the course's coding homeworks hw2 (robot control & MDPs), hw3 (imitation learning) and hw4 (reinforcement learning) from the ETH repo. Then pick one paper from the weekly paper-discussion lists (e.g. Implicit BC, ACT/ALOHA, Decision Transformer) and replicate its key result in simulation at small scale with LeRobot or your own code. Report success rate, a perturbation test, and what didn't replicate.
+links: Homework repo|https://github.com/mees-robot-learning-course/ethz-course-2026|Course page (paper lists)|https://cvg.ethz.ch/lectures/Robot-Learning/|LeRobot|https://huggingface.co/docs/lerobot/index
+Q: Why replicate a paper rather than only read it? => Replication exposes hidden details, hyperparameters and failure modes, and makes a strong portfolio piece.
+Q: What must the report include? => Success rate, a robustness/perturbation test, and an honest account of what didn't replicate.
+Q: Which homework covers DAgger-style imitation? => hw3 imitation learning.
+X: Push the homeworks and replication to GitHub with a README.
+R: Homework + replication = proof you can do modern robot learning, not just watch it.
+## M9
+month: 9
+title: Month 9 milestone check
+steps: Self-assess after ETH Robot Learning.
+links: Course page|https://cvg.ethz.ch/lectures/Robot-Learning/
+Q: Can you explain covariate shift, causal confusion and DAgger? => Yes (L3).
+Q: Can you explain why diffusion policies and action chunking help imitation learning? => Yes (L6-7).
+Q: Can you explain what a VLA is and how generalist policies are trained? => Yes (L9).
+Q: Can you describe what a world model is and its main failure mode? => Yes (L8).
+X: Rate yourself 1-5 per line; revisit weak lectures.
+R: You can follow and critique current robot learning research.

@@ -268,7 +268,7 @@ function Library() {
   });
   w.append(h('section', { class: 'card' }, h('h2', null, 'Textbooks & tools'), h('ul', null,
     ...[['VMLS — Vectors, Matrices, and Least Squares', 'https://web.stanford.edu/~boyd/vmls/'], ['Principles of Robot Autonomy (porabook.com)', 'https://porabook.com'], ['AA203 course page', 'https://stanfordasl.github.io/aa203/sp2526/'], ['CS224R course page', 'https://cs224r.stanford.edu/'], ['CS223A on SEE', 'https://see.stanford.edu/Course/CS223A'], ['Stanford Robotics Seminar archive', 'https://stanfordasl.github.io/robotics_seminar/'],
-      ['MIT 6.4210 Robotic Manipulation textbook', 'https://manipulation.csail.mit.edu'], ['Drake', 'https://drake.mit.edu'], ['MuJoCo', 'https://mujoco.readthedocs.io/'], ['MuJoCo Menagerie: SO-ARM100', 'https://github.com/google-deepmind/mujoco_menagerie/tree/main/trs_so_arm100'], ['Gymnasium', 'https://gymnasium.farama.org/'], ['Stable-Baselines3', 'https://stable-baselines3.readthedocs.io/'], ['LeRobot', 'https://huggingface.co/docs/lerobot/index'], ['SO-ARM100 / SO-101', 'https://github.com/TheRobotStudio/SO-ARM100']]
+      ['MIT 6.4210 Robotic Manipulation textbook', 'https://manipulation.csail.mit.edu'], ['Drake', 'https://drake.mit.edu'], ['MIT 6.8210 Underactuated Robotics textbook', 'https://underactuated.mit.edu'], ['ETH Robot Learning 2026 course page', 'https://cvg.ethz.ch/lectures/Robot-Learning/'], ['ETH Robot Learning homework repo', 'https://github.com/mees-robot-learning-course/ethz-course-2026'], ['MuJoCo', 'https://mujoco.readthedocs.io/'], ['MuJoCo Menagerie: SO-ARM100', 'https://github.com/google-deepmind/mujoco_menagerie/tree/main/trs_so_arm100'], ['Gymnasium', 'https://gymnasium.farama.org/'], ['Stable-Baselines3', 'https://stable-baselines3.readthedocs.io/'], ['LeRobot', 'https://huggingface.co/docs/lerobot/index'], ['SO-ARM100 / SO-101', 'https://github.com/TheRobotStudio/SO-ARM100']]
       .map(([t, u]) => h('li', null, ext(u, t))))));
   return w;
 }
@@ -289,7 +289,7 @@ function Settings() {
 }
 function About() {
   return h('div', { class: 'page' }, h('h1', null, 'About'),
-    h('section', { class: 'card' }, h('p', null, `Built from the X Article “Stanford's Robotics Degree, for Free: the 6-month path to Robot Learning Engineer” by @0x_meden (Sep 2026). ${meta.modules} modules (~30 min each) cover ${meta.pathLectures} lectures / ~${Math.round(meta.videoHours)} h of video, plus textbook reading and the article's six practice projects.`),
+    h('section', { class: 'card' }, h('p', null, `Built from the X Article “Stanford's Robotics Degree, for Free: the 6-month path to Robot Learning Engineer” by @0x_meden (Sep 2026). ${meta.modules} modules (~30 min each) cover ${meta.pathLectures} lectures / ~${Math.round(meta.videoHours)} h of video, plus textbook reading and the article's six practice projects. Bonus Months 7-9 add MIT 6.4210 Robotic Manipulation, MIT 6.8210 Underactuated Robotics (both Russ Tedrake, shared by @0x_meden) and ETH Zurich Robot Learning 2026 (Oier Mees, shared by @rahim_mirani).`),
       h('p', null, 'Honest notes:'), h('ul', null,
         h('li', null, 'Lecture titles, durations and links come from the official YouTube playlists. Long lectures are split into time-based parts — the time ranges are NOT topic timestamps.'),
         h('li', null, 'Quiz questions, exercises and recaps were written for this app from the lecture titles, course schedules, SEE topic lists and the article; answers are study aids — check them against the lecture and textbook.'),
