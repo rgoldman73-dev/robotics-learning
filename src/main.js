@@ -83,7 +83,7 @@ function Home() {
   wrap.append(h('section', { class: 'card' }, h('div', { class: 'spread' }, h('strong', null, 'Pace'), h('span', { class: 'muted' }, `one module a day since ${st.startDate} → ${behind}`)), bar((n / total) * 100),
     h('p', { class: 'muted small' }, 'Missed days never reset your place: “Today” always shows the first module you have not finished.')));
   // months
-  const months = h('section', { class: 'card' }, h('h2', null, 'Six months'));
+  const months = h('section', { class: 'card' }, h('h2', null, 'Months'));
   for (const k of Object.keys(meta.months)) {
     const ms = modules.filter((m) => String(m.month) === k), d = ms.filter((m) => S.isDone(m.id)).length;
     months.append(h('a', { class: 'month', href: `#/modules?month=${k}` }, h('div', { class: 'spread' }, h('strong', null, `${meta.months[k].label}: ${meta.months[k].title}`), h('span', { class: 'muted' }, `${d}/${ms.length}`)),
@@ -268,7 +268,7 @@ function Library() {
   });
   w.append(h('section', { class: 'card' }, h('h2', null, 'Textbooks & tools'), h('ul', null,
     ...[['VMLS — Vectors, Matrices, and Least Squares', 'https://web.stanford.edu/~boyd/vmls/'], ['Principles of Robot Autonomy (porabook.com)', 'https://porabook.com'], ['AA203 course page', 'https://stanfordasl.github.io/aa203/sp2526/'], ['CS224R course page', 'https://cs224r.stanford.edu/'], ['CS223A on SEE', 'https://see.stanford.edu/Course/CS223A'], ['Stanford Robotics Seminar archive', 'https://stanfordasl.github.io/robotics_seminar/'],
-      ['MuJoCo', 'https://mujoco.readthedocs.io/'], ['MuJoCo Menagerie: SO-ARM100', 'https://github.com/google-deepmind/mujoco_menagerie/tree/main/trs_so_arm100'], ['Gymnasium', 'https://gymnasium.farama.org/'], ['Stable-Baselines3', 'https://stable-baselines3.readthedocs.io/'], ['LeRobot', 'https://huggingface.co/docs/lerobot/index'], ['SO-ARM100 / SO-101', 'https://github.com/TheRobotStudio/SO-ARM100']]
+      ['MIT 6.4210 Robotic Manipulation textbook', 'https://manipulation.csail.mit.edu'], ['Drake', 'https://drake.mit.edu'], ['MuJoCo', 'https://mujoco.readthedocs.io/'], ['MuJoCo Menagerie: SO-ARM100', 'https://github.com/google-deepmind/mujoco_menagerie/tree/main/trs_so_arm100'], ['Gymnasium', 'https://gymnasium.farama.org/'], ['Stable-Baselines3', 'https://stable-baselines3.readthedocs.io/'], ['LeRobot', 'https://huggingface.co/docs/lerobot/index'], ['SO-ARM100 / SO-101', 'https://github.com/TheRobotStudio/SO-ARM100']]
       .map(([t, u]) => h('li', null, ext(u, t))))));
   return w;
 }

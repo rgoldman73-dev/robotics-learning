@@ -22,6 +22,8 @@ PLAYLISTS = {
     pl='PLoROMvodv4rNsMOMF1LG3ohsTqZVJVeVp', page='https://stanfordasl.github.io/aa203/sp2526/'),
  'cs224r': dict(name='CS224R', full='Deep Reinforcement Learning (Spring 2025)', who='Chelsea Finn',
     pl='PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL', page='https://cs224r.stanford.edu/'),
+ 'mit64210': dict(name='MIT 6.4210', full='Robotic Manipulation: Perception, Planning, and Control (Fall 2023)', who='Russ Tedrake (MIT)',
+    pl=None, url='https://www.youtube.com/watch?v=v04rn86Dehg', page='https://manipulation.csail.mit.edu'),
  'cs234': dict(name='CS234', full='Reinforcement Learning (optional deeper theory)', who='Emma Brunskill',
     pl='PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX', page='https://web.stanford.edu/class/cs234/'),
 }
@@ -202,7 +204,7 @@ def project_module(pid, c, month, kind):
 
 def main():
     rows = {k: read_pl(k) for k in PLAYLISTS}
-    C = {k: parse_md(f'{ROOT}/content/{k}.md') for k in ['engr108', 'cs223a', 'cs231n', 'ee259', 'aa203', 'cs224r']}
+    C = {k: parse_md(f'{ROOT}/content/{k}.md') for k in ['engr108', 'cs223a', 'cs231n', 'ee259', 'aa203', 'cs224r', 'mit64210']}
     SEM = parse_md(f'{ROOT}/content/seminars.md')
     PROJ = parse_md(f'{ROOT}/content/projects.md')
 
@@ -297,13 +299,19 @@ def main():
     for o in order:
         if isinstance(o, str): M.append(pm(o))
         else: M += seminar_mod(*o)
+    # ---- Month 7 (bonus, appended so existing module ids/progress stay stable) ----
+    M += [pm('P7.0'), pm('P7.C')]
+    for lec in L('mit64210', range(1, 24)):
+        M += modules_for_lecture('mit64210', lec, 7)
+    M.append(pm('M7'))
 
     PH = {1:('Month 1','The math everything else stands on','ENGR108 Applied Linear Algebra (Boyd)'),
           2:('Month 2',"The robot's body",'CS223A Introduction to Robotics (Khatib)'),
           3:('Month 3','How a robot sees and senses','CS231N + EE259'),
           4:('Month 4','Planning and control','AA203 lectures 1-12 (Pavone, Gammelli)'),
           5:('Month 5','Teaching robots instead of programming them','AA203 13-19 + CS224R (Finn)'),
-          6:('Month 6','The frontier, and your first real robot','Seminars + final project')}
+          6:('Month 6','The frontier, and your first real robot','Seminars + final project'),
+          7:('Month 7 (bonus)','Robotic manipulation, end to end','MIT 6.4210 (Tedrake) + humanoid career map')}
     for i, m in enumerate(M):
         m['id'] = f'm{i+1:03d}'; m['day'] = i+1; m['minutes'] = 30
     # sanity
@@ -328,7 +336,7 @@ def main():
             if k == 'aa203' and not re.search(r'AA203', r['title']): continue  # playlist also contains unrelated seminar items
             items.append(dict(idx=r['idx'], id=r['id'], title=r['title'], min=round(r['sec']/60), lecture=lec_no(r['title']),
                               inPath=(p['name'], r['id']) in in_path))
-        lib.append(dict(key=k, name=p['name'], full=p['full'], who=p['who'], playlist=f"https://www.youtube.com/playlist?list={p['pl']}", page=p['page'], items=items))
+        lib.append(dict(key=k, name=p['name'], full=p['full'], who=p['who'], playlist=p.get('url') or f"https://www.youtube.com/playlist?list={p['pl']}", page=p['page'], items=items))
     json.dump(dict(courses=lib), open(f'{ROOT}/src/data/library.json', 'w'), ensure_ascii=False, indent=1)
     print('modules', len(M), 'path lectures', path_lectures, 'video hours', round(mins/60,1))
     from collections import Counter

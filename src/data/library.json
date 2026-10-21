@@ -1237,6 +1237,200 @@
    ]
   },
   {
+   "key": "mit64210",
+   "name": "MIT 6.4210",
+   "full": "Robotic Manipulation: Perception, Planning, and Control (Fall 2023)",
+   "who": "Russ Tedrake (MIT)",
+   "playlist": "https://www.youtube.com/watch?v=v04rn86Dehg",
+   "page": "https://manipulation.csail.mit.edu",
+   "items": [
+    {
+     "idx": 1,
+     "id": "v04rn86Dehg",
+     "title": "6.4210 Fall 2023 Lecture 1: Intro",
+     "min": 76,
+     "lecture": 1,
+     "inPath": true
+    },
+    {
+     "idx": 2,
+     "id": "q896_lTh8eA",
+     "title": "6.4210 Fall 2023 Lecture 2: Let's get you a robot!",
+     "min": 81,
+     "lecture": 2,
+     "inPath": true
+    },
+    {
+     "idx": 3,
+     "id": "0-34RZJxyww",
+     "title": "6.4210 Fall 2023 Lecture 3: Basic Pick and Place (Pt. 1)",
+     "min": 81,
+     "lecture": 3,
+     "inPath": true
+    },
+    {
+     "idx": 4,
+     "id": "1mkzXp9_QYY",
+     "title": "6.4210 Fall 2023 Lecture 4: Basic Pick and Place (Pt. 2)",
+     "min": 74,
+     "lecture": 4,
+     "inPath": true
+    },
+    {
+     "idx": 5,
+     "id": "YaQrC_Zm8qg",
+     "title": "6.4210 Fall 2023 Lecture 5: Basic Pick and Place (Pt. 3)",
+     "min": 80,
+     "lecture": 5,
+     "inPath": true
+    },
+    {
+     "idx": 6,
+     "id": "1a3KhOq1938",
+     "title": "6.4210 Fall 2023 Lecture 6: Geometric Perception (Pt. 1)",
+     "min": 79,
+     "lecture": 6,
+     "inPath": true
+    },
+    {
+     "idx": 7,
+     "id": "Cs49WVNqEdk",
+     "title": "6.4210 Fall 2023 Lecture 7: Geometric Perception (Pt. 2)",
+     "min": 78,
+     "lecture": 7,
+     "inPath": true
+    },
+    {
+     "idx": 8,
+     "id": "G8Iwe1XRQQM",
+     "title": "6.4210 Fall 2023 Lecture 8: Manipulation in Clutter- Contact Simulation",
+     "min": 78,
+     "lecture": 8,
+     "inPath": true
+    },
+    {
+     "idx": 9,
+     "id": "SenccXyBn-k",
+     "title": "6.4210 Fall 2023 Lecture 9: Manipulation in Clutter- Grasp Selection",
+     "min": 80,
+     "lecture": 9,
+     "inPath": true
+    },
+    {
+     "idx": 10,
+     "id": "SX-0ZDXaL1A",
+     "title": "6.4210 Fall 2023 Lecture 10: Manipulation in Clutter- Programming Tasks",
+     "min": 79,
+     "lecture": 10,
+     "inPath": true
+    },
+    {
+     "idx": 11,
+     "id": "ZJNIzuP_8GA",
+     "title": "6.4210 Fall 2023 Lecture 11: Motion Planning- Optimization Based",
+     "min": 79,
+     "lecture": 11,
+     "inPath": true
+    },
+    {
+     "idx": 12,
+     "id": "uLkWAvNTkXA",
+     "title": "6.4210 Fall 2023 Lecture 12: Motion Planning- Sampling Based and Global Optimization",
+     "min": 80,
+     "lecture": 12,
+     "inPath": true
+    },
+    {
+     "idx": 13,
+     "id": "GKbbjOsS8x8",
+     "title": "6.4210 Fall 2023 Lecture 13: Mobile Manipulation",
+     "min": 72,
+     "lecture": 13,
+     "inPath": true
+    },
+    {
+     "idx": 14,
+     "id": "JtJyesuYvb4",
+     "title": "6.4210 Fall 2023 Lecture 14: Force Control",
+     "min": 71,
+     "lecture": 14,
+     "inPath": true
+    },
+    {
+     "idx": 15,
+     "id": "9GB6kpQyMtM",
+     "title": "6.4210 Fall 2023 Lecture 15: Manipulator Control",
+     "min": 78,
+     "lecture": 15,
+     "inPath": true
+    },
+    {
+     "idx": 16,
+     "id": "kZh2laD7NQI",
+     "title": "6.4210 Fall 2023 Lecture 16: Deep Perception",
+     "min": 67,
+     "lecture": 16,
+     "inPath": true
+    },
+    {
+     "idx": 17,
+     "id": "LbBP2Ba2J9Q",
+     "title": "6.4210 Fall 2023 Lecture 17: Deep Perception Pt. 2",
+     "min": 79,
+     "lecture": 17,
+     "inPath": true
+    },
+    {
+     "idx": 18,
+     "id": "i-303tTtEig",
+     "title": "6.4210 Fall 2023 Lecture 18: Visuomotor Policies (via Behavior Cloning)",
+     "min": 79,
+     "lecture": 18,
+     "inPath": true
+    },
+    {
+     "idx": 19,
+     "id": "DpEE97tv3BM",
+     "title": "6.4210 Fall 2023 Lecture 19: Reinforcement Learning Pt. 1",
+     "min": 76,
+     "lecture": 19,
+     "inPath": true
+    },
+    {
+     "idx": 20,
+     "id": "4a5-zWWz8Fs",
+     "title": "6.4210 Fall 2023 Lecture 20: Reinforcement Learning Pt. 2",
+     "min": 80,
+     "lecture": 20,
+     "inPath": true
+    },
+    {
+     "idx": 21,
+     "id": "v_ZLjfbeZmw",
+     "title": "6.4210 Fall 2023 Lecture 21: Multibody Parameter Estimation",
+     "min": 77,
+     "lecture": 21,
+     "inPath": true
+    },
+    {
+     "idx": 22,
+     "id": "XLPObNeeTGg",
+     "title": "6.4210 Fall 2023 Lecture 22: Foundational Models for Decision Making",
+     "min": 81,
+     "lecture": 22,
+     "inPath": true
+    },
+    {
+     "idx": 23,
+     "id": "XjyUGtjjou4",
+     "title": "6.4210 Fall 2023 Lecture 23: Soft Manipulation and Tactile Sensing",
+     "min": 71,
+     "lecture": 23,
+     "inPath": true
+    }
+   ]
+  },
+  {
    "key": "cs234",
    "name": "CS234",
    "full": "Reinforcement Learning (optional deeper theory)",

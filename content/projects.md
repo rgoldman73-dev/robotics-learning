@@ -305,3 +305,34 @@ Q: Can you train and evaluate an IL policy with LeRobot? => Yes (final project).
 Q: How will you follow new research? => The Stanford Robotics Seminar archive, one talk per week.
 X: Schedule one seminar per week in your calendar.
 R: You finished the path: you can build, measure and explain robot learning.
+## P7.0
+month: 7
+title: Start here: MIT 6.4210 Robotic Manipulation (Tedrake)
+steps: Bonus month, shared by @0x_meden (x.com/0x_meden/status/2112588317925531663). Russ Tedrake's MIT 6.4210 "Robotic Manipulation: Perception, Planning, and Control" is fully free: 23 lectures (~30 h, Fall 2023) on YouTube, a free textbook website updated each semester, and Python notebook exercises built on Drake, his lab's open-source toolkit. It covers pick and place, geometric perception, grasping in clutter, motion planning, force control, deep perception, behavior cloning, RL, foundation models and tactile sensing. It builds directly on Month 2 (CS223A kinematics, Jacobians, force control) and Month 4 (AA203 planning/control); Lecture 18 (behavior cloning) is the idea behind ALOHA, Diffusion Policy and pi0 and pairs with Month 5's CS224R imitation-learning modules. Today: bookmark the book, clone the repo and run one notebook.
+links: Textbook (free)|https://manipulation.csail.mit.edu|Lectures on YouTube|https://www.youtube.com/watch?v=v04rn86Dehg|Code & exercises|https://github.com/RussTedrake/manipulation|Drake|https://drake.mit.edu|Source post (@0x_meden)|https://x.com/0x_meden/status/2112588317925531663
+Q: What are the three pillars in the course title? => Perception, planning and control.
+Q: Which earlier months does it build on? => Month 2 (CS223A kinematics/force control) and Month 4 (AA203 planning and control); L18 links to Month 5 imitation learning.
+Q: What toolkit do the exercises use? => Drake (open source, from Tedrake's lab), via Python notebooks.
+X: Clone github.com/RussTedrake/manipulation (or open the book's notebook links) and run the first chapter's example.
+R: A free MIT course that turns the arm math from Months 2 and 4 into full manipulation systems.
+## P7.C
+month: 7
+title: Sidebar: the humanoid robotics career map (412 job posts)
+steps: From @0x_meden's X Article "I read 412 humanoid robot jobs. Here's the real career map." (Oct 2026; 412 roles at Figure, 1X, Agility, Apptronik, Skild AI and Physical Intelligence). Only 2 of 412 require a PhD; 160 (39%) mention no degree at all. In engineering roles: Python 50%, C++ 32%, PyTorch 11%, ROS 7.5%, MuJoCo/Isaac 7.1%, RL 5.8%, imitation learning 5.8%. Median posted pay for AI/ML roles: $200K–$305.5K. Career ladder: data collection operator (1X, $28–36/hr) → service technician (Figure, $35–65/hr) → Robot Operator II (Agility, $102–133K) → AI researcher (1X, $200–300K) → staff teleop engineer (Agility, $190–296K) → Helix AI engineer (Figure, $200–400K). 12-month plan: months 1–2 Python, Linux, Stanford ENGR108; 3–4 CS223A + MuJoCo; 5–6 C++, AA203 control, then RL; 7–8 SO-101 arm ($122–230) + 50 LeRobot demos + an imitation policy; 9 measure success rate and robustness and write up the failures; 10–12 apply via operator, technician, residency or internship roles. Figures are the author's; check current postings.
+links: Career map article (@0x_meden)|https://x.com/i/status/2107423031588946035|Post sharing MIT 6.4210|https://x.com/0x_meden/status/2112588317925531663|LeRobot|https://huggingface.co/docs/lerobot/index|SO-ARM100 / SO-101|https://github.com/TheRobotStudio/SO-ARM100
+Q: How many of the 412 roles required a PhD? => 2.
+Q: Which skill appeared most in engineering roles? => Python (50%), then C++ (32%).
+Q: What are the entry rungs of the ladder? => Data collection operator and service technician roles, then robot operator.
+Q: What should months 7–9 of the plan produce? => An SO-101 arm, 50 LeRobot demos, a trained imitation policy, and a write-up of its success rate, robustness and failures.
+X: Map your own progress in this app onto the 12-month plan and pick one entry-level role to target.
+R: The bar is a demonstrated robot project plus Python/C++, not a PhD.
+## M7
+month: 7
+title: Month 7 milestone check
+steps: Self-assess after MIT 6.4210.
+links: Textbook|https://manipulation.csail.mit.edu
+Q: Can you script a pick and place in Drake with differential IK? => Yes if you completed L3–5 exercises.
+Q: Can you estimate an object's pose from a point cloud and explain ICP's failure modes? => Yes (L6–7).
+Q: Can you explain behavior cloning, compounding error and action chunking? => Yes (L18).
+X: Rate yourself 1-5 per line; revisit weak lectures.
+R: You can now build an end-to-end manipulation system in simulation.

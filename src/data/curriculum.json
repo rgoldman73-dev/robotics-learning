@@ -1,9 +1,9 @@
 {
  "meta": {
   "source": "X Article by @0x_meden: Stanford's Robotics Degree, for Free: the 6-month path to Robot Learning Engineer",
-  "modules": 189,
-  "pathLectures": 116,
-  "videoHours": 94.9,
+  "modules": 238,
+  "pathLectures": 139,
+  "videoHours": 124.5,
   "months": {
    "1": {
     "label": "Month 1",
@@ -34,6 +34,11 @@
     "label": "Month 6",
     "title": "The frontier, and your first real robot",
     "sub": "Seminars + final project"
+   },
+   "7": {
+    "label": "Month 7 (bonus)",
+    "title": "Robotic manipulation, end to end",
+    "sub": "MIT 6.4210 (Tedrake) + humanoid career map"
    }
   },
   "built": "2026-10-03"
@@ -9265,6 +9270,2482 @@
    "videoMin": 0,
    "id": "m189",
    "day": 189,
+   "minutes": 30
+  },
+  {
+   "kind": "project",
+   "month": 7,
+   "title": "Start here: MIT 6.4210 Robotic Manipulation (Tedrake)",
+   "course": "Project",
+   "watch": [],
+   "read": [],
+   "topics": [],
+   "steps": "Bonus month, shared by @0x_meden (x.com/0x_meden/status/2112588317925531663). Russ Tedrake's MIT 6.4210 \"Robotic Manipulation: Perception, Planning, and Control\" is fully free: 23 lectures (~30 h, Fall 2023) on YouTube, a free textbook website updated each semester, and Python notebook exercises built on Drake, his lab's open-source toolkit. It covers pick and place, geometric perception, grasping in clutter, motion planning, force control, deep perception, behavior cloning, RL, foundation models and tactile sensing. It builds directly on Month 2 (CS223A kinematics, Jacobians, force control) and Month 4 (AA203 planning/control); Lecture 18 (behavior cloning) is the idea behind ALOHA, Diffusion Policy and pi0 and pairs with Month 5's CS224R imitation-learning modules. Today: bookmark the book, clone the repo and run one notebook.",
+   "questions": [
+    {
+     "q": "What are the three pillars in the course title?",
+     "a": "Perception, planning and control."
+    },
+    {
+     "q": "Which earlier months does it build on?",
+     "a": "Month 2 (CS223A kinematics/force control) and Month 4 (AA203 planning and control); L18 links to Month 5 imitation learning."
+    },
+    {
+     "q": "What toolkit do the exercises use?",
+     "a": "Drake (open source, from Tedrake's lab), via Python notebooks."
+    }
+   ],
+   "exercise": "Clone github.com/RussTedrake/manipulation (or open the book's notebook links) and run the first chapter's example.",
+   "recap": "A free MIT course that turns the arm math from Months 2 and 4 into full manipulation systems.",
+   "speaker": null,
+   "seminar": false,
+   "links": [
+    {
+     "label": "Textbook (free)",
+     "url": "https://manipulation.csail.mit.edu"
+    },
+    {
+     "label": "Lectures on YouTube",
+     "url": "https://www.youtube.com/watch?v=v04rn86Dehg"
+    },
+    {
+     "label": "Code & exercises",
+     "url": "https://github.com/RussTedrake/manipulation"
+    },
+    {
+     "label": "Drake",
+     "url": "https://drake.mit.edu"
+    },
+    {
+     "label": "Source post (@0x_meden)",
+     "url": "https://x.com/0x_meden/status/2112588317925531663"
+    }
+   ],
+   "videoMin": 0,
+   "id": "m190",
+   "day": 190,
+   "minutes": 30
+  },
+  {
+   "kind": "project",
+   "month": 7,
+   "title": "Sidebar: the humanoid robotics career map (412 job posts)",
+   "course": "Project",
+   "watch": [],
+   "read": [],
+   "topics": [],
+   "steps": "From @0x_meden's X Article \"I read 412 humanoid robot jobs. Here's the real career map.\" (Oct 2026; 412 roles at Figure, 1X, Agility, Apptronik, Skild AI and Physical Intelligence). Only 2 of 412 require a PhD; 160 (39%) mention no degree at all. In engineering roles: Python 50%, C++ 32%, PyTorch 11%, ROS 7.5%, MuJoCo/Isaac 7.1%, RL 5.8%, imitation learning 5.8%. Median posted pay for AI/ML roles: $200K–$305.5K. Career ladder: data collection operator (1X, $28–36/hr) → service technician (Figure, $35–65/hr) → Robot Operator II (Agility, $102–133K) → AI researcher (1X, $200–300K) → staff teleop engineer (Agility, $190–296K) → Helix AI engineer (Figure, $200–400K). 12-month plan: months 1–2 Python, Linux, Stanford ENGR108; 3–4 CS223A + MuJoCo; 5–6 C++, AA203 control, then RL; 7–8 SO-101 arm ($122–230) + 50 LeRobot demos + an imitation policy; 9 measure success rate and robustness and write up the failures; 10–12 apply via operator, technician, residency or internship roles. Figures are the author's; check current postings.",
+   "questions": [
+    {
+     "q": "How many of the 412 roles required a PhD?",
+     "a": "2."
+    },
+    {
+     "q": "Which skill appeared most in engineering roles?",
+     "a": "Python (50%), then C++ (32%)."
+    },
+    {
+     "q": "What are the entry rungs of the ladder?",
+     "a": "Data collection operator and service technician roles, then robot operator."
+    },
+    {
+     "q": "What should months 7–9 of the plan produce?",
+     "a": "An SO-101 arm, 50 LeRobot demos, a trained imitation policy, and a write-up of its success rate, robustness and failures."
+    }
+   ],
+   "exercise": "Map your own progress in this app onto the 12-month plan and pick one entry-level role to target.",
+   "recap": "The bar is a demonstrated robot project plus Python/C++, not a PhD.",
+   "speaker": null,
+   "seminar": false,
+   "links": [
+    {
+     "label": "Career map article (@0x_meden)",
+     "url": "https://x.com/i/status/2107423031588946035"
+    },
+    {
+     "label": "Post sharing MIT 6.4210",
+     "url": "https://x.com/0x_meden/status/2112588317925531663"
+    },
+    {
+     "label": "LeRobot",
+     "url": "https://huggingface.co/docs/lerobot/index"
+    },
+    {
+     "label": "SO-ARM100 / SO-101",
+     "url": "https://github.com/TheRobotStudio/SO-ARM100"
+    }
+   ],
+   "videoMin": 0,
+   "id": "m191",
+   "day": 191,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L1: Intro to robotic manipulation (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 1,
+     "title": "6.4210 Fall 2023 Lecture 1: Intro",
+     "id": "v04rn86Dehg",
+     "url": "https://www.youtube.com/watch?v=v04rn86Dehg",
+     "start": 0.0,
+     "end": 37.9,
+     "lengthMin": 75.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Introduction\""
+   ],
+   "topics": [
+    "Course overview",
+    "why manipulation is hard",
+    "the manipulation stack (perception",
+    "planning",
+    "control)",
+    "Drake"
+   ],
+   "questions": [
+    {
+     "q": "What three pillars does the course title name?",
+     "a": "Perception, planning and control."
+    },
+    {
+     "q": "What is Drake?",
+     "a": "The open-source C++/Python toolbox for modeling, simulation, planning and control from Tedrake's lab; the course exercises run on it."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Course overview, why manipulation is hard, the manipulation stack (perception. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 37.9,
+   "id": "m192",
+   "day": 192,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L1: Intro to robotic manipulation (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 1,
+     "title": "6.4210 Fall 2023 Lecture 1: Intro",
+     "id": "v04rn86Dehg",
+     "url": "https://www.youtube.com/watch?v=v04rn86Dehg&t=2272s",
+     "start": 37.9,
+     "end": 75.7,
+     "lengthMin": 75.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Introduction\""
+   ],
+   "topics": [
+    "Course overview",
+    "why manipulation is hard",
+    "the manipulation stack (perception",
+    "planning",
+    "control)",
+    "Drake"
+   ],
+   "questions": [
+    {
+     "q": "How does this course relate to CS223A from Month 2?",
+     "a": "CS223A gives kinematics/dynamics/control of the arm; 6.4210 builds full manipulation systems on top (perception, grasping, planning, learning)."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Open the course notebooks (github.com/RussTedrake/manipulation, or the Deepnote links in the book) and run the first example.",
+   "recap": "Manipulation = perception + planning + control around contact; the course builds a full system in simulation with Drake.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 37.9,
+   "id": "m193",
+   "day": 193,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L2: Let's get you a robot! (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 2,
+     "title": "6.4210 Fall 2023 Lecture 2: Let's get you a robot!",
+     "id": "q896_lTh8eA",
+     "url": "https://www.youtube.com/watch?v=q896_lTh8eA",
+     "start": 0.0,
+     "end": 40.3,
+     "lengthMin": 80.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Let's get you a robot\""
+   ],
+   "topics": [
+    "Robot hardware",
+    "arms and hands",
+    "actuators",
+    "position vs torque control",
+    "simulating a robot in Drake"
+   ],
+   "questions": [
+    {
+     "q": "What is the difference between position-controlled and torque-controlled arms?",
+     "a": "Position control tracks joint setpoints with stiff internal loops; torque control commands joint torques, enabling compliant/force behaviour."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Robot hardware, arms and hands, actuators. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.3,
+   "id": "m194",
+   "day": 194,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L2: Let's get you a robot! (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 2,
+     "title": "6.4210 Fall 2023 Lecture 2: Let's get you a robot!",
+     "id": "q896_lTh8eA",
+     "url": "https://www.youtube.com/watch?v=q896_lTh8eA&t=2417s",
+     "start": 40.3,
+     "end": 80.6,
+     "lengthMin": 80.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Let's get you a robot\""
+   ],
+   "topics": [
+    "Robot hardware",
+    "arms and hands",
+    "actuators",
+    "position vs torque control",
+    "simulating a robot in Drake"
+   ],
+   "questions": [
+    {
+     "q": "Why simulate before running hardware?",
+     "a": "It is cheap, safe and repeatable, and lets you debug the whole stack."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Load the iiwa (or another arm) in Drake's MeshCat visualiser and move a joint.",
+   "recap": "Know your hardware's interface (position/torque) because it shapes every controller you write.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.3,
+   "id": "m195",
+   "day": 195,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L3: Basic pick and place (1) (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 3,
+     "title": "6.4210 Fall 2023 Lecture 3: Basic Pick and Place (Pt. 1)",
+     "id": "0-34RZJxyww",
+     "url": "https://www.youtube.com/watch?v=0-34RZJxyww",
+     "start": 0.0,
+     "end": 40.3,
+     "lengthMin": 80.5,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Basic Pick and Place\""
+   ],
+   "topics": [
+    "Spatial algebra",
+    "frames and poses",
+    "monogram notation",
+    "forward kinematics"
+   ],
+   "questions": [
+    {
+     "q": "What does Tedrake's monogram notation X^B_A (or X_AB) mean?",
+     "a": "The pose of frame B measured from frame A; composition X_AC = X_AB X_BC."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Spatial algebra, frames and poses. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.3,
+   "id": "m196",
+   "day": 196,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L3: Basic pick and place (1) (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 3,
+     "title": "6.4210 Fall 2023 Lecture 3: Basic Pick and Place (Pt. 1)",
+     "id": "0-34RZJxyww",
+     "url": "https://www.youtube.com/watch?v=0-34RZJxyww&t=2416s",
+     "start": 40.3,
+     "end": 80.5,
+     "lengthMin": 80.5,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Basic Pick and Place\""
+   ],
+   "topics": [
+    "Spatial algebra",
+    "frames and poses",
+    "monogram notation",
+    "forward kinematics"
+   ],
+   "questions": [
+    {
+     "q": "Which Month 2 idea is this?",
+     "a": "Homogeneous transforms / forward kinematics from CS223A."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Compute a gripper pose from a chain of frames in Drake and compare to your own numpy product.",
+   "recap": "Pick and place starts as frame bookkeeping: where is the object, where should the gripper go.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.3,
+   "id": "m197",
+   "day": 197,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L4: Basic pick and place (2) (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 4,
+     "title": "6.4210 Fall 2023 Lecture 4: Basic Pick and Place (Pt. 2)",
+     "id": "1mkzXp9_QYY",
+     "url": "https://www.youtube.com/watch?v=1mkzXp9_QYY",
+     "start": 0.0,
+     "end": 37.2,
+     "lengthMin": 74.5,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Basic Pick and Place\" (differential kinematics)"
+   ],
+   "topics": [
+    "Differential kinematics",
+    "Jacobians",
+    "pseudo-inverse control",
+    "singularities"
+   ],
+   "questions": [
+    {
+     "q": "What does the Jacobian map?",
+     "a": "Joint velocities to end-effector spatial velocity."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Differential kinematics, Jacobians. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 37.2,
+   "id": "m198",
+   "day": 198,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L4: Basic pick and place (2) (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 4,
+     "title": "6.4210 Fall 2023 Lecture 4: Basic Pick and Place (Pt. 2)",
+     "id": "1mkzXp9_QYY",
+     "url": "https://www.youtube.com/watch?v=1mkzXp9_QYY&t=2234s",
+     "start": 37.2,
+     "end": 74.5,
+     "lengthMin": 74.5,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Basic Pick and Place\" (differential kinematics)"
+   ],
+   "topics": [
+    "Differential kinematics",
+    "Jacobians",
+    "pseudo-inverse control",
+    "singularities"
+   ],
+   "questions": [
+    {
+     "q": "Why does the pseudo-inverse controller misbehave near singularities?",
+     "a": "The Jacobian loses rank, so small task velocities demand huge joint velocities."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Command a straight-line gripper velocity with the Jacobian pseudo-inverse and plot joint speeds.",
+   "recap": "Differential IK turns desired hand motion into joint motion; watch for singularities.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 37.2,
+   "id": "m199",
+   "day": 199,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L5: Basic pick and place (3) (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 5,
+     "title": "6.4210 Fall 2023 Lecture 5: Basic Pick and Place (Pt. 3)",
+     "id": "YaQrC_Zm8qg",
+     "url": "https://www.youtube.com/watch?v=YaQrC_Zm8qg",
+     "start": 0.0,
+     "end": 40.0,
+     "lengthMin": 80.0,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Basic Pick and Place\""
+   ],
+   "topics": [
+    "Differential IK as optimization",
+    "constraints (joint limits)",
+    "gripper trajectories",
+    "full pick and place"
+   ],
+   "questions": [
+    {
+     "q": "Why formulate differential IK as a QP?",
+     "a": "To respect joint position/velocity limits and other constraints while tracking the desired velocity."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Differential IK as optimization, constraints (joint limits). Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.0,
+   "id": "m200",
+   "day": 200,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L5: Basic pick and place (3) (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 5,
+     "title": "6.4210 Fall 2023 Lecture 5: Basic Pick and Place (Pt. 3)",
+     "id": "YaQrC_Zm8qg",
+     "url": "https://www.youtube.com/watch?v=YaQrC_Zm8qg&t=2401s",
+     "start": 40.0,
+     "end": 80.0,
+     "lengthMin": 80.0,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Basic Pick and Place\""
+   ],
+   "topics": [
+    "Differential IK as optimization",
+    "constraints (joint limits)",
+    "gripper trajectories",
+    "full pick and place"
+   ],
+   "questions": [
+    {
+     "q": "What are keyframes in pick and place?",
+     "a": "Pre-grasp, grasp, lift, pre-place, place poses that a trajectory interpolates between."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Build the keyframe sequence for one pick-and-place and run it in simulation.",
+   "recap": "A complete scripted pick and place = poses + interpolation + constrained differential IK.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.0,
+   "id": "m201",
+   "day": 201,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L6: Geometric perception (1) (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 6,
+     "title": "6.4210 Fall 2023 Lecture 6: Geometric Perception (Pt. 1)",
+     "id": "1a3KhOq1938",
+     "url": "https://www.youtube.com/watch?v=1a3KhOq1938",
+     "start": 0.0,
+     "end": 39.3,
+     "lengthMin": 78.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Geometric Pose Estimation\""
+   ],
+   "topics": [
+    "Depth cameras",
+    "point clouds",
+    "pose estimation",
+    "iterative closest point (ICP)"
+   ],
+   "questions": [
+    {
+     "q": "What does ICP alternate between?",
+     "a": "Finding correspondences (nearest points) and solving for the best rigid transform given them."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Depth cameras, point clouds. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.3,
+   "id": "m202",
+   "day": 202,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L6: Geometric perception (1) (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 6,
+     "title": "6.4210 Fall 2023 Lecture 6: Geometric Perception (Pt. 1)",
+     "id": "1a3KhOq1938",
+     "url": "https://www.youtube.com/watch?v=1a3KhOq1938&t=2357s",
+     "start": 39.3,
+     "end": 78.6,
+     "lengthMin": 78.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Geometric Pose Estimation\""
+   ],
+   "topics": [
+    "Depth cameras",
+    "point clouds",
+    "pose estimation",
+    "iterative closest point (ICP)"
+   ],
+   "questions": [
+    {
+     "q": "Why does ICP need a good initial guess?",
+     "a": "It converges to local minima."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Run ICP on a synthetic point cloud with noise and a known pose; report the error.",
+   "recap": "Geometric perception estimates object pose from point clouds; ICP is the workhorse and its weaknesses matter.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.3,
+   "id": "m203",
+   "day": 203,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L7: Geometric perception (2) (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 7,
+     "title": "6.4210 Fall 2023 Lecture 7: Geometric Perception (Pt. 2)",
+     "id": "Cs49WVNqEdk",
+     "url": "https://www.youtube.com/watch?v=Cs49WVNqEdk",
+     "start": 0.0,
+     "end": 38.8,
+     "lengthMin": 77.5,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Geometric Pose Estimation\""
+   ],
+   "topics": [
+    "Outliers",
+    "partial views",
+    "global/robust registration",
+    "non-penetration and free-space constraints"
+   ],
+   "questions": [
+    {
+     "q": "Why are outliers a problem for least-squares registration?",
+     "a": "Squared error lets a few bad correspondences dominate the fit."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Outliers, partial views. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 38.8,
+   "id": "m204",
+   "day": 204,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L7: Geometric perception (2) (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 7,
+     "title": "6.4210 Fall 2023 Lecture 7: Geometric Perception (Pt. 2)",
+     "id": "Cs49WVNqEdk",
+     "url": "https://www.youtube.com/watch?v=Cs49WVNqEdk&t=2326s",
+     "start": 38.8,
+     "end": 77.5,
+     "lengthMin": 77.5,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Geometric Pose Estimation\""
+   ],
+   "topics": [
+    "Outliers",
+    "partial views",
+    "global/robust registration",
+    "non-penetration and free-space constraints"
+   ],
+   "questions": [
+    {
+     "q": "Name one way to make registration robust.",
+     "a": "RANSAC, robust losses, or global optimization approaches."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Add 20% outliers to your ICP test and compare plain vs RANSAC-style registration.",
+   "recap": "Real point clouds are partial and noisy, so robustness is the hard part.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 38.8,
+   "id": "m205",
+   "day": 205,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L8: Clutter: contact simulation (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 8,
+     "title": "6.4210 Fall 2023 Lecture 8: Manipulation in Clutter- Contact Simulation",
+     "id": "G8Iwe1XRQQM",
+     "url": "https://www.youtube.com/watch?v=G8Iwe1XRQQM",
+     "start": 0.0,
+     "end": 39.2,
+     "lengthMin": 78.5,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Bin Picking\" (simulation)"
+   ],
+   "topics": [
+    "Rigid-body contact",
+    "friction cones",
+    "simulating piles of objects"
+   ],
+   "questions": [
+    {
+     "q": "What does a friction cone describe?",
+     "a": "The set of contact forces that do not slip, |f_t| <= mu f_n."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Rigid-body contact, friction cones. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.2,
+   "id": "m206",
+   "day": 206,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L8: Clutter: contact simulation (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 8,
+     "title": "6.4210 Fall 2023 Lecture 8: Manipulation in Clutter- Contact Simulation",
+     "id": "G8Iwe1XRQQM",
+     "url": "https://www.youtube.com/watch?v=G8Iwe1XRQQM&t=2353s",
+     "start": 39.2,
+     "end": 78.5,
+     "lengthMin": 78.5,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Bin Picking\" (simulation)"
+   ],
+   "topics": [
+    "Rigid-body contact",
+    "friction cones",
+    "simulating piles of objects"
+   ],
+   "questions": [
+    {
+     "q": "Why is contact hard to simulate?",
+     "a": "It is non-smooth (impacts, stick/slip), stiff, and sensitive to geometry."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Drop 10 objects into a bin in simulation and observe the result for different friction values.",
+   "recap": "Clutter means many contacts; simulation of contact is a field of its own.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.2,
+   "id": "m207",
+   "day": 207,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L9: Clutter: grasp selection (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 9,
+     "title": "6.4210 Fall 2023 Lecture 9: Manipulation in Clutter- Grasp Selection",
+     "id": "SenccXyBn-k",
+     "url": "https://www.youtube.com/watch?v=SenccXyBn-k",
+     "start": 0.0,
+     "end": 39.8,
+     "lengthMin": 79.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Bin Picking\" (grasp selection)"
+   ],
+   "topics": [
+    "Antipodal grasps",
+    "grasp metrics",
+    "sampling grasp candidates from point clouds"
+   ],
+   "questions": [
+    {
+     "q": "What is an antipodal grasp?",
+     "a": "Two contacts whose normals oppose each other along the line between them, so forces can balance within friction cones."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Antipodal grasps, grasp metrics. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.8,
+   "id": "m208",
+   "day": 208,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L9: Clutter: grasp selection (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 9,
+     "title": "6.4210 Fall 2023 Lecture 9: Manipulation in Clutter- Grasp Selection",
+     "id": "SenccXyBn-k",
+     "url": "https://www.youtube.com/watch?v=SenccXyBn-k&t=2387s",
+     "start": 39.8,
+     "end": 79.6,
+     "lengthMin": 79.6,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Bin Picking\" (grasp selection)"
+   ],
+   "topics": [
+    "Antipodal grasps",
+    "grasp metrics",
+    "sampling grasp candidates from point clouds"
+   ],
+   "questions": [
+    {
+     "q": "How are grasps chosen in clutter?",
+     "a": "Sample many candidates from the point cloud, score them with a cost (alignment, collision, normals) and pick the best."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Write a scoring function for a parallel-jaw grasp given two contact points and normals.",
+   "recap": "Grasp selection = sample + score + collision check.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.8,
+   "id": "m209",
+   "day": 209,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L10: Clutter: programming tasks (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 10,
+     "title": "6.4210 Fall 2023 Lecture 10: Manipulation in Clutter- Programming Tasks",
+     "id": "SX-0ZDXaL1A",
+     "url": "https://www.youtube.com/watch?v=SX-0ZDXaL1A",
+     "start": 0.0,
+     "end": 39.6,
+     "lengthMin": 79.2,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Bin Picking\""
+   ],
+   "topics": [
+    "State machines",
+    "task-level programming",
+    "bin picking end to end"
+   ],
+   "questions": [
+    {
+     "q": "Why use a state machine for a manipulation task?",
+     "a": "To sequence perception, planning and execution steps and handle failures/retries explicitly."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: State machines, task-level programming. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.6,
+   "id": "m210",
+   "day": 210,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L10: Clutter: programming tasks (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 10,
+     "title": "6.4210 Fall 2023 Lecture 10: Manipulation in Clutter- Programming Tasks",
+     "id": "SX-0ZDXaL1A",
+     "url": "https://www.youtube.com/watch?v=SX-0ZDXaL1A&t=2375s",
+     "start": 39.6,
+     "end": 79.2,
+     "lengthMin": 79.2,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Bin Picking\""
+   ],
+   "topics": [
+    "State machines",
+    "task-level programming",
+    "bin picking end to end"
+   ],
+   "questions": [
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Draw the state machine for \"clear a bin of objects\" including failure transitions.",
+   "recap": "Systems engineering glues perception, grasping and motion into a task that keeps running.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.6,
+   "id": "m211",
+   "day": 211,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L11: Motion planning: optimization (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 11,
+     "title": "6.4210 Fall 2023 Lecture 11: Motion Planning- Optimization Based",
+     "id": "ZJNIzuP_8GA",
+     "url": "https://www.youtube.com/watch?v=ZJNIzuP_8GA",
+     "start": 0.0,
+     "end": 39.4,
+     "lengthMin": 78.8,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Motion Planning\""
+   ],
+   "topics": [
+    "Inverse kinematics as optimization",
+    "trajectory optimization",
+    "collision constraints"
+   ],
+   "questions": [
+    {
+     "q": "Why use trajectory optimization?",
+     "a": "It finds smooth, constraint-satisfying trajectories by minimising cost subject to dynamics/collision constraints."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Inverse kinematics as optimization, trajectory optimization. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.4,
+   "id": "m212",
+   "day": 212,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L11: Motion planning: optimization (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 11,
+     "title": "6.4210 Fall 2023 Lecture 11: Motion Planning- Optimization Based",
+     "id": "ZJNIzuP_8GA",
+     "url": "https://www.youtube.com/watch?v=ZJNIzuP_8GA&t=2365s",
+     "start": 39.4,
+     "end": 78.8,
+     "lengthMin": 78.8,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Motion Planning\""
+   ],
+   "topics": [
+    "Inverse kinematics as optimization",
+    "trajectory optimization",
+    "collision constraints"
+   ],
+   "questions": [
+    {
+     "q": "What is its main weakness?",
+     "a": "Non-convex collision constraints give local minima."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Solve an IK problem in Drake with a position constraint and a collision constraint.",
+   "recap": "Optimization-based planning; compare with AA203's trajectory optimization (Month 4).",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.4,
+   "id": "m213",
+   "day": 213,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L12: Motion planning: sampling and global optimization (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 12,
+     "title": "6.4210 Fall 2023 Lecture 12: Motion Planning- Sampling Based and Global Optimization",
+     "id": "uLkWAvNTkXA",
+     "url": "https://www.youtube.com/watch?v=uLkWAvNTkXA",
+     "start": 0.0,
+     "end": 40.1,
+     "lengthMin": 80.2,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Motion Planning\""
+   ],
+   "topics": [
+    "RRT",
+    "PRM",
+    "graphs of convex sets (GCS)"
+   ],
+   "questions": [
+    {
+     "q": "How does RRT explore?",
+     "a": "Randomly samples configurations and extends the tree from the nearest node toward each sample."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: RRT, PRM. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.1,
+   "id": "m214",
+   "day": 214,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L12: Motion planning: sampling and global optimization (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 12,
+     "title": "6.4210 Fall 2023 Lecture 12: Motion Planning- Sampling Based and Global Optimization",
+     "id": "uLkWAvNTkXA",
+     "url": "https://www.youtube.com/watch?v=uLkWAvNTkXA&t=2405s",
+     "start": 40.1,
+     "end": 80.2,
+     "lengthMin": 80.2,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Motion Planning\""
+   ],
+   "topics": [
+    "RRT",
+    "PRM",
+    "graphs of convex sets (GCS)"
+   ],
+   "questions": [
+    {
+     "q": "What idea does graphs of convex sets add?",
+     "a": "Decompose free space into convex regions and solve a (near-)global optimization over paths through them."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Implement a 2D RRT around two obstacles.",
+   "recap": "Sampling-based planners find feasible paths; GCS aims for globally good ones.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.1,
+   "id": "m215",
+   "day": 215,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L13: Mobile manipulation (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 13,
+     "title": "6.4210 Fall 2023 Lecture 13: Mobile Manipulation",
+     "id": "GKbbjOsS8x8",
+     "url": "https://www.youtube.com/watch?v=GKbbjOsS8x8",
+     "start": 0.0,
+     "end": 36.0,
+     "lengthMin": 72.0,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Mobile Manipulation\""
+   ],
+   "topics": [
+    "Mobile bases",
+    "whole-body planning",
+    "navigation plus manipulation"
+   ],
+   "questions": [
+    {
+     "q": "What changes when the arm is on a mobile base?",
+     "a": "More degrees of freedom, localization uncertainty and larger workspace planning."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Mobile bases, whole-body planning. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 36.0,
+   "id": "m216",
+   "day": 216,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L13: Mobile manipulation (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 13,
+     "title": "6.4210 Fall 2023 Lecture 13: Mobile Manipulation",
+     "id": "GKbbjOsS8x8",
+     "url": "https://www.youtube.com/watch?v=GKbbjOsS8x8&t=2158s",
+     "start": 36.0,
+     "end": 72.0,
+     "lengthMin": 72.0,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Mobile Manipulation\""
+   ],
+   "topics": [
+    "Mobile bases",
+    "whole-body planning",
+    "navigation plus manipulation"
+   ],
+   "questions": [
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "List the extra state variables a mobile manipulator must track compared with a fixed arm.",
+   "recap": "Mobile manipulation combines navigation and manipulation; relevant for humanoids.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 36.0,
+   "id": "m217",
+   "day": 217,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L14: Force control (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 14,
+     "title": "6.4210 Fall 2023 Lecture 14: Force Control",
+     "id": "JtJyesuYvb4",
+     "url": "https://www.youtube.com/watch?v=JtJyesuYvb4",
+     "start": 0.0,
+     "end": 35.7,
+     "lengthMin": 71.4,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Force Control\""
+   ],
+   "topics": [
+    "Contact forces",
+    "force control",
+    "impedance/stiffness control",
+    "pushing and sliding"
+   ],
+   "questions": [
+    {
+     "q": "What is impedance control?",
+     "a": "Regulating the relation between motion error and force (like a virtual spring-damper) instead of position or force alone."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Contact forces, force control. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 35.7,
+   "id": "m218",
+   "day": 218,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L14: Force control (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 14,
+     "title": "6.4210 Fall 2023 Lecture 14: Force Control",
+     "id": "JtJyesuYvb4",
+     "url": "https://www.youtube.com/watch?v=JtJyesuYvb4&t=2142s",
+     "start": 35.7,
+     "end": 71.4,
+     "lengthMin": 71.4,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Force Control\""
+   ],
+   "topics": [
+    "Contact forces",
+    "force control",
+    "impedance/stiffness control",
+    "pushing and sliding"
+   ],
+   "questions": [
+    {
+     "q": "Why does pure position control fail at contact?",
+     "a": "Tiny position errors against a stiff surface produce huge forces."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Simulate a point finger pressing on a table with a stiffness controller at two stiffness values.",
+   "recap": "Contact-rich tasks need force/impedance control (CS223A force-control lectures revisited).",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 35.7,
+   "id": "m219",
+   "day": 219,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L15: Manipulator control (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 15,
+     "title": "6.4210 Fall 2023 Lecture 15: Manipulator Control",
+     "id": "9GB6kpQyMtM",
+     "url": "https://www.youtube.com/watch?v=9GB6kpQyMtM",
+     "start": 0.0,
+     "end": 38.9,
+     "lengthMin": 77.8,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Force Control\""
+   ],
+   "topics": [
+    "Joint and task-space control",
+    "inverse dynamics",
+    "controllers on real arms"
+   ],
+   "questions": [
+    {
+     "q": "What does inverse-dynamics control compute?",
+     "a": "Torques that cancel the robot dynamics and impose desired accelerations."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Joint and task-space control, inverse dynamics. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 38.9,
+   "id": "m220",
+   "day": 220,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L15: Manipulator control (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 15,
+     "title": "6.4210 Fall 2023 Lecture 15: Manipulator Control",
+     "id": "9GB6kpQyMtM",
+     "url": "https://www.youtube.com/watch?v=9GB6kpQyMtM&t=2335s",
+     "start": 38.9,
+     "end": 77.8,
+     "lengthMin": 77.8,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Force Control\""
+   ],
+   "topics": [
+    "Joint and task-space control",
+    "inverse dynamics",
+    "controllers on real arms"
+   ],
+   "questions": [
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Compare PD and inverse-dynamics control tracking a sine trajectory in simulation.",
+   "recap": "Model-based control turns plans into torques.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 38.9,
+   "id": "m221",
+   "day": 221,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L16: Deep perception (1) (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 16,
+     "title": "6.4210 Fall 2023 Lecture 16: Deep Perception",
+     "id": "kZh2laD7NQI",
+     "url": "https://www.youtube.com/watch?v=kZh2laD7NQI",
+     "start": 0.0,
+     "end": 33.3,
+     "lengthMin": 66.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Object Detection and Segmentation\""
+   ],
+   "topics": [
+    "Object detection",
+    "segmentation",
+    "deep learning for robot perception"
+   ],
+   "questions": [
+    {
+     "q": "Why combine deep segmentation with geometric perception?",
+     "a": "Networks find which pixels/points belong to an object; geometry then estimates pose or grasps."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Object detection, segmentation. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 33.3,
+   "id": "m222",
+   "day": 222,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L16: Deep perception (1) (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 16,
+     "title": "6.4210 Fall 2023 Lecture 16: Deep Perception",
+     "id": "kZh2laD7NQI",
+     "url": "https://www.youtube.com/watch?v=kZh2laD7NQI&t=1999s",
+     "start": 33.3,
+     "end": 66.7,
+     "lengthMin": 66.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Object Detection and Segmentation\""
+   ],
+   "topics": [
+    "Object detection",
+    "segmentation",
+    "deep learning for robot perception"
+   ],
+   "questions": [
+    {
+     "q": "Where did you meet these models before?",
+     "a": "CS231N in Month 3."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Run a pretrained instance-segmentation model on a rendered bin image.",
+   "recap": "Deep perception provides semantics that pure geometry lacks.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 33.3,
+   "id": "m223",
+   "day": 223,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L17: Deep perception (2) (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 17,
+     "title": "6.4210 Fall 2023 Lecture 17: Deep Perception Pt. 2",
+     "id": "LbBP2Ba2J9Q",
+     "url": "https://www.youtube.com/watch?v=LbBP2Ba2J9Q",
+     "start": 0.0,
+     "end": 39.7,
+     "lengthMin": 79.3,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Deep Perception for Manipulation\""
+   ],
+   "topics": [
+    "Deep pose estimation",
+    "keypoints",
+    "dense descriptors",
+    "grasp prediction"
+   ],
+   "questions": [
+    {
+     "q": "What are dense descriptors used for?",
+     "a": "Corresponding points on objects across views/instances so a task can be specified on object parts."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Deep pose estimation, keypoints. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.7,
+   "id": "m224",
+   "day": 224,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L17: Deep perception (2) (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 17,
+     "title": "6.4210 Fall 2023 Lecture 17: Deep Perception Pt. 2",
+     "id": "LbBP2Ba2J9Q",
+     "url": "https://www.youtube.com/watch?v=LbBP2Ba2J9Q&t=2379s",
+     "start": 39.7,
+     "end": 79.3,
+     "lengthMin": 79.3,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Deep Perception for Manipulation\""
+   ],
+   "topics": [
+    "Deep pose estimation",
+    "keypoints",
+    "dense descriptors",
+    "grasp prediction"
+   ],
+   "questions": [
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Explain how keypoints could specify \"hang the mug by its handle\" for any mug.",
+   "recap": "Learned representations make manipulation generalize across object instances.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.7,
+   "id": "m225",
+   "day": 225,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L18: Visuomotor policies via behavior cloning (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 18,
+     "title": "6.4210 Fall 2023 Lecture 18: Visuomotor Policies (via Behavior Cloning)",
+     "id": "i-303tTtEig",
+     "url": "https://www.youtube.com/watch?v=i-303tTtEig",
+     "start": 0.0,
+     "end": 39.3,
+     "lengthMin": 78.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Imitation Learning\"; revisit Month 5 CS224R imitation learning modules and the Month 6 action-chunking seminar"
+   ],
+   "topics": [
+    "Behavior cloning",
+    "teleoperation data",
+    "action chunking",
+    "Diffusion Policy",
+    "ALOHA",
+    "pi0-style policies"
+   ],
+   "questions": [
+    {
+     "q": "What is behavior cloning?",
+     "a": "Supervised learning of a policy mapping observations to actions from expert demonstrations."
+    },
+    {
+     "q": "What is compounding error?",
+     "a": "Small mistakes put the robot in states the demos never covered, where errors grow."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Behavior cloning, teleoperation data, action chunking. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.3,
+   "id": "m226",
+   "day": 226,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L18: Visuomotor policies via behavior cloning (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 18,
+     "title": "6.4210 Fall 2023 Lecture 18: Visuomotor Policies (via Behavior Cloning)",
+     "id": "i-303tTtEig",
+     "url": "https://www.youtube.com/watch?v=i-303tTtEig&t=2360s",
+     "start": 39.3,
+     "end": 78.7,
+     "lengthMin": 78.7,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Imitation Learning\"; revisit Month 5 CS224R imitation learning modules and the Month 6 action-chunking seminar"
+   ],
+   "topics": [
+    "Behavior cloning",
+    "teleoperation data",
+    "action chunking",
+    "Diffusion Policy",
+    "ALOHA",
+    "pi0-style policies"
+   ],
+   "questions": [
+    {
+     "q": "Why do Diffusion Policy and action chunking help?",
+     "a": "They model multi-modal action distributions and predict consistent action sequences, reducing compounding error."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    }
+   ],
+   "exercise": "Write the data format (observations, actions, timestamps) you'd record for 50 SO-101 demos.",
+   "recap": "The idea behind ALOHA, Diffusion Policy and pi0; the @0x_meden post singles this lecture out.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 39.3,
+   "id": "m227",
+   "day": 227,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L19: Reinforcement learning (1) (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 19,
+     "title": "6.4210 Fall 2023 Lecture 19: Reinforcement Learning Pt. 1",
+     "id": "DpEE97tv3BM",
+     "url": "https://www.youtube.com/watch?v=DpEE97tv3BM",
+     "start": 0.0,
+     "end": 38.0,
+     "lengthMin": 76.0,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Reinforcement Learning\""
+   ],
+   "topics": [
+    "RL for manipulation",
+    "policy gradients",
+    "simulation at scale"
+   ],
+   "questions": [
+    {
+     "q": "When is RL attractive in manipulation?",
+     "a": "When a good simulator and reward exist and demonstrations are hard to get, e.g. dexterous in-hand tasks."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: RL for manipulation, policy gradients. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 38.0,
+   "id": "m228",
+   "day": 228,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L19: Reinforcement learning (1) (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 19,
+     "title": "6.4210 Fall 2023 Lecture 19: Reinforcement Learning Pt. 1",
+     "id": "DpEE97tv3BM",
+     "url": "https://www.youtube.com/watch?v=DpEE97tv3BM&t=2281s",
+     "start": 38.0,
+     "end": 76.0,
+     "lengthMin": 76.0,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Reinforcement Learning\""
+   ],
+   "topics": [
+    "RL for manipulation",
+    "policy gradients",
+    "simulation at scale"
+   ],
+   "questions": [
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Write a reward function for \"push a block to a goal\" and list two ways it could be exploited.",
+   "recap": "RL vs BC: reward and simulation vs demonstrations.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 38.0,
+   "id": "m229",
+   "day": 229,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L20: Reinforcement learning (2) (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 20,
+     "title": "6.4210 Fall 2023 Lecture 20: Reinforcement Learning Pt. 2",
+     "id": "4a5-zWWz8Fs",
+     "url": "https://www.youtube.com/watch?v=4a5-zWWz8Fs",
+     "start": 0.0,
+     "end": 40.0,
+     "lengthMin": 79.9,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Reinforcement Learning\""
+   ],
+   "topics": [
+    "Sim-to-real",
+    "domain randomization",
+    "policy optimization details"
+   ],
+   "questions": [
+    {
+     "q": "What is domain randomization?",
+     "a": "Training across randomized physics/visual parameters so the policy transfers to the real world."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Sim-to-real, domain randomization. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.0,
+   "id": "m230",
+   "day": 230,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L20: Reinforcement learning (2) (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 20,
+     "title": "6.4210 Fall 2023 Lecture 20: Reinforcement Learning Pt. 2",
+     "id": "4a5-zWWz8Fs",
+     "url": "https://www.youtube.com/watch?v=4a5-zWWz8Fs&t=2397s",
+     "start": 40.0,
+     "end": 79.9,
+     "lengthMin": 79.9,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Reinforcement Learning\""
+   ],
+   "topics": [
+    "Sim-to-real",
+    "domain randomization",
+    "policy optimization details"
+   ],
+   "questions": [
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "List five simulator parameters you would randomize for a grasping policy.",
+   "recap": "Getting RL policies off the simulator is the hard part.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.0,
+   "id": "m231",
+   "day": 231,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L21: Multibody parameter estimation (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 21,
+     "title": "6.4210 Fall 2023 Lecture 21: Multibody Parameter Estimation",
+     "id": "v_ZLjfbeZmw",
+     "url": "https://www.youtube.com/watch?v=v_ZLjfbeZmw",
+     "start": 0.0,
+     "end": 38.7,
+     "lengthMin": 77.3,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Multibody parameter estimation\""
+   ],
+   "topics": [
+    "System identification",
+    "estimating mass/inertia/friction",
+    "least squares on dynamics"
+   ],
+   "questions": [
+    {
+     "q": "Why is parameter estimation a least-squares problem?",
+     "a": "Manipulator dynamics are linear in inertial parameters, so measured torques give a linear regression."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: System identification, estimating mass/inertia/friction. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 38.7,
+   "id": "m232",
+   "day": 232,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L21: Multibody parameter estimation (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 21,
+     "title": "6.4210 Fall 2023 Lecture 21: Multibody Parameter Estimation",
+     "id": "v_ZLjfbeZmw",
+     "url": "https://www.youtube.com/watch?v=v_ZLjfbeZmw&t=2320s",
+     "start": 38.7,
+     "end": 77.3,
+     "lengthMin": 77.3,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter \"Multibody parameter estimation\""
+   ],
+   "topics": [
+    "System identification",
+    "estimating mass/inertia/friction",
+    "least squares on dynamics"
+   ],
+   "questions": [
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Connect this to Month 1: write the regression form tau = Y(q, qd, qdd) theta.",
+   "recap": "Better models = better control and simulation; it's ENGR108 least squares again.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 38.7,
+   "id": "m233",
+   "day": 233,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L22: Foundation models for decision making (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 22,
+     "title": "6.4210 Fall 2023 Lecture 22: Foundational Models for Decision Making",
+     "id": "XLPObNeeTGg",
+     "url": "https://www.youtube.com/watch?v=XLPObNeeTGg",
+     "start": 0.0,
+     "end": 40.4,
+     "lengthMin": 80.9,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter on foundation models / latest notes; Month 6 foundation-model seminars"
+   ],
+   "topics": [
+    "Large pretrained models",
+    "vision-language-action models",
+    "generalist robot policies"
+   ],
+   "questions": [
+    {
+     "q": "What is a vision-language-action model?",
+     "a": "A model that takes images and language and outputs robot actions, often built on a pretrained VLM."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Large pretrained models, vision-language-action models. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.4,
+   "id": "m234",
+   "day": 234,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L22: Foundation models for decision making (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 22,
+     "title": "6.4210 Fall 2023 Lecture 22: Foundational Models for Decision Making",
+     "id": "XLPObNeeTGg",
+     "url": "https://www.youtube.com/watch?v=XLPObNeeTGg&t=2426s",
+     "start": 40.4,
+     "end": 80.9,
+     "lengthMin": 80.9,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter on foundation models / latest notes; Month 6 foundation-model seminars"
+   ],
+   "topics": [
+    "Large pretrained models",
+    "vision-language-action models",
+    "generalist robot policies"
+   ],
+   "questions": [
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Compare a generalist VLA with a task-specific BC policy on data needs and failure modes.",
+   "recap": "Foundation models are the frontier; this ties back to the Month 6 seminars.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 40.4,
+   "id": "m235",
+   "day": 235,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L23: Soft manipulation and tactile sensing (part 1/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 23,
+     "title": "6.4210 Fall 2023 Lecture 23: Soft Manipulation and Tactile Sensing",
+     "id": "XjyUGtjjou4",
+     "url": "https://www.youtube.com/watch?v=XjyUGtjjou4",
+     "start": 0.0,
+     "end": 35.6,
+     "lengthMin": 71.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter on tactile sensing / course notes"
+   ],
+   "topics": [
+    "Soft grippers",
+    "tactile sensors",
+    "contact-rich manipulation with touch"
+   ],
+   "questions": [
+    {
+     "q": "What does tactile sensing add that vision lacks?",
+     "a": "Direct contact location, force and slip information, even when the contact is occluded."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    },
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    }
+   ],
+   "exercise": "Recall drill: close the video and write from memory the 3 most important ideas of this part, then check them against your notes. (Lecture exercise is in part 2.)",
+   "recap": "Checkpoint after part 1/2. Topics so far: Soft grippers, tactile sensors. Finish the lecture in the next module.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 35.6,
+   "id": "m236",
+   "day": 236,
+   "minutes": 30
+  },
+  {
+   "kind": "lecture",
+   "month": 7,
+   "title": "MIT 6.4210 L23: Soft manipulation and tactile sensing (part 2/2)",
+   "course": "MIT 6.4210",
+   "watch": [
+    {
+     "course": "MIT 6.4210",
+     "lecture": 23,
+     "title": "6.4210 Fall 2023 Lecture 23: Soft Manipulation and Tactile Sensing",
+     "id": "XjyUGtjjou4",
+     "url": "https://www.youtube.com/watch?v=XjyUGtjjou4&t=2134s",
+     "start": 35.6,
+     "end": 71.1,
+     "lengthMin": 71.1,
+     "partial": true
+    }
+   ],
+   "read": [
+    "manipulation.csail.mit.edu chapter on tactile sensing / course notes"
+   ],
+   "topics": [
+    "Soft grippers",
+    "tactile sensors",
+    "contact-rich manipulation with touch"
+   ],
+   "questions": [
+    {
+     "q": "Reflection: which equation, diagram or example from this segment belongs on your cheat sheet?",
+     "a": "Personal check - pick one and write it in your notes for this module."
+    },
+    {
+     "q": "Reflection: how does this segment connect to something you learned earlier in the path?",
+     "a": "Personal check - link it to an earlier module (e.g. least squares -> estimation, Jacobian -> control, DP -> RL)."
+    },
+    {
+     "q": "Reflection: state the main idea of this segment in 2-3 sentences. What would you ask the instructor?",
+     "a": "Personal check. If you cannot summarise it, rewatch the last 5 minutes of the segment and re-read the textbook section."
+    }
+   ],
+   "exercise": "Name one task that is much easier with touch than with vision alone, and why.",
+   "recap": "Touch closes the loop on contact.",
+   "speaker": null,
+   "seminar": false,
+   "links": [],
+   "videoMin": 35.6,
+   "id": "m237",
+   "day": 237,
+   "minutes": 30
+  },
+  {
+   "kind": "milestone",
+   "month": 7,
+   "title": "Month 7 milestone check",
+   "course": "Milestone",
+   "watch": [],
+   "read": [],
+   "topics": [],
+   "steps": "Self-assess after MIT 6.4210.",
+   "questions": [
+    {
+     "q": "Can you script a pick and place in Drake with differential IK?",
+     "a": "Yes if you completed L3–5 exercises."
+    },
+    {
+     "q": "Can you estimate an object's pose from a point cloud and explain ICP's failure modes?",
+     "a": "Yes (L6–7)."
+    },
+    {
+     "q": "Can you explain behavior cloning, compounding error and action chunking?",
+     "a": "Yes (L18)."
+    }
+   ],
+   "exercise": "Rate yourself 1-5 per line; revisit weak lectures.",
+   "recap": "You can now build an end-to-end manipulation system in simulation.",
+   "speaker": null,
+   "seminar": false,
+   "links": [
+    {
+     "label": "Textbook",
+     "url": "https://manipulation.csail.mit.edu"
+    }
+   ],
+   "videoMin": 0,
+   "id": "m238",
+   "day": 238,
    "minutes": 30
   }
  ]

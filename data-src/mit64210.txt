@@ -1,0 +1,23 @@
+1|v04rn86Dehg|4544|6.4210 Fall 2023 Lecture 1: Intro
+2|q896_lTh8eA|4835|6.4210 Fall 2023 Lecture 2: Let's get you a robot!
+3|0-34RZJxyww|4832|6.4210 Fall 2023 Lecture 3: Basic Pick and Place (Pt. 1)
+4|1mkzXp9_QYY|4469|6.4210 Fall 2023 Lecture 4: Basic Pick and Place (Pt. 2)
+5|YaQrC_Zm8qg|4803|6.4210 Fall 2023 Lecture 5: Basic Pick and Place (Pt. 3)
+6|1a3KhOq1938|4714|6.4210 Fall 2023 Lecture 6: Geometric Perception (Pt. 1)
+7|Cs49WVNqEdk|4652|6.4210 Fall 2023 Lecture 7: Geometric Perception (Pt. 2)
+8|G8Iwe1XRQQM|4707|6.4210 Fall 2023 Lecture 8: Manipulation in Clutter- Contact Simulation
+9|SenccXyBn-k|4775|6.4210 Fall 2023 Lecture 9: Manipulation in Clutter- Grasp Selection
+10|SX-0ZDXaL1A|4750|6.4210 Fall 2023 Lecture 10: Manipulation in Clutter- Programming Tasks
+11|ZJNIzuP_8GA|4730|6.4210 Fall 2023 Lecture 11: Motion Planning- Optimization Based
+12|uLkWAvNTkXA|4810|6.4210 Fall 2023 Lecture 12: Motion Planning- Sampling Based and Global Optimization
+13|GKbbjOsS8x8|4317|6.4210 Fall 2023 Lecture 13: Mobile Manipulation
+14|JtJyesuYvb4|4284|6.4210 Fall 2023 Lecture 14: Force Control
+15|9GB6kpQyMtM|4671|6.4210 Fall 2023 Lecture 15: Manipulator Control
+16|kZh2laD7NQI|3999|6.4210 Fall 2023 Lecture 16: Deep Perception
+17|LbBP2Ba2J9Q|4759|6.4210 Fall 2023 Lecture 17: Deep Perception Pt. 2
+18|i-303tTtEig|4720|6.4210 Fall 2023 Lecture 18: Visuomotor Policies (via Behavior Cloning)
+19|DpEE97tv3BM|4562|6.4210 Fall 2023 Lecture 19: Reinforcement Learning Pt. 1
+20|4a5-zWWz8Fs|4794|6.4210 Fall 2023 Lecture 20: Reinforcement Learning Pt. 2
+21|v_ZLjfbeZmw|4640|6.4210 Fall 2023 Lecture 21: Multibody Parameter Estimation
+22|XLPObNeeTGg|4853|6.4210 Fall 2023 Lecture 22: Foundational Models for Decision Making
+23|XjyUGtjjou4|4268|6.4210 Fall 2023 Lecture 23: Soft Manipulation and Tactile Sensing
