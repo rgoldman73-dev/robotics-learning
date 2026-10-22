@@ -3038,7 +3038,12 @@
    "recap": "Vision gives robots 3D information through stereo and feature tracking; it links to Month 3.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lecture, AA174A L9: Stereo vision",
+     "url": "https://www.youtube.com/watch?v=idD08N4rgJU"
+    }
+   ],
    "videoMin": 38.0,
    "id": "m055",
    "day": 55,
@@ -3146,7 +3151,40 @@
    "recap": "Smooth polynomial trajectories connect via points; planning in joint or Cartesian space has trade-offs.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lecture, AA174A L2: Trajectory optimization",
+     "url": "https://www.youtube.com/watch?v=Kv5G2OlrIbU"
+    },
+    {
+     "label": "PoRA lecture, AA174A L4: Advanced trajectory optimization",
+     "url": "https://www.youtube.com/watch?v=Izu4_AUiHyk"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.2 Differentially flat planar quadrotor",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch02/differentially_flat_planar_quadrotor.ipynb"
+    },
+    {
+     "label": "PoRA lecture, AA174A L5: Motion planning: graph search",
+     "url": "https://www.youtube.com/watch?v=hFCIZjVkSaw"
+    },
+    {
+     "label": "PoRA lecture, AA174A L6: Motion planning: sampling-based",
+     "url": "https://www.youtube.com/watch?v=AN4jXyWwV7Q"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.4 A*",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch04/exercises/a_star.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.4 RRT",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch04/exercises/rrt.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.4 PRM*",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch04/prm_star.ipynb"
+    }
+   ],
    "videoMin": 30.8,
    "id": "m057",
    "day": 57,
@@ -3364,7 +3402,28 @@
    "recap": "Dynamics: A(q)q¨ + b + g = τ with configuration-dependent inertia; the foundation of model-based control.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lecture, AA174A L1: Course overview and mobile robot kinematics",
+     "url": "https://www.youtube.com/watch?v=Lgt5ONBtFI0"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.1 Double integrator dynamics",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch01/exercises/double_integrator_dynamics.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.1 Nonholonomic wheeled robot",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch01/exercises/nonholonomic_wheeled_robot_dynamics.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.1 Simulation",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch01/exercises/simulation.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.1 Numerical integration",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch01/numerical_integration.ipynb"
+    }
+   ],
    "videoMin": 36.8,
    "id": "m061",
    "day": 61,
@@ -3578,7 +3637,20 @@
    "recap": "PD/PID plus model-based decoupling gives accurate joint-space motion control.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lecture, AA174A L3: Trajectory tracking",
+     "url": "https://www.youtube.com/watch?v=nluc4rMiipA"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.3 PID control",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch03/exercises/pid_control.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.3 Unicycle trajectory tracking",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch03/exercises/unicycle_trajectory_tracking.ipynb"
+    }
+   ],
    "videoMin": 36.6,
    "id": "m065",
    "day": 65,
@@ -4024,7 +4096,20 @@
    "recap": "Linear classifiers + a loss function define the learning problem that neural networks generalize.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lecture, AA174A L10: Image processing",
+     "url": "https://www.youtube.com/watch?v=8A3NmdQJRNc"
+    },
+    {
+     "label": "PoRA lecture, AA174A L11: Classic visual recognition",
+     "url": "https://www.youtube.com/watch?v=GsIRJJ5sYoU"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.8 Correlation filter",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch08/exercises/correlation_filter.ipynb"
+    }
+   ],
    "videoMin": 33.5,
    "id": "m074",
    "day": 74,
@@ -4304,7 +4389,12 @@
    "recap": "CNNs use convolution, nonlinearity and pooling to build hierarchical features from pixels.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.9 CNN",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch09/exercises/cnn.ipynb"
+    }
+   ],
    "videoMin": 34.0,
    "id": "m080",
    "day": 80,
@@ -4488,7 +4578,16 @@
    "recap": "Accelerometers measure specific force via a proof mass; gravity is part of the reading.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.11 Discrete Bayes filter",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch11/discrete_bayes.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.12 Kalman filter",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch12/exercises/kalman_filter.ipynb"
+    }
+   ],
    "videoMin": 40.0,
    "id": "m084",
    "day": 84,
@@ -4580,7 +4679,16 @@
    "recap": "Gyros give angular rate; integrating rate gives orientation but also integrates bias and noise.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.12 EKF/UKF range-bearing",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch12/ekf_ukf_range_bearing.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.15 Kalman sensor fusion",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch15/exercises/kalman_sensor_fusion.ipynb"
+    }
+   ],
    "videoMin": 40.7,
    "id": "m086",
    "day": 86,
@@ -4674,7 +4782,40 @@
    "recap": "IMU-only navigation drifts; sensor fusion is needed for long-term accuracy.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lecture, AA174A L12: Localization & filters",
+     "url": "https://www.youtube.com/watch?v=dG3-D-vDwe8"
+    },
+    {
+     "label": "PoRA lecture, AA174A L13: Parametric filtering",
+     "url": "https://www.youtube.com/watch?v=pSBhRF6j-Zc"
+    },
+    {
+     "label": "PoRA lecture, AA174A L14: EKF localization",
+     "url": "https://www.youtube.com/watch?v=9y_lJdQmKcY"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.13 EKF localization",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch13/exercises/ekf_localization.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.13 Particle filter localization",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch13/exercises/particle_filter_localization.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.14 EKF SLAM",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch14/exercises/ekf_slam.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.14 Range-bearing EKF SLAM",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch14/range_bearing_ekf_slam.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.14 Pose-graph SLAM",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch14/pose_graph_slam.ipynb"
+    }
+   ],
    "videoMin": 39.7,
    "id": "m088",
    "day": 88,
@@ -4858,7 +4999,12 @@
    "recap": "Detection and segmentation localize objects; essential to connect perception to manipulation.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.10 Object detection",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch10/exercises/object_detection.ipynb"
+    }
+   ],
    "videoMin": 36.9,
    "id": "m092",
    "day": 92,
@@ -5118,7 +5264,24 @@
    "recap": "Cameras project 3D to 2D with intrinsics and extrinsics. Month 3 milestone: explain why an IMU drifts and why lidar and cameras fail differently.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lecture, AA174A L7: Sensors and intro to computer vision",
+     "url": "https://www.youtube.com/watch?v=emb_KF3OSu0"
+    },
+    {
+     "label": "PoRA lecture, AA174A L8: Camera models & calibration",
+     "url": "https://www.youtube.com/watch?v=QyG0PTgLBxQ"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.6 Camera intrinsics",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch06/exercises/camera_intrinsics.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.6 Camera extrinsics",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch06/exercises/camera_extrinsics.ipynb"
+    }
+   ],
    "videoMin": 38.3,
    "id": "m098",
    "day": 98,
@@ -5210,7 +5373,16 @@
    "recap": "3D vision recovers geometry from images; for robots it provides actionable spatial information.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.6 SIFT feature matching",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch06/sift_feature_matching.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.8 ICP",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch08/exercises/icp.ipynb"
+    }
+   ],
    "videoMin": 35.9,
    "id": "m100",
    "day": 100,
@@ -5906,7 +6078,20 @@
    "recap": "Pontryagin gives necessary conditions; LQR is the key analytically solvable case.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.2 Two-point boundary value problem",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch02/tpbvp.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.2 Free final time optimal control",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch02/free_final_time_optimal_control.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.2 Zermelo's problem",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch02/zermelos_problem.ipynb"
+    }
+   ],
    "videoMin": 39.0,
    "id": "m115",
    "day": 115,
@@ -6002,7 +6187,12 @@
    "recap": "Direct methods discretize and optimize; they are the practical workhorse for trajectory optimization.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.2 Unicycle optimal control",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch02/exercises/unicycle_optimal_control.ipynb"
+    }
+   ],
    "videoMin": 40.2,
    "id": "m117",
    "day": 117,
@@ -6098,7 +6288,20 @@
    "recap": "DP is the idea underneath RL; discrete LQR is its closed-form special case.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.3 LQR",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch03/lqr.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.3 Cart-pole LQR",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch03/exercises/cartpole_lqr_control.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.3 JAX linearization",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch03/jax_linearization.ipynb"
+    }
+   ],
    "videoMin": 37.6,
    "id": "m119",
    "day": 119,
@@ -6198,7 +6401,12 @@
    "recap": "LQR extends to nonlinear systems through linearization (tracking LQR, iLQR, DDP).",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.3 Cart-pole iterative LQR",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch03/exercises/cartpole_iterative_lqr.ipynb"
+    }
+   ],
    "videoMin": 37.0,
    "id": "m121",
    "day": 121,
@@ -6374,7 +6582,16 @@
    "recap": "With randomness, DP uses expectations; value and policy iteration are the foundation for RL algorithms.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.17 Markovian drone (DP)",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch17/exercises/markovian_drone.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.18 Policy iteration",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch18/policy_iteration.ipynb"
+    }
+   ],
    "videoMin": 38.5,
    "id": "m125",
    "day": 125,
@@ -6568,7 +6785,12 @@
    "recap": "MPC = repeated finite-horizon optimization with feedback; the method behind most real autonomous systems.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.3 Linear MPC",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch03/exercises/linear_mpc.ipynb"
+    }
+   ],
    "videoMin": 36.8,
    "id": "m129",
    "day": 129,
@@ -7174,7 +7396,16 @@
    "recap": "RL = MDPs, returns, value functions and the Bellman equations.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.18 Widget sales (RL)",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch18/exercises/widget_sales.ipynb"
+    },
+    {
+     "label": "PoRA lab (Colab): Ch.18 Cart-pole balance (RL)",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch18/exercises/cartpole_balance.ipynb"
+    }
+   ],
    "videoMin": 36.9,
    "id": "m142",
    "day": 142,
@@ -7720,7 +7951,12 @@
    "recap": "Actor-critic combines policy gradient with learned value baselines; basis for PPO.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "PoRA lab (Colab): Ch.18 Advantage actor-critic",
+     "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch18/exercises/advantage_actor_critic.ipynb"
+    }
+   ],
    "videoMin": 31.8,
    "id": "m154",
    "day": 154,

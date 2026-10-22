@@ -1797,6 +1797,128 @@
    ]
   },
   {
+   "key": "aa174a",
+   "name": "AA174A",
+   "full": "Principles of Robot Autonomy I (companion lectures to the PoRA textbook)",
+   "who": "Stanford ASL (Pavone et al.)",
+   "playlist": "https://porabook.com/lectures/",
+   "page": "https://porabook.com/",
+   "items": [
+    {
+     "idx": 1,
+     "id": "Lgt5ONBtFI0",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 1: Course Overview and Mobile Robot Kinematics",
+     "min": 75,
+     "lecture": 1,
+     "inPath": false
+    },
+    {
+     "idx": 2,
+     "id": "Kv5G2OlrIbU",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 2: Trajectory Optimization",
+     "min": 75,
+     "lecture": 2,
+     "inPath": false
+    },
+    {
+     "idx": 3,
+     "id": "nluc4rMiipA",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 3: Trajectory Tracking",
+     "min": 78,
+     "lecture": 3,
+     "inPath": false
+    },
+    {
+     "idx": 4,
+     "id": "Izu4_AUiHyk",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 4: Advanced Trajectory Optimization",
+     "min": 78,
+     "lecture": 4,
+     "inPath": false
+    },
+    {
+     "idx": 5,
+     "id": "hFCIZjVkSaw",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 5: Motion Planning: Graph Search Methods",
+     "min": 75,
+     "lecture": 5,
+     "inPath": false
+    },
+    {
+     "idx": 6,
+     "id": "AN4jXyWwV7Q",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 6: Motion Planning: Sampling-Based Methods",
+     "min": 79,
+     "lecture": 6,
+     "inPath": false
+    },
+    {
+     "idx": 7,
+     "id": "emb_KF3OSu0",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 7: Sensors and Introduction to Computer Vision",
+     "min": 76,
+     "lecture": 7,
+     "inPath": false
+    },
+    {
+     "idx": 8,
+     "id": "QyG0PTgLBxQ",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 8: Camera Models & Calibration",
+     "min": 79,
+     "lecture": 8,
+     "inPath": false
+    },
+    {
+     "idx": 9,
+     "id": "idD08N4rgJU",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 9: Stereo Vision",
+     "min": 50,
+     "lecture": 9,
+     "inPath": false
+    },
+    {
+     "idx": 10,
+     "id": "8A3NmdQJRNc",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 10: Image Processing",
+     "min": 72,
+     "lecture": 10,
+     "inPath": false
+    },
+    {
+     "idx": 11,
+     "id": "GsIRJJ5sYoU",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 11: Classic Visual Recognition",
+     "min": 80,
+     "lecture": 11,
+     "inPath": false
+    },
+    {
+     "idx": 12,
+     "id": "dG3-D-vDwe8",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 12: Localization & Filters",
+     "min": 77,
+     "lecture": 12,
+     "inPath": false
+    },
+    {
+     "idx": 13,
+     "id": "pSBhRF6j-Zc",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 13: Parametric Filtering",
+     "min": 78,
+     "lecture": 13,
+     "inPath": false
+    },
+    {
+     "idx": 14,
+     "id": "9y_lJdQmKcY",
+     "title": "Stanford AA174A Principles of Robot Autonomy I | Lecture 14: EKF Localization",
+     "min": 78,
+     "lecture": 14,
+     "inPath": false
+    }
+   ]
+  },
+  {
    "key": "cs234",
    "name": "CS234",
    "full": "Reinforcement Learning (optional deeper theory)",

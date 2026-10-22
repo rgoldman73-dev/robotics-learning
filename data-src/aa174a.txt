@@ -1,0 +1,14 @@
+01|Lgt5ONBtFI0|4521|Stanford AA174A Principles of Robot Autonomy I | Lecture 1: Course Overview and Mobile Robot Kinematics
+02|Kv5G2OlrIbU|4480|Stanford AA174A Principles of Robot Autonomy I | Lecture 2: Trajectory Optimization
+03|nluc4rMiipA|4706|Stanford AA174A Principles of Robot Autonomy I | Lecture 3: Trajectory Tracking
+04|Izu4_AUiHyk|4664|Stanford AA174A Principles of Robot Autonomy I | Lecture 4: Advanced Trajectory Optimization
+05|hFCIZjVkSaw|4522|Stanford AA174A Principles of Robot Autonomy I | Lecture 5: Motion Planning: Graph Search Methods
+06|AN4jXyWwV7Q|4746|Stanford AA174A Principles of Robot Autonomy I | Lecture 6: Motion Planning: Sampling-Based Methods
+07|emb_KF3OSu0|4573|Stanford AA174A Principles of Robot Autonomy I | Lecture 7: Sensors and Introduction to Computer Vision
+08|QyG0PTgLBxQ|4714|Stanford AA174A Principles of Robot Autonomy I | Lecture 8: Camera Models & Calibration
+09|idD08N4rgJU|2985|Stanford AA174A Principles of Robot Autonomy I | Lecture 9: Stereo Vision
+10|8A3NmdQJRNc|4307|Stanford AA174A Principles of Robot Autonomy I | Lecture 10: Image Processing
+11|GsIRJJ5sYoU|4771|Stanford AA174A Principles of Robot Autonomy I | Lecture 11: Classic Visual Recognition
+12|dG3-D-vDwe8|4640|Stanford AA174A Principles of Robot Autonomy I | Lecture 12: Localization & Filters
+13|pSBhRF6j-Zc|4657|Stanford AA174A Principles of Robot Autonomy I | Lecture 13: Parametric Filtering
+14|9y_lJdQmKcY|4706|Stanford AA174A Principles of Robot Autonomy I | Lecture 14: EKF Localization

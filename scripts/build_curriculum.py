@@ -30,6 +30,8 @@ PLAYLISTS = {
     pl=None, url='https://www.youtube.com/watch?v=X0k14u6pSxw', page='https://cvg.ethz.ch/lectures/Robot-Learning/'),
  'ethguest': dict(name='ETH guest', full='ETH Robot Learning 2026: guest lectures', who='Various (see each talk)',
     pl=None, url='https://www.youtube.com/watch?v=aG8NPTPhwkE', page='https://cvg.ethz.ch/lectures/Robot-Learning/'),
+ 'aa174a': dict(name='AA174A', full='Principles of Robot Autonomy I (companion lectures to the PoRA textbook)', who='Stanford ASL (Pavone et al.)',
+    pl=None, url='https://porabook.com/lectures/', page='https://porabook.com/'),
  'cs234': dict(name='CS234', full='Reinforcement Learning (optional deeper theory)', who='Emma Brunskill',
     pl='PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX', page='https://web.stanford.edu/class/cs234/'),
 }
@@ -209,6 +211,48 @@ def project_module(pid, c, month, kind):
                 watch=[], read=[], topics=[], steps=c.get('steps', ''), questions=c['q'][:5], exercise=c.get('X', ''),
                 recap=c.get('R', ''), speaker=None, seminar=False, links=c.get('links', []), videoMin=0)
 
+# ---- PoRA (Principles of Robot Autonomy, Stanford 2026): AA174A lectures + Colab labs attached as links to the matching module.
+# Links only, so module ids/progress stay stable. Attached to the last part of the given (course, lecture).
+PORA_NB = 'https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/'
+def _nb(path, label): return dict(label=f'PoRA lab (Colab): {label}', url=PORA_NB + path + '.ipynb')
+def _v(n, vid, t): return dict(label=f'PoRA lecture, AA174A L{n}: {t}', url=f'https://www.youtube.com/watch?v={vid}')
+PORA_LINKS = {
+ ('CS223A', 12): [_v(1, 'Lgt5ONBtFI0', 'Course overview and mobile robot kinematics'), _nb('ch01/exercises/double_integrator_dynamics', 'Ch.1 Double integrator dynamics'),
+                  _nb('ch01/exercises/nonholonomic_wheeled_robot_dynamics', 'Ch.1 Nonholonomic wheeled robot'), _nb('ch01/exercises/simulation', 'Ch.1 Simulation'), _nb('ch01/numerical_integration', 'Ch.1 Numerical integration')],
+ ('CS223A', 9): [_v(9, 'idD08N4rgJU', 'Stereo vision')],
+ ('CS223A', 10): [_v(2, 'Kv5G2OlrIbU', 'Trajectory optimization'), _v(4, 'Izu4_AUiHyk', 'Advanced trajectory optimization'), _nb('ch02/differentially_flat_planar_quadrotor', 'Ch.2 Differentially flat planar quadrotor'),
+                  _v(5, 'hFCIZjVkSaw', 'Motion planning: graph search'), _v(6, 'AN4jXyWwV7Q', 'Motion planning: sampling-based'),
+                  _nb('ch04/exercises/a_star', 'Ch.4 A*'), _nb('ch04/exercises/rrt', 'Ch.4 RRT'), _nb('ch04/prm_star', 'Ch.4 PRM*')],
+ ('CS223A', 14): [_v(3, 'nluc4rMiipA', 'Trajectory tracking'), _nb('ch03/exercises/pid_control', 'Ch.3 PID control'), _nb('ch03/exercises/unicycle_trajectory_tracking', 'Ch.3 Unicycle trajectory tracking')],
+ ('CS231N', 2): [_v(10, '8A3NmdQJRNc', 'Image processing'), _v(11, 'GsIRJJ5sYoU', 'Classic visual recognition'), _nb('ch08/exercises/correlation_filter', 'Ch.8 Correlation filter')],
+ ('CS231N', 5): [_nb('ch09/exercises/cnn', 'Ch.9 CNN')],
+ ('CS231N', 9): [_nb('ch10/exercises/object_detection', 'Ch.10 Object detection')],
+ ('CS231N', 15): [_nb('ch06/sift_feature_matching', 'Ch.6 SIFT feature matching'), _nb('ch08/exercises/icp', 'Ch.8 ICP')],
+ ('EE259', 19): [_v(7, 'emb_KF3OSu0', 'Sensors and intro to computer vision'), _v(8, 'QyG0PTgLBxQ', 'Camera models & calibration'),
+                 _nb('ch06/exercises/camera_intrinsics', 'Ch.6 Camera intrinsics'), _nb('ch06/exercises/camera_extrinsics', 'Ch.6 Camera extrinsics')],
+ ('EE259', 5): [_nb('ch11/discrete_bayes', 'Ch.11 Discrete Bayes filter'), _nb('ch12/exercises/kalman_filter', 'Ch.12 Kalman filter')],
+ ('EE259', 6): [_nb('ch12/ekf_ukf_range_bearing', 'Ch.12 EKF/UKF range-bearing'), _nb('ch15/exercises/kalman_sensor_fusion', 'Ch.15 Kalman sensor fusion')],
+ ('EE259', 7): [_v(12, 'dG3-D-vDwe8', 'Localization & filters'), _v(13, 'pSBhRF6j-Zc', 'Parametric filtering'), _v(14, '9y_lJdQmKcY', 'EKF localization'),
+                _nb('ch13/exercises/ekf_localization', 'Ch.13 EKF localization'), _nb('ch13/exercises/particle_filter_localization', 'Ch.13 Particle filter localization'),
+                _nb('ch14/exercises/ekf_slam', 'Ch.14 EKF SLAM'), _nb('ch14/range_bearing_ekf_slam', 'Ch.14 Range-bearing EKF SLAM'), _nb('ch14/pose_graph_slam', 'Ch.14 Pose-graph SLAM')],
+ ('AA203', 5): [_nb('ch02/tpbvp', 'Ch.2 Two-point boundary value problem'), _nb('ch02/free_final_time_optimal_control', 'Ch.2 Free final time optimal control'), _nb('ch02/zermelos_problem', "Ch.2 Zermelo's problem")],
+ ('AA203', 6): [_nb('ch02/exercises/unicycle_optimal_control', 'Ch.2 Unicycle optimal control')],
+ ('AA203', 7): [_nb('ch03/lqr', 'Ch.3 LQR'), _nb('ch03/exercises/cartpole_lqr_control', 'Ch.3 Cart-pole LQR'), _nb('ch03/jax_linearization', 'Ch.3 JAX linearization')],
+ ('AA203', 8): [_nb('ch03/exercises/cartpole_iterative_lqr', 'Ch.3 Cart-pole iterative LQR')],
+ ('AA203', 9): [_nb('ch17/exercises/markovian_drone', 'Ch.17 Markovian drone (DP)'), _nb('ch18/policy_iteration', 'Ch.18 Policy iteration')],
+ ('AA203', 11): [_nb('ch03/exercises/linear_mpc', 'Ch.3 Linear MPC')],
+ ('AA203', 16): [_nb('ch18/exercises/widget_sales', 'Ch.18 Widget sales (RL)'), _nb('ch18/exercises/cartpole_balance', 'Ch.18 Cart-pole balance (RL)')],
+ ('CS224R', 4): [_nb('ch18/exercises/advantage_actor_critic', 'Ch.18 Advantage actor-critic')],
+}
+def attach_pora(M):
+    last = {}
+    for m in M:
+        for w in m['watch']: last[(w['course'], w['lecture'])] = m
+    for k, links in PORA_LINKS.items():
+        assert k in last, ('PoRA target missing', k)
+        last[k]['links'] = last[k]['links'] + links
+    n = sum(len(v) for v in PORA_LINKS.values()); print('PoRA links attached:', n, 'to', len(PORA_LINKS), 'modules')
+
 def main():
     rows = {k: read_pl(k) for k in PLAYLISTS}
     C = {k: parse_md(f'{ROOT}/content/{k}.md') for k in ['engr108', 'cs223a', 'cs231n', 'ee259', 'aa203', 'cs224r', 'mit64210', 'underactuated', 'ethrl', 'ethguest']}
@@ -335,6 +379,7 @@ def main():
           7:('Month 7 (bonus)','Robotic manipulation, end to end','MIT 6.4210 (Tedrake) + humanoid career map'),
           8:('Month 8 (bonus)','Underactuated robotics: walking, balancing, humanoids','MIT 6.8210 (Tedrake)'),
           9:('Month 9 (bonus)','Robot learning, fundamentals to foundation models','ETH Zurich Robot Learning 2026 (Mees) + guest talks')}
+    attach_pora(M)
     for i, m in enumerate(M):
         m['id'] = f'm{i+1:03d}'; m['day'] = i+1; m['minutes'] = 30
     # sanity
