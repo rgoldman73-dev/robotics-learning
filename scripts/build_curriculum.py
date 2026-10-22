@@ -158,7 +158,7 @@ def modules_for_lecture(key, lec, month, seminar_note=False):
             ex, rc = c.get('X', ''), c.get('R', '')
         title = short(key, lec) + (f' (part {i+1}/{n})' if n > 1 else '')
         mods.append(dict(kind='lecture', month=month, title=title, course=PLAYLISTS[key]['name'],
-                         watch=[make_watch(key, lec, t0, t1, i+1, n)], read=[c.get('read', '')] if c.get('read') else [],
+                         watch=[make_watch(key, lec, t0, t1, i+1, n)], read=([c.get('read', '')] if c.get('read') else []) + ([c['mml']] if c.get('mml') else []),
                          topics=topics, questions=qs, exercise=ex, recap=rc,
                          speaker=c.get('speaker'), seminar=seminar_note, links=[], videoMin=round(t1-t0, 1)))
     return mods
@@ -184,6 +184,7 @@ def modules_for_engr108(lecs, month):
             watch.append(make_watch('engr108', lec, 0, D))
             qs_all.append(lec['c'].get('q', []))
             if lec['c'].get('read'): reads.append(lec['c']['read'])
+            if lec['c'].get('mml'): reads.append(lec['c']['mml'])
             if lec['c'].get('R'): recs.append(lec['c']['R'])
             if lec['c'].get('X'): exs.append(lec['c']['X'])
         # interleave questions

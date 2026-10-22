@@ -32,7 +32,7 @@ R: Linear systems model state evolution; Month 1 milestone: simulate a linear sy
 month: 1
 title: Month 1 milestone check
 steps: Self-assess against the Month 1 milestone from the article and revisit anything shaky.
-links: VMLS|https://web.stanford.edu/~boyd/vmls/
+links: VMLS|https://web.stanford.edu/~boyd/vmls/|Mathematics for Machine Learning (free PDF, optional refresher)|https://mml-book.github.io/|MML post by @mentalium_|https://x.com/mentalium_/status/2112909734936199213
 Q: Can you multiply a 2x2 matrix by a vector in your head and explain it geometrically? => Yes if you can describe it as a combination of the matrix columns, i.e. a transformed grid.
 Q: Can you explain why least squares is "the best fit"? => It minimizes the sum of squared residuals; the residual is orthogonal to the columns of A.
 Q: Can you rotate points with a rotation matrix in code? => Yes (Practice 2).

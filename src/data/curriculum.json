@@ -352,6 +352,7 @@
    ],
    "read": [
     "VMLS 3.1 Norm",
+    "MML (optional maths refresher, free PDF mml-book.github.io): Ch 3.1-3.3 Norms, inner products, lengths and distances",
     "VMLS 3.2 Distance",
     "VMLS 3.3 Standard deviation"
    ],
@@ -465,7 +466,8 @@
    ],
    "read": [
     "VMLS 5.1 Linear dependence, 5.2 Basis",
-    "VMLS 5.3 Orthonormal vectors, 5.4 Gram-Schmidt algorithm"
+    "VMLS 5.3 Orthonormal vectors, 5.4 Gram-Schmidt algorithm",
+    "MML Ch 3.5 Orthonormal basis and 3.8 Orthogonal projections (the geometry behind Gram-Schmidt)"
    ],
    "topics": [],
    "questions": [
@@ -1147,7 +1149,8 @@
     }
    ],
    "read": [
-    "VMLS 12.1 Least squares problem, 12.2 Solution, 12.3 Solving least squares problems"
+    "VMLS 12.1 Least squares problem, 12.2 Solution, 12.3 Solving least squares problems",
+    "MML Ch 3.8 Orthogonal projections and Ch 9.1-9.2 least squares as maximum likelihood"
    ],
    "topics": [],
    "questions": [
@@ -1401,7 +1404,8 @@
    ],
    "read": [
     "VMLS 14.1 Classification",
-    "VMLS 14.2 Least squares classifier"
+    "VMLS 14.2 Least squares classifier",
+    "MML Ch 12.1 Separating hyperplanes (classification seen as geometry)"
    ],
    "topics": [],
    "questions": [
@@ -1901,6 +1905,14 @@
     {
      "label": "VMLS",
      "url": "https://web.stanford.edu/~boyd/vmls/"
+    },
+    {
+     "label": "Mathematics for Machine Learning (free PDF, optional refresher)",
+     "url": "https://mml-book.github.io/"
+    },
+    {
+     "label": "MML post by @mentalium_",
+     "url": "https://x.com/mentalium_/status/2112909734936199213"
     }
    ],
    "videoMin": 0,
@@ -3943,7 +3955,8 @@
     }
    ],
    "read": [
-    "CS231N notes: Linear classification; PoRA Chapter 9"
+    "CS231N notes: Linear classification; PoRA Chapter 9",
+    "MML Ch 8.1-8.2 Empirical risk minimization (loss + regularizer)"
    ],
    "topics": [],
    "questions": [
@@ -3989,7 +4002,8 @@
     }
    ],
    "read": [
-    "CS231N notes: Linear classification; PoRA Chapter 9"
+    "CS231N notes: Linear classification; PoRA Chapter 9",
+    "MML Ch 8.1-8.2 Empirical risk minimization (loss + regularizer)"
    ],
    "topics": [],
    "questions": [
@@ -4035,7 +4049,8 @@
     }
    ],
    "read": [
-    "CS231N notes: Optimization; Neural nets part 3"
+    "CS231N notes: Optimization; Neural nets part 3",
+    "MML Ch 7.1 Optimization using gradient descent (step size, momentum, SGD)"
    ],
    "topics": [],
    "questions": [
@@ -4081,7 +4096,8 @@
     }
    ],
    "read": [
-    "CS231N notes: Optimization; Neural nets part 3"
+    "CS231N notes: Optimization; Neural nets part 3",
+    "MML Ch 7.1 Optimization using gradient descent (step size, momentum, SGD)"
    ],
    "topics": [],
    "questions": [
@@ -4127,7 +4143,8 @@
     }
    ],
    "read": [
-    "CS231N notes: Backpropagation; PoRA Chapter 9"
+    "CS231N notes: Backpropagation; PoRA Chapter 9",
+    "MML Ch 5.2-5.6 Gradients, Jacobians, backpropagation and automatic differentiation"
    ],
    "topics": [],
    "questions": [
@@ -4173,7 +4190,8 @@
     }
    ],
    "read": [
-    "CS231N notes: Backpropagation; PoRA Chapter 9"
+    "CS231N notes: Backpropagation; PoRA Chapter 9",
+    "MML Ch 5.2-5.6 Gradients, Jacobians, backpropagation and automatic differentiation"
    ],
    "topics": [],
    "questions": [
@@ -4587,7 +4605,8 @@
     }
    ],
    "read": [
-    "PoRA Chapters 5 and 11 (filtering intro)"
+    "PoRA Chapters 5 and 11 (filtering intro)",
+    "MML Ch 6.5 Gaussian distribution: marginals, conditioning and products of Gaussians (the algebra inside the Kalman filter)"
    ],
    "topics": [],
    "questions": [
@@ -4633,7 +4652,8 @@
     }
    ],
    "read": [
-    "PoRA Chapters 5 and 11 (filtering intro)"
+    "PoRA Chapters 5 and 11 (filtering intro)",
+    "MML Ch 6.5 Gaussian distribution: marginals, conditioning and products of Gaussians (the algebra inside the Kalman filter)"
    ],
    "topics": [],
    "questions": [
@@ -5521,7 +5541,8 @@
     }
    ],
    "read": [
-    "PoRA Chapter 2; AA203 slides Lecture 2 and Recitation 2 (CVXPY)"
+    "PoRA Chapter 2; AA203 slides Lecture 2 and Recitation 2 (CVXPY)",
+    "MML Ch 7.2-7.3 Constrained optimization, Lagrange multipliers and convex optimization"
    ],
    "topics": [
     "Optimization theory"
@@ -5569,7 +5590,8 @@
     }
    ],
    "read": [
-    "PoRA Chapter 2; AA203 slides Lecture 2 and Recitation 2 (CVXPY)"
+    "PoRA Chapter 2; AA203 slides Lecture 2 and Recitation 2 (CVXPY)",
+    "MML Ch 7.2-7.3 Constrained optimization, Lagrange multipliers and convex optimization"
    ],
    "topics": [
     "Optimization theory"
@@ -6789,7 +6811,8 @@
     }
    ],
    "read": [
-    "PoRA Chapters 18-19 intro; AA203 slides Lecture 13"
+    "PoRA Chapters 18-19 intro; AA203 slides Lecture 13",
+    "MML Ch 9 Linear regression (parameter estimation, MLE/MAP, Bayesian linear regression) for system identification"
    ],
    "topics": [
     "Intro to learning",
@@ -6838,7 +6861,8 @@
     }
    ],
    "read": [
-    "PoRA Chapters 18-19 intro; AA203 slides Lecture 13"
+    "PoRA Chapters 18-19 intro; AA203 slides Lecture 13",
+    "MML Ch 9 Linear regression (parameter estimation, MLE/MAP, Bayesian linear regression) for system identification"
    ],
    "topics": [
     "Intro to learning",
@@ -7175,7 +7199,8 @@
     }
    ],
    "read": [
-    "PoRA Chapter 19 Imitation Learning; papers listed on cs224r.stanford.edu: Diffusion Policy (Chi et al.), ALOHA (Zhao et al.)"
+    "PoRA Chapter 19 Imitation Learning; papers listed on cs224r.stanford.edu: Diffusion Policy (Chi et al.), ALOHA (Zhao et al.)",
+    "MML Ch 8.3 Parameter estimation: maximum likelihood (behaviour cloning is MLE of actions given observations)"
    ],
    "topics": [],
    "questions": [
@@ -7221,7 +7246,8 @@
     }
    ],
    "read": [
-    "PoRA Chapter 19 Imitation Learning; papers listed on cs224r.stanford.edu: Diffusion Policy (Chi et al.), ALOHA (Zhao et al.)"
+    "PoRA Chapter 19 Imitation Learning; papers listed on cs224r.stanford.edu: Diffusion Policy (Chi et al.), ALOHA (Zhao et al.)",
+    "MML Ch 8.3 Parameter estimation: maximum likelihood (behaviour cloning is MLE of actions given observations)"
    ],
    "topics": [],
    "questions": [
@@ -9925,7 +9951,8 @@
     }
    ],
    "read": [
-    "manipulation.csail.mit.edu chapter \"Geometric Pose Estimation\""
+    "manipulation.csail.mit.edu chapter \"Geometric Pose Estimation\"",
+    "MML Ch 4.5 Singular value decomposition (the SVD step in point-cloud registration / ICP)"
    ],
    "topics": [
     "Depth cameras",
@@ -9976,7 +10003,8 @@
     }
    ],
    "read": [
-    "manipulation.csail.mit.edu chapter \"Geometric Pose Estimation\""
+    "manipulation.csail.mit.edu chapter \"Geometric Pose Estimation\"",
+    "MML Ch 4.5 Singular value decomposition (the SVD step in point-cloud registration / ICP)"
    ],
    "topics": [
     "Depth cameras",
@@ -10027,7 +10055,8 @@
     }
    ],
    "read": [
-    "manipulation.csail.mit.edu chapter \"Geometric Pose Estimation\""
+    "manipulation.csail.mit.edu chapter \"Geometric Pose Estimation\"",
+    "MML Ch 10 PCA (normals and principal axes of point clouds come from an eigendecomposition)"
    ],
    "topics": [
     "Outliers",
@@ -10078,7 +10107,8 @@
     }
    ],
    "read": [
-    "manipulation.csail.mit.edu chapter \"Geometric Pose Estimation\""
+    "manipulation.csail.mit.edu chapter \"Geometric Pose Estimation\"",
+    "MML Ch 10 PCA (normals and principal axes of point clouds come from an eigendecomposition)"
    ],
    "topics": [
     "Outliers",

@@ -51,6 +51,7 @@ X: Linearize f(x)=x^2 around z=3 and compare with f(3.1).
 R: Taylor approximation lets us replace a nonlinear function with an affine one locally; the same idea underlies linearizing robot dynamics in LQR.
 ## 9
 read: VMLS 3.1 Norm
+mml: MML (optional maths refresher, free PDF mml-book.github.io): Ch 3.1-3.3 Norms, inner products, lengths and distances
 Q: Define the Euclidean norm of x. => ||x|| = sqrt(x_1^2 + ... + x_n^2) = sqrt(x^T x).
 Q: Name two properties every norm satisfies. => E.g. homogeneity ||alpha x|| = |alpha| ||x||, triangle inequality, nonnegativity, definiteness.
 X: Compute the norm of [3,4] by hand, then verify np.linalg.norm.
@@ -82,6 +83,7 @@ X: Check whether [1,2],[2,4] are independent and explain.
 R: Independence means no redundancy; a basis gives unique coordinates for every vector.
 ## 16
 read: VMLS 5.3 Orthonormal vectors, 5.4 Gram-Schmidt algorithm
+mml: MML Ch 3.5 Orthonormal basis and 3.8 Orthogonal projections (the geometry behind Gram-Schmidt)
 Q: What does orthonormal mean? => Vectors are mutually orthogonal and each has norm 1.
 Q: What does Gram-Schmidt do? => Turns independent vectors into orthonormal ones spanning the same space by subtracting projections on earlier ones and normalizing.
 X: Run Gram-Schmidt by hand on [1,1] and [1,0].
@@ -186,6 +188,7 @@ X: Compare np.linalg.pinv(A) @ b to np.linalg.lstsq(A, b) for a tall A.
 R: The pseudo-inverse generalizes the inverse to non-square matrices and solves least squares.
 ## 33
 read: VMLS 12.1 Least squares problem, 12.2 Solution, 12.3 Solving least squares problems
+mml: MML Ch 3.8 Orthogonal projections and Ch 9.1-9.2 least squares as maximum likelihood
 Q: What does least squares minimize? => ||A x - b||^2, the sum of squared residuals.
 Q: What are the normal equations? => A^T A x = A^T b.
 Q: Why is the residual orthogonal to the columns of A at the solution? => The gradient of ||Ax-b||^2 vanishes: A^T(Ax-b)=0.
@@ -223,6 +226,7 @@ X: Compute error rate, TPR and FPR for a given 2x2 confusion matrix.
 R: Classification outputs discrete labels; performance is summarized by the confusion matrix.
 ## 39
 read: VMLS 14.2 Least squares classifier
+mml: MML Ch 12.1 Separating hyperplanes (classification seen as geometry)
 Q: How does the least squares classifier work? => Fit f(x)=x^T beta + v to +/-1 labels by least squares and predict sign(f(x)).
 Q: Why is this not the ideal loss for classification? => It penalizes confidently correct predictions; logistic or hinge losses fit better, but LS is simple and often works.
 X: Fit an LS classifier on 2 Gaussian blobs in 2D and plot the boundary.
