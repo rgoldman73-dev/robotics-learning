@@ -4907,7 +4907,16 @@
    "recap": "Attention computes data-dependent weighted mixtures; transformers use it to process sequences or patch tokens.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Go deeper (Month 9): ETH Robot Learning L7: Sequence modeling & transformers",
+     "url": "https://www.youtube.com/watch?v=imSTfMJjp7M"
+    },
+    {
+     "label": "Go deeper (Month 9): ETH guest talk 8: Scott Reed, the right backbone for embodied agents",
+     "url": "https://www.youtube.com/watch?v=fqkp_wkov6M"
+    }
+   ],
    "videoMin": 33.3,
    "id": "m090",
    "day": 90,
@@ -7108,7 +7117,16 @@
    "recap": "When dynamics are unknown, learn them (system ID) or adapt online; this opens the learning half of the course.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Go deeper (Month 9): ETH Robot Learning L2: Robot control & MDPs",
+     "url": "https://www.youtube.com/watch?v=5-Bb84eTTqQ"
+    },
+    {
+     "label": "ETH homework: hw2 robot control & MDPs",
+     "url": "https://github.com/mees-robot-learning-course/ethz-course-2026/tree/main/hw2_robot_control_mdps"
+    }
+   ],
    "videoMin": 40.0,
    "id": "m136",
    "day": 136,
@@ -7404,6 +7422,10 @@
     {
      "label": "PoRA lab (Colab): Ch.18 Cart-pole balance (RL)",
      "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch18/exercises/cartpole_balance.ipynb"
+    },
+    {
+     "label": "Go deeper (Month 9): ETH Robot Learning L4: Reinforcement learning I",
+     "url": "https://www.youtube.com/watch?v=90raNpc11tQ"
     }
    ],
    "videoMin": 36.9,
@@ -7499,7 +7521,20 @@
    "recap": "Imitation learning scales with demonstrations; multimodality and distribution shift are the main challenges.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Go deeper (Month 9): ETH Robot Learning L3: Imitation learning",
+     "url": "https://www.youtube.com/watch?v=Ef4R5s1LqoQ"
+    },
+    {
+     "label": "ETH homework: hw3 imitation learning",
+     "url": "https://github.com/mees-robot-learning-course/ethz-course-2026/tree/main/hw3_imitation_learning"
+    },
+    {
+     "label": "Go deeper (Month 9): ETH guest talk 3: Danfei Xu, human data for robot learning",
+     "url": "https://www.youtube.com/watch?v=qvTP6T5oq1w"
+    }
+   ],
    "videoMin": 33.5,
    "id": "m144",
    "day": 144,
@@ -7859,7 +7894,16 @@
    "recap": "Policy gradients directly optimize expected return using sampled trajectories.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Go deeper (Month 9): ETH Robot Learning L5: Reinforcement learning II",
+     "url": "https://www.youtube.com/watch?v=AdTGz8YnnlE"
+    },
+    {
+     "label": "ETH homework: hw4 reinforcement learning",
+     "url": "https://github.com/mees-robot-learning-course/ethz-course-2026/tree/main/hw4_reinforcement_learning"
+    }
+   ],
    "videoMin": 31.3,
    "id": "m152",
    "day": 152,
@@ -8316,7 +8360,12 @@
    "recap": "Offline RL learns from logged data; the key problem is out-of-distribution actions.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Go deeper (Month 9): ETH guest talk 4: Aviral Kumar, replicating the LLM recipe in robot learning",
+     "url": "https://www.youtube.com/watch?v=fHHLmTu9sFk"
+    }
+   ],
    "videoMin": 33.9,
    "id": "m162",
    "day": 162,
@@ -8408,7 +8457,12 @@
    "recap": "Model-based RL is more sample efficient but needs care about model bias.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Go deeper (Month 9): ETH Robot Learning L8: World models",
+     "url": "https://www.youtube.com/watch?v=cTTmUZlOF2s"
+    }
+   ],
    "videoMin": 36.7,
    "id": "m164",
    "day": 164,
@@ -8500,7 +8554,16 @@
    "recap": "RL on real robots faces data cost, safety and sim-to-real challenges.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Go deeper (Month 9): ETH guest talk 5: Andrew Wagenmaker, robots that learn from experience",
+     "url": "https://www.youtube.com/watch?v=CPmTpXA5azw"
+    },
+    {
+     "label": "Go deeper (Month 9): ETH guest talk 2: Abhishek Gupta, simulation for manipulation",
+     "url": "https://www.youtube.com/watch?v=aG8NPTPhwkE"
+    }
+   ],
    "videoMin": 32.9,
    "id": "m166",
    "day": 166,
@@ -8680,7 +8743,16 @@
    "recap": "A second watch after a month of RL looks like a different lecture (per the article).",
    "speaker": null,
    "seminar": true,
-   "links": [],
+   "links": [
+    {
+     "label": "Go deeper (Month 9): ETH Robot Learning L6: Generative models",
+     "url": "https://www.youtube.com/watch?v=qd6Ldsuu46I"
+    },
+    {
+     "label": "Go deeper (Month 9): ETH guest talk 11: Lucas Beyer, vision in the age of LLMs",
+     "url": "https://www.youtube.com/watch?v=0XB7fNS_ONg"
+    }
+   ],
    "videoMin": 39.3,
    "id": "m170",
    "day": 170,
@@ -8772,7 +8844,16 @@
    "recap": "Industry perspective on scaling robot learning.",
    "speaker": null,
    "seminar": true,
-   "links": [],
+   "links": [
+    {
+     "label": "Go deeper (Month 9): ETH Robot Learning L9: Generalist robot policies",
+     "url": "https://www.youtube.com/watch?v=dtofzDY9zuo"
+    },
+    {
+     "label": "Go deeper (Month 9): ETH guest talk 9: Quan Vuong, pi0.7 generalist model",
+     "url": "https://www.youtube.com/watch?v=pzolgvyWEFY"
+    }
+   ],
    "videoMin": 24.9,
    "id": "m172",
    "day": 172,
@@ -8864,7 +8945,20 @@
    "recap": "Frontier directions give context for your final project.",
    "speaker": null,
    "seminar": true,
-   "links": [],
+   "links": [
+    {
+     "label": "Go deeper (Month 9): ETH Robot Learning L10: Embodied reasoning & test-time scaling",
+     "url": "https://www.youtube.com/watch?v=CxhrjQuGEuE"
+    },
+    {
+     "label": "Go deeper (Month 9): ETH Robot Learning L11: Frontier & open problems",
+     "url": "https://www.youtube.com/watch?v=eL4lcy1KNzE"
+    },
+    {
+     "label": "Go deeper (Month 9): ETH guest talk 7: Ted Xiao, three eras of robot learning",
+     "url": "https://www.youtube.com/watch?v=VS7Ulaugevg"
+    }
+   ],
    "videoMin": 35.4,
    "id": "m174",
    "day": 174,

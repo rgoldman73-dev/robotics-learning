@@ -253,6 +253,33 @@ def attach_pora(M):
         last[k]['links'] = last[k]['links'] + links
     n = sum(len(v) for v in PORA_LINKS.values()); print('PoRA links attached:', n, 'to', len(PORA_LINKS), 'modules')
 
+# ---- ETH Zurich Robot Learning 2026 (Mees): "go deeper" links from earlier modules to the Month 9 lectures/homework (@0x_meden, 2026-10-24).
+ETH_HW = 'https://github.com/mees-robot-learning-course/ethz-course-2026/tree/main/'
+def _e(n, vid, t): return dict(label=f'Go deeper (Month 9): ETH Robot Learning L{n}: {t}', url=f'https://www.youtube.com/watch?v={vid}')
+def _g(n, vid, t): return dict(label=f'Go deeper (Month 9): ETH guest talk {n}: {t}', url=f'https://www.youtube.com/watch?v={vid}')
+def _h(d, t): return dict(label=f'ETH homework: {t}', url=ETH_HW + d)
+ETH_LINKS = {
+ ('CS231N', 8): [_e(7, 'imSTfMJjp7M', 'Sequence modeling & transformers'), _g(8, 'fqkp_wkov6M', 'Scott Reed, the right backbone for embodied agents')],
+ ('CS231N', 17): [_e(6, 'qd6Ldsuu46I', 'Generative models'), _g(11, '0XB7fNS_ONg', 'Lucas Beyer, vision in the age of LLMs')],
+ ('AA203', 13): [_e(2, '5-Bb84eTTqQ', 'Robot control & MDPs'), _h('hw2_robot_control_mdps', 'hw2 robot control & MDPs')],
+ ('AA203', 16): [_e(4, '90raNpc11tQ', 'Reinforcement learning I')],
+ ('CS224R', 2): [_e(3, 'Ef4R5s1LqoQ', 'Imitation learning'), _h('hw3_imitation_learning', 'hw3 imitation learning'), _g(3, 'qvTP6T5oq1w', 'Danfei Xu, human data for robot learning')],
+ ('CS224R', 3): [_e(5, 'AdTGz8YnnlE', 'Reinforcement learning II'), _h('hw4_reinforcement_learning', 'hw4 reinforcement learning')],
+ ('CS224R', 7): [_g(4, 'fHHLmTu9sFk', 'Aviral Kumar, replicating the LLM recipe in robot learning')],
+ ('CS224R', 11): [_e(8, 'cTTmUZlOF2s', 'World models')],
+ ('CS224R', 16): [_g(5, 'CPmTpXA5azw', 'Andrew Wagenmaker, robots that learn from experience'), _g(2, 'aG8NPTPhwkE', 'Abhishek Gupta, simulation for manipulation')],
+ ('CS224R', 17): [_e(9, 'dtofzDY9zuo', 'Generalist robot policies'), _g(9, 'pzolgvyWEFY', 'Quan Vuong, pi0.7 generalist model')],
+ ('CS224R', 18): [_e(10, 'CxhrjQuGEuE', 'Embodied reasoning & test-time scaling'), _e(11, 'eL4lcy1KNzE', 'Frontier & open problems'), _g(7, 'VS7Ulaugevg', 'Ted Xiao, three eras of robot learning')],
+}
+def attach_eth(M):
+    last = {}
+    for m in M:
+        for w in m['watch']: last[(w['course'], w['lecture'])] = m
+    for k, links in ETH_LINKS.items():
+        assert k in last, ('ETH target missing', k)
+        last[k]['links'] = last[k]['links'] + links
+    print('ETH links attached:', sum(len(v) for v in ETH_LINKS.values()), 'to', len(ETH_LINKS), 'modules')
+
 def main():
     rows = {k: read_pl(k) for k in PLAYLISTS}
     C = {k: parse_md(f'{ROOT}/content/{k}.md') for k in ['engr108', 'cs223a', 'cs231n', 'ee259', 'aa203', 'cs224r', 'mit64210', 'underactuated', 'ethrl', 'ethguest']}
@@ -380,6 +407,7 @@ def main():
           8:('Month 8 (bonus)','Underactuated robotics: walking, balancing, humanoids','MIT 6.8210 (Tedrake)'),
           9:('Month 9 (bonus)','Robot learning, fundamentals to foundation models','ETH Zurich Robot Learning 2026 (Mees) + guest talks')}
     attach_pora(M)
+    attach_eth(M)
     for i, m in enumerate(M):
         m['id'] = f'm{i+1:03d}'; m['day'] = i+1; m['minutes'] = 30
     # sanity
