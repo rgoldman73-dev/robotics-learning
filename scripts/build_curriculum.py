@@ -280,6 +280,25 @@ def attach_eth(M):
         last[k]['links'] = last[k]['links'] + links
     print('ETH links attached:', sum(len(v) for v in ETH_LINKS.values()), 'to', len(ETH_LINKS), 'modules')
 
+# ---- Free Cambridge ML textbooks (@bkdgiffug list, 2026-10-24): optional textbook reads; full text is in the private course RAG (-s book-).
+NNML = 'https://arxiv.org/pdf/1901.05639'; EP4A = 'https://sites.math.duke.edu/~rtd/EP4A/EP4A_April2021.pdf'; LTB = 'https://tongzhang-ml.org/lt-book/lt-book.pdf'
+def _b(t, u, pg): return dict(label=f'Textbook (optional): {t}', url=f'{u}#page={pg}')
+BOOK_LINKS = {
+ ('CS231N', 4): [_b('Mehlig, ML with Neural Networks, Ch 6 Stochastic gradient descent & backprop', NNML, 105)],
+ ('CS231N', 5): [_b('Mehlig, ML with Neural Networks, Ch 8 Convolutional networks', NNML, 147)],
+ ('AA203', 9): [_b('Durrett, Elementary Probability for Applications, Ch 6 Markov chains', EP4A, 130)],
+ ('CS224R', 3): [_b('Tong Zhang, Mathematical Analysis of ML Algorithms, reinforcement learning theory', LTB, 396)],
+ ('CS224R', 6): [_b('Mehlig, ML with Neural Networks, Ch 11 Q-learning', NNML, 216)],
+}
+def attach_books(M):
+    last = {}
+    for m in M:
+        for w in m['watch']: last[(w['course'], w['lecture'])] = m
+    for k, links in BOOK_LINKS.items():
+        assert k in last, ('book target missing', k)
+        last[k]['links'] = last[k]['links'] + links
+    print('Textbook links attached:', sum(len(v) for v in BOOK_LINKS.values()), 'to', len(BOOK_LINKS), 'modules')
+
 def main():
     rows = {k: read_pl(k) for k in PLAYLISTS}
     C = {k: parse_md(f'{ROOT}/content/{k}.md') for k in ['engr108', 'cs223a', 'cs231n', 'ee259', 'aa203', 'cs224r', 'mit64210', 'underactuated', 'ethrl', 'ethguest']}
@@ -408,6 +427,7 @@ def main():
           9:('Month 9 (bonus)','Robot learning, fundamentals to foundation models','ETH Zurich Robot Learning 2026 (Mees) + guest talks')}
     attach_pora(M)
     attach_eth(M)
+    attach_books(M)
     for i, m in enumerate(M):
         m['id'] = f'm{i+1:03d}'; m['day'] = i+1; m['minutes'] = 30
     # sanity

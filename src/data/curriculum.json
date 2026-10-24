@@ -4297,7 +4297,12 @@
    "recap": "Backprop = efficient chain rule; autodiff frameworks do it for you.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Textbook (optional): Mehlig, ML with Neural Networks, Ch 6 Stochastic gradient descent & backprop",
+     "url": "https://arxiv.org/pdf/1901.05639#page=105"
+    }
+   ],
    "videoMin": 38.4,
    "id": "m078",
    "day": 78,
@@ -4393,6 +4398,10 @@
     {
      "label": "PoRA lab (Colab): Ch.9 CNN",
      "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch09/exercises/cnn.ipynb"
+    },
+    {
+     "label": "Textbook (optional): Mehlig, ML with Neural Networks, Ch 8 Convolutional networks",
+     "url": "https://arxiv.org/pdf/1901.05639#page=147"
     }
    ],
    "videoMin": 34.0,
@@ -6599,6 +6608,10 @@
     {
      "label": "PoRA lab (Colab): Ch.18 Policy iteration",
      "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch18/policy_iteration.ipynb"
+    },
+    {
+     "label": "Textbook (optional): Durrett, Elementary Probability for Applications, Ch 6 Markov chains",
+     "url": "https://sites.math.duke.edu/~rtd/EP4A/EP4A_April2021.pdf#page=130"
     }
    ],
    "videoMin": 38.5,
@@ -7902,6 +7915,10 @@
     {
      "label": "ETH homework: hw4 reinforcement learning",
      "url": "https://github.com/mees-robot-learning-course/ethz-course-2026/tree/main/hw4_reinforcement_learning"
+    },
+    {
+     "label": "Textbook (optional): Tong Zhang, Mathematical Analysis of ML Algorithms, reinforcement learning theory",
+     "url": "https://tongzhang-ml.org/lt-book/lt-book.pdf#page=396"
     }
    ],
    "videoMin": 31.3,
@@ -8092,7 +8109,12 @@
    "recap": "Deep Q-learning makes off-policy learning practical with replay and target networks.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Textbook (optional): Mehlig, ML with Neural Networks, Ch 11 Q-learning",
+     "url": "https://arxiv.org/pdf/1901.05639#page=216"
+    }
+   ],
    "videoMin": 30.8,
    "id": "m156",
    "day": 156,
