@@ -4301,6 +4301,14 @@
     {
      "label": "Textbook (optional): Mehlig, ML with Neural Networks, Ch 6 Stochastic gradient descent & backprop",
      "url": "https://arxiv.org/pdf/1901.05639#page=105"
+    },
+    {
+     "label": "Build it (optional, Karpathy Zero to Hero): L1 building micrograd, backprop from scratch",
+     "url": "https://www.youtube.com/watch?v=VMj-3S1tku0"
+    },
+    {
+     "label": "Build it (optional, Karpathy Zero to Hero): L5 Becoming a Backprop Ninja",
+     "url": "https://youtu.be/q8SA3rM6ckI"
     }
    ],
    "videoMin": 38.4,
@@ -4495,7 +4503,12 @@
    "recap": "Architecture design (depth, residuals, normalization) drives accuracy and trainability.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Build it (optional, Karpathy Zero to Hero): L4 Activations, gradients and BatchNorm",
+     "url": "https://youtu.be/P6sfmUTpUmc"
+    }
+   ],
    "videoMin": 35.6,
    "id": "m082",
    "day": 82,
@@ -4924,6 +4937,10 @@
     {
      "label": "Go deeper (Month 9): ETH guest talk 8: Scott Reed, the right backbone for embodied agents",
      "url": "https://www.youtube.com/watch?v=fqkp_wkov6M"
+    },
+    {
+     "label": "Build it (optional, Karpathy Zero to Hero): L7 Let's build GPT from scratch",
+     "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY"
     }
    ],
    "videoMin": 33.3,

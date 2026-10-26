@@ -299,6 +299,22 @@ def attach_books(M):
         last[k]['links'] = last[k]['links'] + links
     print('Textbook links attached:', sum(len(v) for v in BOOK_LINKS.values()), 'to', len(BOOK_LINKS), 'modules')
 
+# ---- Karpathy, Neural Networks: Zero to Hero (MIT repo, 2026-10-26): light optional cross-links; full course lives in Learn AI (#/track/nn-zero-to-hero), captions+notebooks in the private course RAG (-s nnz).
+def _k(t, u): return dict(label=f'Build it (optional, Karpathy Zero to Hero): {t}', url=u)
+NNZ_LINKS = {
+ ('CS231N', 4): [_k('L1 building micrograd, backprop from scratch', 'https://www.youtube.com/watch?v=VMj-3S1tku0'), _k('L5 Becoming a Backprop Ninja', 'https://youtu.be/q8SA3rM6ckI')],
+ ('CS231N', 6): [_k('L4 Activations, gradients and BatchNorm', 'https://youtu.be/P6sfmUTpUmc')],
+ ('CS231N', 8): [_k("L7 Let's build GPT from scratch", 'https://www.youtube.com/watch?v=kCc8FmEb1nY')],
+}
+def attach_nnz(M):
+    last = {}
+    for m in M:
+        for w in m['watch']: last[(w['course'], w['lecture'])] = m
+    for k, links in NNZ_LINKS.items():
+        assert k in last, ('nnz target missing', k)
+        last[k]['links'] = last[k]['links'] + links
+    print('Zero to Hero links attached:', sum(len(v) for v in NNZ_LINKS.values()), 'to', len(NNZ_LINKS), 'modules')
+
 def main():
     rows = {k: read_pl(k) for k in PLAYLISTS}
     C = {k: parse_md(f'{ROOT}/content/{k}.md') for k in ['engr108', 'cs223a', 'cs231n', 'ee259', 'aa203', 'cs224r', 'mit64210', 'underactuated', 'ethrl', 'ethguest']}
@@ -428,6 +444,7 @@ def main():
     attach_pora(M)
     attach_eth(M)
     attach_books(M)
+    attach_nnz(M)
     for i, m in enumerate(M):
         m['id'] = f'm{i+1:03d}'; m['day'] = i+1; m['minutes'] = 30
     # sanity
