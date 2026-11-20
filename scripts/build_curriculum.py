@@ -315,6 +315,50 @@ def attach_nnz(M):
         last[k]['links'] = last[k]['links'] + links
     print('Zero to Hero links attached:', sum(len(v) for v in NNZ_LINKS.values()), 'to', len(NNZ_LINKS), 'modules')
 
+
+# ---- MIT MAS.863 How To Make (almost) Anything (Fall 2026, Gershenfeld): optional hands-on hardware
+# companion. Full week map, shop substitutes and costs: content/tracks/htmaa.md. Official pages
+# (not copied) plus recitation notes are in the private course RAG (-s htmaa). Added 2026-11-20
+# from https://x.com/fishjar/status/2123734999803289659. Module ids unchanged.
+HTMAA_SITE = 'https://pub.cba.mit.edu/863.26/site/'
+FA = 'https://fabacademy.org/2026/classes/'
+def _h(label, url):
+    return dict(label=f'Hands-on (optional, MIT MAS.863 / Fab Academy): {label}', url=url)
+HTMAA_LEC = {
+ ('CS223A', 1): [_h('Week 1: CAD and the 2026 course roadmap', FA + 'computer_design/index.html'),
+                 _h('2026 course site (schedule, recitations, docs)', HTMAA_SITE)],
+ ('CS223A', 16): [_h('Week 10: output devices, motors and motion control', FA + 'output_devices/index.html'),
+                  _h('Motor and motion control recitation', HTMAA_SITE + 'recitations/motor_control/')],
+ ('EE259', 5): [_h('Week 9: input devices (add a sensor to a board you designed)', FA + 'input_devices/index.html')],
+ ('EE259', 19): [_h('Week 4: 3D scanning and printing', FA + 'scanning_printing/index.html')],
+ ('MIT 6.4210', 2): [_h('Embedded programming', FA + 'embedded_programming/index.html'),
+                     _h('Electronics design (KiCad) and EDA recitation', FA + 'electronics_design/index.html'),
+                     _h('Electronics production (board house or makerspace, not a home mill)', FA + 'electronics_production/index.html')],
+ ('MIT 6.4210', 14): [_h('Output devices and motor / motion control', FA + 'output_devices/index.html')],
+ ('MIT 6.4210', 23): [_h('Input devices / sensing on a microcontroller you designed', FA + 'input_devices/index.html'),
+                      _h('Edge AI recitation (slides)', HTMAA_SITE + 'recitations/edge_ai/')],
+}
+HTMAA_BY_ID = {
+ 'm168': [_h('System integration and a documented final project', FA + 'system_integration/index.html'),
+          _h('2026 course site (schedule, recitations, docs)', HTMAA_SITE)],
+ 'm190': [_h('Hands-on hardware track: How To Make (almost) Anything', HTMAA_SITE)],
+}
+def attach_htmaa(M):
+    last = {}
+    for m in M:
+        for w in m.get('watch') or []:
+            if w.get('course') and w.get('lecture') is not None:
+                last[(w['course'], w['lecture'])] = m
+    for k, links in HTMAA_LEC.items():
+        assert k in last, ('HTMAA lecture target missing', k)
+        last[k]['links'] = last[k]['links'] + links
+    by_id = {m['id']: m for m in M}
+    for mid, links in HTMAA_BY_ID.items():
+        assert mid in by_id, ('HTMAA module id missing', mid)
+        by_id[mid]['links'] = by_id[mid]['links'] + links
+    print('HTMAA links attached:', sum(len(v) for v in HTMAA_LEC.values()) + sum(len(v) for v in HTMAA_BY_ID.values()),
+          'to', len(HTMAA_LEC) + len(HTMAA_BY_ID), 'modules')
+
 def main():
     rows = {k: read_pl(k) for k in PLAYLISTS}
     C = {k: parse_md(f'{ROOT}/content/{k}.md') for k in ['engr108', 'cs223a', 'cs231n', 'ee259', 'aa203', 'cs224r', 'mit64210', 'underactuated', 'ethrl', 'ethguest']}
@@ -447,6 +491,7 @@ def main():
     attach_nnz(M)
     for i, m in enumerate(M):
         m['id'] = f'm{i+1:03d}'; m['day'] = i+1; m['minutes'] = 30
+    attach_htmaa(M)
     # sanity
     for m in M:
         assert 3 <= len(m['questions']) <= 5, (m['id'], m['title'], len(m['questions']))

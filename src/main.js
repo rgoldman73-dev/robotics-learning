@@ -258,7 +258,7 @@ function More() {
   return w;
 }
 function Library() {
-  const w = h('div', { class: 'page' }, h('h1', null, 'Library'), h('p', { class: 'muted' }, 'Lecture lists were fetched from the official YouTube playlists (Oct 2026). ✔ = included in the daily path.'));
+  const w = h('div', { class: 'page' }, h('h1', null, 'Library'), h('p', { class: 'muted' }, 'Lecture lists were fetched from the official YouTube playlists (Oct 2026). ✔ = included in the daily path. Optional hands-on hardware track (not a playlist): MIT MAS.863 How To Make (almost) Anything, Fall 2026 — week map and shop/cost notes in the repo at content/tracks/htmaa.md, official site https://pub.cba.mit.edu/863.26/site/'));
   library.courses.forEach((c) => {
     const inP = c.items.filter((i) => i.inPath).length;
     const d = h('details', { class: 'card' }, h('summary', null, h('strong', null, `${c.name} — ${c.full}`), h('span', { class: 'muted small' }, ` ${c.items.length} videos · ${inP} in path`)),
@@ -289,7 +289,7 @@ function Settings() {
 }
 function About() {
   return h('div', { class: 'page' }, h('h1', null, 'About'),
-    h('section', { class: 'card' }, h('p', null, `Built from the X Article “Stanford's Robotics Degree, for Free: the 6-month path to Robot Learning Engineer” by @0x_meden (Sep 2026). ${meta.modules} modules (~30 min each) cover ${meta.pathLectures} lectures / ~${Math.round(meta.videoHours)} h of video, plus textbook reading and the article's six practice projects. Bonus Months 7-9 add MIT 6.4210 Robotic Manipulation, MIT 6.8210 Underactuated Robotics (both Russ Tedrake, shared by @0x_meden) and ETH Zurich Robot Learning 2026 (Oier Mees, shared by @rahim_mirani).`),
+    h('section', { class: 'card' }, h('p', null, `Built from the X Article “Stanford's Robotics Degree, for Free: the 6-month path to Robot Learning Engineer” by @0x_meden (Sep 2026). ${meta.modules} modules (~30 min each) cover ${meta.pathLectures} lectures / ~${Math.round(meta.videoHours)} h of video, plus textbook reading and the article's six practice projects. Bonus Months 7-9 add MIT 6.4210 Robotic Manipulation, MIT 6.8210 Underactuated Robotics (both Russ Tedrake, shared by @0x_meden) and ETH Zurich Robot Learning 2026 (Oier Mees, shared by @rahim_mirani). An optional hands-on fabrication companion, MIT MAS.863 How To Make (almost) Anything (Gershenfeld, Fall 2026), is linked from hardware-related modules and documented in the repo at content/tracks/htmaa.md; official notes stay on the course site.`),
       h('p', null, 'Honest notes:'), h('ul', null,
         h('li', null, 'Lecture titles, durations and links come from the official YouTube playlists. Long lectures are split into time-based parts — the time ranges are NOT topic timestamps.'),
         h('li', null, 'Quiz questions, exercises and recaps were written for this app from the lecture titles, course schedules, SEE topic lists and the article; answers are study aids — check them against the lecture and textbook.'),

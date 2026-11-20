@@ -2028,7 +2028,16 @@
    "recap": "CS223A covers the whole manipulator stack: geometry, velocities (Jacobian), trajectories, dynamics and control.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): Week 1: CAD and the 2026 course roadmap",
+     "url": "https://fabacademy.org/2026/classes/computer_design/index.html"
+    },
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): 2026 course site (schedule, recitations, docs)",
+     "url": "https://pub.cba.mit.edu/863.26/site/"
+    }
+   ],
    "videoMin": 29.1,
    "id": "m035",
    "day": 35,
@@ -3868,7 +3877,16 @@
    "recap": "Force control, compliance and whole-body control extend manipulation to contact-rich tasks. This closes Month 2.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): Week 10: output devices, motors and motion control",
+     "url": "https://fabacademy.org/2026/classes/output_devices/index.html"
+    },
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): Motor and motion control recitation",
+     "url": "https://pub.cba.mit.edu/863.26/site/recitations/motor_control/"
+    }
+   ],
    "videoMin": 35.1,
    "id": "m069",
    "day": 69,
@@ -4608,6 +4626,10 @@
     {
      "label": "PoRA lab (Colab): Ch.12 Kalman filter",
      "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch12/exercises/kalman_filter.ipynb"
+    },
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): Week 9: input devices (add a sensor to a board you designed)",
+     "url": "https://fabacademy.org/2026/classes/input_devices/index.html"
     }
    ],
    "videoMin": 40.0,
@@ -5315,6 +5337,10 @@
     {
      "label": "PoRA lab (Colab): Ch.6 Camera extrinsics",
      "url": "https://colab.research.google.com/github/StanfordASL/pora-exercises/blob/main/ch06/exercises/camera_extrinsics.ipynb"
+    },
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): Week 4: 3D scanning and printing",
+     "url": "https://fabacademy.org/2026/classes/scanning_printing/index.html"
     }
    ],
    "videoMin": 38.3,
@@ -8689,6 +8715,14 @@
     {
      "label": "SO-ARM100",
      "url": "https://github.com/TheRobotStudio/SO-ARM100"
+    },
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): System integration and a documented final project",
+     "url": "https://fabacademy.org/2026/classes/system_integration/index.html"
+    },
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): 2026 course site (schedule, recitations, docs)",
+     "url": "https://pub.cba.mit.edu/863.26/site/"
     }
    ],
    "videoMin": 0,
@@ -9724,6 +9758,10 @@
     {
      "label": "Source post (@0x_meden)",
      "url": "https://x.com/0x_meden/status/2112588317925531663"
+    },
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): Hands-on hardware track: How To Make (almost) Anything",
+     "url": "https://pub.cba.mit.edu/863.26/site/"
     }
    ],
    "videoMin": 0,
@@ -9989,7 +10027,20 @@
    "recap": "Know your hardware's interface (position/torque) because it shapes every controller you write.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): Embedded programming",
+     "url": "https://fabacademy.org/2026/classes/embedded_programming/index.html"
+    },
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): Electronics design (KiCad) and EDA recitation",
+     "url": "https://fabacademy.org/2026/classes/electronics_design/index.html"
+    },
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): Electronics production (board house or makerspace, not a home mill)",
+     "url": "https://fabacademy.org/2026/classes/electronics_production/index.html"
+    }
+   ],
    "videoMin": 40.3,
    "id": "m195",
    "day": 195,
@@ -11205,7 +11256,12 @@
    "recap": "Contact-rich tasks need force/impedance control (CS223A force-control lectures revisited).",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): Output devices and motor / motion control",
+     "url": "https://fabacademy.org/2026/classes/output_devices/index.html"
+    }
+   ],
    "videoMin": 35.7,
    "id": "m219",
    "day": 219,
@@ -12113,7 +12169,16 @@
    "recap": "Touch closes the loop on contact.",
    "speaker": null,
    "seminar": false,
-   "links": [],
+   "links": [
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): Input devices / sensing on a microcontroller you designed",
+     "url": "https://fabacademy.org/2026/classes/input_devices/index.html"
+    },
+    {
+     "label": "Hands-on (optional, MIT MAS.863 / Fab Academy): Edge AI recitation (slides)",
+     "url": "https://pub.cba.mit.edu/863.26/site/recitations/edge_ai/"
+    }
+   ],
    "videoMin": 35.6,
    "id": "m237",
    "day": 237,
